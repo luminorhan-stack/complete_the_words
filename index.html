@@ -323,6 +323,65 @@
             line-height: 1.9;
         }
 
+        /* ===== v3 新增：错题本返回题目 · 高亮定位 ===== */
+        /* 目标单词空位：金色脉冲闪烁 3 次 */
+        @keyframes jumpFlash {
+            0%, 100% {
+                background: rgba(232, 163, 23, 0);
+                box-shadow: 0 0 0 0 rgba(232, 163, 23, 0);
+            }
+            15%, 55% {
+                background: rgba(232, 163, 23, 0.30);
+                box-shadow: 0 0 0 5px rgba(232, 163, 23, 0.28);
+            }
+            35%, 75% {
+                background: rgba(232, 163, 23, 0.10);
+                box-shadow: 0 0 0 2px rgba(232, 163, 23, 0.18);
+            }
+        }
+        .word-blank.jump-flash {
+            border-radius: 6px;
+            padding: 2px 4px;
+            animation: jumpFlash 2.4s ease-in-out 1;
+            outline: 2px solid rgba(232, 163, 23, 0.75);
+            outline-offset: 2px;
+        }
+        /* 目标题卡：短暂描边提示 */
+        @keyframes cardPulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 102, 51, 0.45); }
+            100% { box-shadow: 0 0 0 14px rgba(0, 102, 51, 0); }
+        }
+        .question-card.jump-target {
+            animation: cardPulse 1.6s ease-out 1;
+            border-color: var(--primary-color);
+        }
+        /* 错题卡片上的返回按钮 */
+        .wb-jump-btn {
+            background: rgba(0, 102, 51, 0.08);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        .wb-jump-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+        /* ===== v3 新增：题目状态徽章 ===== */
+        .q-status-pill {
+            display: inline-block;
+            font-size: 0.72em;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 999px;
+            margin-left: 8px;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        .q-status-pill.st-correct { background: #e8f5e9; color: var(--success-color, #2e7d32); border: 1px solid var(--success-color, #2e7d32); }
+        .q-status-pill.st-wrong { background: #ffebee; color: var(--error-color, #c62828); border: 1px solid var(--error-color, #c62828); }
+        .q-status-pill.st-partial { background: #fff8e1; color: #b28704; border: 1px solid var(--warning-color, #e6a817); }
+        .q-status-pill.st-done { background: #e0f7fa; color: #00838f; border: 1px solid #00838f; }
+
         .feedback-answer-list .answer-word {
             display: inline-block;
             margin: 2px 6px 2px 0;
@@ -1287,6 +1346,10 @@
             }
             allQuestions = QUESTION_DB.questions.filter(q => q.status === 'active');
 
+            // v3：做题痕迹库初始化 + 旧版进度一次性迁移（须在 applyFilters 之前）
+            loadTraceStore();
+            migrateLegacyProgress();
+
             // 填充月份下拉
             const monthSel = document.getElementById('monthFilter');
             QUESTION_DB.months.forEach(m => {
@@ -1378,9 +1441,7 @@
             }
             updateProgress();
             renderCurrentPassage();
-            if (questions.length > 0) {
-                restoreInputs();
-            }
+            // restoreInputs 已在 renderCurrentPassage 内部统一调用
 
             document.getElementById('resultCount').textContent = `${questions.length} / ${allQuestions.length} 题`;
             document.getElementById('emptyResult').style.display = questions.length ? 'none' : 'block';
@@ -1403,14 +1464,105 @@
             filterTimer = setTimeout(applyFilters, 250);
         }
 
-        // 从 localStorage 恢复当前题目已填字母与状态
+        // ============ 做题痕迹持久化（按题目 id 全局存储，v3）============
+        // 结构：{ _meta: { lastQid, migrated }, [qid]: { answers, inputStates, completed, score, checkedAt, updatedAt } }
+        // 按题 id 存储的好处：切换筛选条件、刷新页面、重开文件，做题痕迹都完整保留
+        const TRACE_KEY = 'cwTraces_v2';
+        let traceStore = null;
+
+        function loadTraceStore() {
+            if (traceStore) return traceStore;
+            try {
+                const raw = JSON.parse(localStorage.getItem(TRACE_KEY) || 'null');
+                traceStore = (raw && typeof raw === 'object') ? raw : {};
+                if (!traceStore._meta) traceStore._meta = {};
+            } catch (e) { traceStore = { _meta: {} }; }
+            return traceStore;
+        }
+
+        function persistTraceStore() {
+            try { localStorage.setItem(TRACE_KEY, JSON.stringify(traceStore)); } catch (e) {}
+        }
+
+        function getTrace(qid) {
+            loadTraceStore();
+            const t = traceStore[qid];
+            return (t && typeof t === 'object') ? t : null;
+        }
+
+        // 题目状态：untouched 未作答 / partial 进行中 / correct 已答对 / wrong 有错误 / done 已完成(旧数据无得分)
+        function qStatus(qid) {
+            const t = getTrace(qid);
+            if (!t) return 'untouched';
+            if (t.completed) {
+                if (t.score && t.score.total > 0) return t.score.wrongCount > 0 ? 'wrong' : 'correct';
+                return 'done';
+            }
+            const hasInput = t.answers && Object.values(t.answers).some(v => v && v.trim());
+            return hasInput ? 'partial' : 'untouched';
+        }
+
+        const Q_STATUS_META = {
+            correct: { label: '✓ 已答对', color: 'var(--success-color, #2e7d32)' },
+            wrong:   { label: '✗ 有错误', color: 'var(--error-color, #c62828)' },
+            done:    { label: '✓ 已完成', color: '#00838f' },
+            partial: { label: '◐ 进行中', color: 'var(--warning-color, #e6a817)' }
+        };
+
+        // 提交判分后记录得分（供进度点着色与恢复横幅使用）
+        function recordCheckResult(qid, correct, total, wrongCount) {
+            loadTraceStore();
+            if (!traceStore[qid]) traceStore[qid] = { answers: {}, inputStates: {} };
+            const t = traceStore[qid];
+            t.completed = true;
+            t.score = { correct: correct, total: total, wrongCount: wrongCount };
+            t.checkedAt = new Date().toISOString();
+        }
+
+        // 旧版进度迁移：旧版按"全量题集序列"存储，此处把 qIndex 映射回题目 id，一次性并入新存储
+        function migrateLegacyProgress() {
+            loadTraceStore();
+            if (traceStore._meta.migrated || !allQuestions.length) return;
+            traceStore._meta.migrated = true;
+            try {
+                const sig = allQuestions.map(q => q.id).join(',').slice(0, 120);
+                const legacyKey = 'cwProgress_' + (sig ? sig.length + '_' + sig.slice(0, 40) : 'empty');
+                const saved = JSON.parse(localStorage.getItem(legacyKey) || 'null');
+                if (saved && saved.answers) {
+                    allQuestions.forEach((q, qi) => {
+                        if (getTrace(q.id)) return; // 新数据优先，不覆盖
+                        const answers = {}, states = {};
+                        Object.keys(saved.answers).forEach(k => {
+                            const m = k.match(/^(\d+)-(.+)$/);
+                            if (m && parseInt(m[1]) === qi) answers[m[2]] = saved.answers[k];
+                        });
+                        if (saved.inputStates) {
+                            Object.keys(saved.inputStates).forEach(k => {
+                                const m = k.match(/^(\d+)-(.+)$/);
+                                if (m && parseInt(m[1]) === qi) states[m[2]] = saved.inputStates[k];
+                            });
+                        }
+                        const completed = Array.isArray(saved.passageCompleted) && !!saved.passageCompleted[qi];
+                        if (completed || Object.keys(answers).length) {
+                            traceStore[q.id] = { answers, inputStates: states, completed };
+                        }
+                    });
+                }
+            } catch (e) { /* 迁移失败不影响使用 */ }
+            persistTraceStore();
+        }
+
+        // 恢复当前题目已填字母、对错样式与上次得分横幅（渲染后调用）
         function restoreInputs() {
-            let saved;
-            try { saved = JSON.parse(localStorage.getItem(progressKey()) || 'null'); } catch (e) { return; }
-            if (!saved || !saved.answers) return;
+            if (!questions.length) return;
+            const q = questions[currentPassageIndex];
+            if (!q) return;
+            const saved = getTrace(q.id);
+            if (!saved) return;
+
             document.querySelectorAll('.blank').forEach(input => {
-                const key = `${input.dataset.question}-${input.dataset.blank}-${input.dataset.position}`;
-                if (saved.answers[key]) input.value = saved.answers[key];
+                const key = `${input.dataset.blank}-${input.dataset.position}`;
+                if (saved.answers && saved.answers[key]) input.value = saved.answers[key];
                 if (saved.inputStates) {
                     const state = saved.inputStates[key];
                     if (state === 'correct') input.classList.add('correct');
@@ -1420,25 +1572,40 @@
                     if (ca) input.setAttribute('data-correct-answer', ca);
                 }
             });
+
+            // 恢复上次作答结果横幅
+            if (saved.completed && saved.score && saved.score.total > 0) {
+                const fb = document.getElementById('feedback-current');
+                if (fb && !fb.classList.contains('show')) {
+                    const pct = Math.round(saved.score.correct / saved.score.total * 100);
+                    const wrongN = saved.score.wrongCount || 0;
+                    const when = saved.checkedAt ? new Date(saved.checkedAt) : null;
+                    const whenTxt = when && !isNaN(when)
+                        ? `${when.getMonth() + 1}月${when.getDate()}日 ${String(when.getHours()).padStart(2, '0')}:${String(when.getMinutes()).padStart(2, '0')}` : '';
+                    fb.className = 'feedback show ' + (pct >= 80 ? 'success' : 'error');
+                    fb.innerHTML = `<strong>📌 上次作答：${saved.score.correct} / ${saved.score.total}（${pct}%）</strong>`
+                        + (wrongN > 0 ? ` · <span style="color:var(--error-color);">✗ ${wrongN} 处错误</span>` : ` · <span style="color:var(--success-color);">✓ 全部正确</span>`)
+                        + (whenTxt ? `<span style="color:#999;font-weight:400;font-size:0.85em;"> · ${whenTxt}</span>` : '')
+                        + `<br><span style="font-size:0.85em;color:#888;">做题记录已自动保留，可修改后重新提交更新成绩。</span>`;
+                }
+            }
         }
 
-        // 进度按筛选后的题目 id 序列存取，避免不同筛选间错位
+        // 兼容保留：旧版按筛选序列生成存储键（仅迁移与清理旧数据时使用）
         function progressKey() {
             const sig = questions.map(q => q.id).join(',').slice(0, 120);
             return 'cwProgress_' + (sig ? sig.length + '_' + sig.slice(0, 40) : 'empty');
         }
 
+        // 从痕迹库派生题集完成状态，并恢复上次浏览位置
         function loadProgressFor(qs) {
-            try {
-                const saved = JSON.parse(localStorage.getItem(progressKey()) || 'null');
-                if (!saved) return;
-                if (saved.passageCompleted && saved.passageCompleted.length === qs.length) {
-                    passageCompleted = saved.passageCompleted;
-                }
-                if (saved.currentPassage !== undefined && saved.currentPassage < qs.length) {
-                    currentPassageIndex = saved.currentPassage;
-                }
-            } catch (e) { /* 忽略损坏数据 */ }
+            passageCompleted = qs.map(q => !!(getTrace(q.id) || {}).completed);
+            loadTraceStore();
+            const lastQid = traceStore._meta && traceStore._meta.lastQid;
+            if (lastQid) {
+                const idx = qs.findIndex(q => q.id === lastQid);
+                if (idx >= 0) currentPassageIndex = idx;
+            }
         }
 
         document.getElementById('excelFile').addEventListener('change', function(e) {
@@ -1667,12 +1834,20 @@
                 </div>
             `;
 
+            // 做题状态徽章：已答对 / 有错误 / 进行中
+            const st = qStatus(q.id);
+            const stMeta = Q_STATUS_META[st];
+            const statusBadge = stMeta
+                ? `<span class="q-status-pill st-${st}">${stMeta.label}</span>`
+                : '';
+
             // 渲染带有标题和标签的头部
             header.innerHTML = `
                 <div class="title-area">
                     <div class="question-title-main">
                         ${displayTitle}
                         <span class="question-id-sub">(编号: ${escapeHtml(q.id)})</span>
+                        ${statusBadge}
                     </div>
                     ${tagsHtml}
                 </div>
@@ -1708,6 +1883,7 @@
 
             updateProgress();
             updateNavigationButtons();
+            restoreInputs(); // 渲染后立即恢复已填字母与对错样式
         }
 
         function renderPassage(question, qIndex) {
@@ -1753,8 +1929,10 @@
 
         function nextPassage() {
             if (currentPassageIndex < questions.length - 1) {
+                saveProgress();
                 currentPassageIndex++;
                 renderCurrentPassage();
+                restoreInputs();
             } else {
                 alert('已经是最后一篇了！');
             }
@@ -1762,8 +1940,10 @@
 
         function previousPassage() {
             if (currentPassageIndex > 0) {
+                saveProgress();
                 currentPassageIndex--;
                 renderCurrentPassage();
+                restoreInputs();
             } else {
                 alert('已经是第一篇了！');
             }
@@ -1779,16 +1959,28 @@
         }
 
         function clearAllQuestions() {
-            if (confirm('确定要清空当前筛选条件与练习进度吗？')) {
+            if (confirm('确定要重置筛选条件为全部题目吗？\n（做题记录默认完整保留）')) {
                 document.getElementById('monthFilter').value = '';
                 document.getElementById('sourceFilter').value = '';
                 document.getElementById('topicFilter').value = '';
                 document.getElementById('difficultyFilter').value = '';
                 document.getElementById('keywordSearch').value = '';
-                try { localStorage.removeItem(progressKey()); } catch (e) {}
                 applyFilters();
-                alert('已重置为全部题目，进度已清空！');
+                if (confirm('是否同时清空全部做题记录？\n\n⚠️ 将删除所有题目的已填字母、对错标记与成绩，清空后无法恢复。\n（仅在新学生使用时建议选择清空）')) {
+                    clearAllTraces();
+                    applyFilters();
+                    alert('已重置为全部题目，做题记录已清空。');
+                }
             }
+        }
+
+        // 显式清空全部做题痕迹（仅用户主动触发；刷新 / 重开 / 切筛选均不会调用）
+        function clearAllTraces() {
+            loadTraceStore();
+            traceStore = { _meta: traceStore._meta || {} };
+            delete traceStore._meta.lastQid;
+            persistTraceStore();
+            try { localStorage.removeItem(progressKey()); } catch (e) {}
         }
 
         function clearAllQuestionsInternal() {
@@ -1797,7 +1989,7 @@
             passageCompleted = [];
             passageSubmitted = [];
             stats = { total: 0, completed: 0, correct: 0 };
-            try { localStorage.removeItem(progressKey()); } catch (e) {}
+            // v3：痕迹按题 id 存储，自定义导入题清空后痕迹仍按 id 保留，不影响题库题
             document.getElementById('fileName').textContent = '';
         }
 
@@ -2051,7 +2243,7 @@
                     const group = blankGroups[bi];
                     const userStr = group ? group.map(inp => inp.value.trim().toLowerCase()).join('') : '';
                     if (userStr !== (b.answer || '').toLowerCase()) {
-                        wordErrors.push({ word: b.word, prefix: b.prefix || '', myAnswer: userStr, correctAnswer: b.answer });
+                        wordErrors.push({ word: b.word, prefix: b.prefix || '', myAnswer: userStr, correctAnswer: b.answer, blankIndex: bi });
                     }
                 });
                 if (wordErrors.length > 0) {
@@ -2066,8 +2258,33 @@
                 }
             }
 
+            // ===== 痕迹库：记录本次得分（供进度点着色与刷新后恢复横幅）=====
+            if (filledBlanks > 0 && hasAnswerData && totalBlanks > 0) {
+                const wrongLetterCount = wrongAnswers.length;
+                recordCheckResult(currentQuestion.id, correctBlanks, totalBlanks, wrongLetterCount);
+                refreshStatusBadge(); // 提交后立即更新头部状态徽章
+            }
+
             updateProgress();
             saveProgress();
+        }
+
+        // 提交判分后即时刷新头部状态徽章（无需整卡重渲染，避免丢失反馈内容）
+        function refreshStatusBadge() {
+            const q = questions[currentPassageIndex];
+            if (!q) return;
+            const title = document.querySelector('.question-title-main');
+            if (!title) return;
+            let pill = title.querySelector('.q-status-pill');
+            const st = qStatus(q.id);
+            const meta = Q_STATUS_META[st];
+            if (!meta) { if (pill) pill.remove(); return; }
+            if (!pill) {
+                pill = document.createElement('span');
+                title.appendChild(pill);
+            }
+            pill.className = 'q-status-pill st-' + st;
+            pill.textContent = meta.label;
         }
 
         function showErrorModal() {
@@ -2219,14 +2436,30 @@
             const progressIndicator = document.getElementById('progressIndicator');
             if (progressIndicator) {
                 progressIndicator.innerHTML = `
-                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px;">
-                        ${questions.map((q, index) => `
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap;">
+                        ${questions.map((q, index) => {
+                            const st = qStatus(q.id);
+                            const color = index === currentPassageIndex
+                                ? 'var(--primary-color)'
+                                : (st === 'correct' ? 'var(--success-color)'
+                                  : st === 'wrong' ? 'var(--error-color)'
+                                  : st === 'done' ? '#00838f'
+                                  : st === 'partial' ? 'var(--warning-color, #e6a817)'
+                                  : '#ccc');
+                            const mark = st === 'correct' ? '✓' : (st === 'wrong' ? '✗' : '');
+                            const tipMap = { correct: '已答对', wrong: '有错误', done: '已完成', partial: '进行中' };
+                            return `
                             <div class="progress-dot ${index === currentPassageIndex ? 'active' : ''} ${passageCompleted[index] ? 'completed' : ''}"
-                                 style="width: 12px; height: 12px; border-radius: 50%; background: ${index === currentPassageIndex ? 'var(--primary-color)' : passageCompleted[index] ? 'var(--success-color)' : '#ccc'}; cursor: pointer;"
+                                 style="width: 14px; height: 14px; border-radius: 50%; background: ${color}; cursor: pointer; ${index === currentPassageIndex ? 'outline: 2px solid var(--primary-color); outline-offset: 2px;' : ''} display: flex; align-items: center; justify-content: center; color: #fff; font-size: 9px; line-height: 1;"
                                  onclick="goToPassage(${index})"
-                                 title="${q.id} ${index === currentPassageIndex ? '(当前)' : ''} ${passageCompleted[index] ? '(已完成)' : ''} ${index > currentPassageIndex && !passageCompleted[index] ? '(未解锁)' : ''}">
-                            </div>
-                        `).join('')}
+                                 title="${q.id} ${index === currentPassageIndex ? '(当前)' : ''} ${tipMap[st] ? '(' + tipMap[st] + ')' : '(未作答)'}">${mark}</div>`;
+                        }).join('')}
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 12px; font-size: 0.78em; color: #888; flex-wrap: wrap;">
+                        <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--success-color);margin-right:4px;vertical-align:middle;"></span>已答对</span>
+                        <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--error-color);margin-right:4px;vertical-align:middle;"></span>有错误</span>
+                        <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--warning-color,#e6a817);margin-right:4px;vertical-align:middle;"></span>进行中</span>
+                        <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#ccc;margin-right:4px;vertical-align:middle;"></span>未作答</span>
                     </div>
                     <div style="text-align: center; color: var(--primary-color); font-size: 0.9em;">
                         文章 ${currentPassageIndex + 1} / ${totalCount}
@@ -2236,8 +2469,10 @@
         }
 
         function goToPassage(index) {
+            saveProgress();
             currentPassageIndex = index;
             renderCurrentPassage();
+            restoreInputs();
         }
 
         function updateNavigationButtons() {
@@ -2419,6 +2654,7 @@
             });
             const firstInput = container.querySelector('input');
             if (firstInput) firstInput.focus();
+            setTimeout(saveProgress, 50); // v3：清空后立即持久化
         }
 
         function handleDoubleClick(event) {
@@ -2430,67 +2666,43 @@
 
         function saveProgress() {
             if (!questions.length) return;
-            const inputs = document.querySelectorAll('.blank');
-            const progress = {
-                currentPassage: currentPassageIndex,
-                passageCompleted: passageCompleted,
-                answers: {},
-                inputStates: {}
-            };
+            const q = questions[currentPassageIndex];
+            if (!q) return;
+            loadTraceStore();
+            if (!traceStore[q.id]) traceStore[q.id] = { answers: {}, inputStates: {} };
+            const t = traceStore[q.id];
 
+            const inputs = document.querySelectorAll('.blank');
+            const answers = {};
+            const inputStates = {};
             inputs.forEach(input => {
-                const key = `${input.dataset.question}-${input.dataset.blank}-${input.dataset.position}`;
-                progress.answers[key] = input.value;
+                const key = `${input.dataset.blank}-${input.dataset.position}`;
+                answers[key] = input.value;
                 if (input.classList.contains('correct')) {
-                    progress.inputStates[key] = 'correct';
+                    inputStates[key] = 'correct';
                 } else if (input.classList.contains('incorrect')) {
-                    progress.inputStates[key] = 'incorrect';
+                    inputStates[key] = 'incorrect';
                 } else if (input.classList.contains('hint')) {
-                    progress.inputStates[key] = 'hint';
+                    inputStates[key] = 'hint';
                 }
                 const correctAnswer = input.getAttribute('data-correct-answer');
                 if (correctAnswer) {
-                    progress.inputStates[key + '_correctAnswer'] = correctAnswer;
+                    inputStates[key + '_correctAnswer'] = correctAnswer;
                 }
             });
+            t.answers = answers;
+            t.inputStates = inputStates;
+            t.completed = !!passageCompleted[currentPassageIndex];
+            t.updatedAt = new Date().toISOString();
+            traceStore._meta.lastQid = q.id;
 
-            try { localStorage.setItem(progressKey(), JSON.stringify(progress)); } catch (e) {}
+            persistTraceStore();
         }
 
         function loadProgress() {
-            // 渲染后恢复当前题目已填字母（进度条目本身已在 loadProgressFor 读取）
-            let saved;
-            try { saved = JSON.parse(localStorage.getItem(progressKey()) || 'null'); } catch (e) { return; }
-            if (!saved) return;
-
+            // 渲染后恢复当前题目已填字母（完成状态已在 loadProgressFor 从痕迹库派生）
             renderCurrentPassage();
-
-            if (saved.answers) {
-                const inputs = document.querySelectorAll('.blank');
-                inputs.forEach(input => {
-                    const key = `${input.dataset.question}-${input.dataset.blank}-${input.dataset.position}`;
-
-                    if (saved.answers[key]) {
-                        input.value = saved.answers[key];
-                    }
-
-                    if (saved.inputStates) {
-                        const state = saved.inputStates[key];
-                        if (state === 'correct') {
-                            input.classList.add('correct');
-                        } else if (state === 'incorrect') {
-                            input.classList.add('incorrect', 'show-answer');
-                        } else if (state === 'hint') {
-                            input.classList.add('show-answer', 'hint');
-                        }
-
-                        const correctAnswer = saved.inputStates[key + '_correctAnswer'];
-                        if (correctAnswer) {
-                            input.setAttribute('data-correct-answer', correctAnswer);
-                        }
-                    }
-                });
-            }
+            restoreInputs();
         }
 
         // ============ 错题本模块 ============
@@ -2640,6 +2852,7 @@
             const stIdx = WB_STATUSES.indexOf(it.status);
             const kpBadges = (it.knowledgePoints || []).map(k => `<span class="wb-badge">${escapeHtml(k)}</span>`).join(' ');
             const mine = it.myAnswer ? (escapeHtml(it.prefix || '') + '<span class="mine">' + escapeHtml(it.myAnswer) + '</span>') : '<span style="color:#999;">（未填写）</span>';
+            const canJump = it.questionId && typeof allQuestions !== 'undefined' && allQuestions.some(q => q.id === it.questionId);
             return `
                 <div class="wb-card st-${stIdx === 2 ? 'done' : (stIdx === 1 ? 'doing' : 'undo')}">
                     <div class="wb-card-head">
@@ -2655,10 +2868,63 @@
                             ${WB_STATUSES.map((st, i) => `<button class="${i === stIdx ? (i === 0 ? 'on-undo' : (i === 1 ? 'on-doing' : 'on-done')) : ''}" onclick="wbSetStatus('${it.id}', '${st}')">${['🔴 未掌握', '🟡 复习中', '🟢 已掌握'][i]}</button>`).join('')}
                         </div>
                         <span style="flex:1;"></span>
+                        ${canJump ? `<button class="wb-mini-btn wb-jump-btn" onclick="wbJumpToQuestion('${it.id}')" title="跳转到该单词所在的原始题目">↩ 返回题目</button>` : ''}
                         <button class="wb-mini-btn" onclick="openWbForm('${it.id}')">✏️ 编辑</button>
                         <button class="wb-mini-btn" id="del-${it.id}" onclick="wbDeleteClick('${it.id}')">🗑️ 删除</button>
                     </div>
                 </div>`;
+        }
+
+        // ---------- 一键返回题目：定位原题并高亮目标单词 ----------
+        function wbJumpToQuestion(id) {
+            const it = wrongBookItems.find(x => x.id === id);
+            if (!it || !it.questionId) { alert('该错题未关联题目，无法跳转。'); return; }
+            const q = (typeof allQuestions !== 'undefined' ? allQuestions : []).find(x => x.id === it.questionId);
+            if (!q) { alert('未在当前题库中找到对应题目（可能来自自定义导入），无法跳转。'); return; }
+
+            // 1) 切回练习视图
+            switchView('practice');
+
+            // 2) 目标题不在当前筛选结果中 → 重置筛选条件
+            if (!questions.some(x => x.id === q.id)) resetAllFilters();
+
+            // 3) 定位并渲染
+            const idx = questions.findIndex(x => x.id === q.id);
+            if (idx < 0) { alert('题目定位失败，请检查筛选条件。'); return; }
+            currentPassageIndex = idx;
+            renderCurrentPassage();   // 内部已调用 restoreInputs 恢复做题痕迹
+            saveProgress();
+
+            // 4) 滚动定位 + 目标单词高亮
+            const smoothScroll = (el, opt) => { try { if (el && el.scrollIntoView) el.scrollIntoView(opt); } catch (e) {} };
+            setTimeout(() => {
+                let target = null;
+                if (typeof it.blankIndex === 'number' && it.blankIndex >= 0) {
+                    target = document.querySelector(`.word-blank[data-blank-id="${it.blankIndex}"]`);
+                }
+                if (!target) {
+                    // 兜底：按单词匹配空位
+                    const bl = (q.blanks || []).findIndex(b => b.word === it.word);
+                    if (bl >= 0) target = document.querySelector(`.word-blank[data-blank-id="${bl}"]`);
+                }
+                if (!target) target = document.querySelector('.word-blank'); // 最终兜底：第一个空
+
+                const card = document.querySelector('.question-card');
+                if (card) {
+                    card.classList.remove('jump-target');
+                    void card.offsetWidth;
+                    card.classList.add('jump-target');
+                    smoothScroll(card, { behavior: 'smooth', block: 'start' });
+                }
+                if (target) {
+                    target.classList.remove('jump-flash');
+                    void target.offsetWidth;
+                    target.classList.add('jump-flash');
+                    setTimeout(() => smoothScroll(target, { behavior: 'smooth', block: 'center' }), 400);
+                    const first = target.querySelector('input');
+                    if (first) setTimeout(() => { first.focus(); smoothScroll(first, { block: 'nearest' }); }, 900);
+                }
+            }, 100);
         }
 
         function renderWbList() {
@@ -2794,6 +3060,7 @@
                 wrongBookItems.push({
                     id: wbId(),
                     questionId: question.id || '',
+                    blankIndex: (typeof c.blankIndex === 'number') ? c.blankIndex : -1,
                     word: c.word,
                     prefix: c.prefix || '',
                     myAnswer: c.myAnswer || '',

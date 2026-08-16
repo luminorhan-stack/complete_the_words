@@ -721,6 +721,323 @@
         .translation-box.open .trans-body {
             display: block;
         }
+
+        /* ============ 错题本模块 ============ */
+        .view-nav {
+            display: flex;
+            background: #fff;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .view-nav button {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            background: transparent;
+            font-size: 15px;
+            font-weight: 600;
+            color: #888;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -3px;
+            transition: all 0.2s;
+        }
+
+        .view-nav button:hover { color: var(--primary-color); }
+
+        .view-nav button.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+            background: var(--secondary-color);
+        }
+
+        .wb-dashboard {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .wb-stat-card {
+            background: var(--secondary-color);
+            border-radius: 10px;
+            padding: 14px;
+            text-align: center;
+        }
+
+        .wb-stat-card .num {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        .wb-stat-card .lbl { font-size: 0.82em; color: #666; margin-top: 2px; }
+        .wb-stat-card.st-undo .num { color: var(--error-color); }
+        .wb-stat-card.st-doing .num { color: var(--warning-color); }
+        .wb-stat-card.st-done .num { color: var(--success-color); }
+
+        .wb-charts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .wb-chart-card {
+            background: #fafaf7;
+            border: 1px solid #e8e8e2;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .wb-chart-card h4 {
+            font-size: 0.92em;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        .wb-bar-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 0.82em;
+        }
+
+        .wb-bar-row .bar-label { width: 84px; text-align: right; color: #555; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+        .wb-bar-row .bar-track {
+            flex: 1;
+            height: 14px;
+            background: #eee;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .wb-bar-row .bar-fill {
+            height: 100%;
+            border-radius: 7px;
+            background: var(--primary-color);
+            transition: width 0.4s;
+            min-width: 4px;
+        }
+
+        .wb-bar-row .bar-val { width: 30px; color: #777; flex-shrink: 0; }
+
+        .wb-kp-cloud { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+
+        .wb-kp-tag {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 12px;
+            padding: 3px 10px;
+            cursor: default;
+        }
+
+        .wb-kp-tag.f2 { font-weight: 700; background: #cfe3d8; }
+        .wb-kp-tag.f3 { font-weight: 700; background: var(--primary-color); color: #fff; }
+
+        .wb-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            padding: 14px 16px;
+            background: var(--secondary-color);
+            border-radius: 10px;
+            margin-bottom: 16px;
+        }
+
+        .wb-toolbar select, .wb-toolbar input[type="text"] {
+            padding: 8px 10px;
+            border: 1px solid #cfd8d2;
+            border-radius: 6px;
+            font-size: 13px;
+            background: #fff;
+        }
+
+        .wb-toolbar .spacer { flex: 1; }
+
+        .wb-card {
+            background: #fff;
+            border: 1px solid #e8e8e2;
+            border-left: 4px solid var(--error-color);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            transition: box-shadow 0.2s;
+        }
+
+        .wb-card:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.08); }
+        .wb-card.st-doing { border-left-color: var(--warning-color); }
+        .wb-card.st-done { border-left-color: var(--success-color); opacity: 0.78; }
+
+        .wb-card-head {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .wb-card-head .word { font-size: 1.25em; font-weight: 700; color: var(--text-color); }
+
+        .wb-badge {
+            font-size: 0.72em;
+            padding: 2px 9px;
+            border-radius: 10px;
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            white-space: nowrap;
+        }
+
+        .wb-badge.date { background: #f0f0ea; color: #888; }
+
+        .wb-compare {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.88em;
+            background: #fafaf7;
+            border-radius: 6px;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .wb-compare .mine { color: var(--error-color); text-decoration: line-through; }
+        .wb-compare .right { color: var(--primary-color); font-weight: 700; }
+
+        .wb-reason { font-size: 0.85em; color: #555; margin-bottom: 10px; }
+        .wb-reason strong { color: var(--warning-color); }
+
+        .wb-card-foot {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .wb-status-group { display: flex; gap: 0; border-radius: 6px; overflow: hidden; border: 1px solid #ddd; }
+
+        .wb-status-group button {
+            border: none;
+            padding: 6px 12px;
+            font-size: 0.78em;
+            cursor: pointer;
+            background: #fff;
+            color: #888;
+            transition: all 0.15s;
+        }
+
+        .wb-status-group button.on-undo { background: var(--error-color); color: #fff; }
+        .wb-status-group button.on-doing { background: var(--warning-color); color: #fff; }
+        .wb-status-group button.on-done { background: var(--success-color); color: #fff; }
+
+        .wb-mini-btn {
+            border: 1px solid #cfd8d2;
+            background: #fff;
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 0.78em;
+            cursor: pointer;
+            color: #555;
+        }
+
+        .wb-mini-btn:hover { border-color: var(--primary-color); color: var(--primary-color); }
+        .wb-mini-btn.danger-armed { background: var(--error-color); border-color: var(--error-color); color: #fff; }
+
+        .wb-archive-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 16px;
+            background: #f4f9f5;
+            border: 1px dashed var(--success-color);
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 22px;
+            font-weight: 600;
+            color: var(--success-color);
+        }
+
+        .wb-empty {
+            text-align: center;
+            padding: 44px 20px;
+            color: #999;
+        }
+
+        .wb-empty .icon { font-size: 2.6em; margin-bottom: 10px; }
+
+        /* 收录/编辑弹窗内部 */
+        .wb-collect-list { max-height: 46vh; overflow-y: auto; margin: 10px 0; }
+
+        .wb-collect-item {
+            border: 1px solid #e5e5df;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: #fff;
+        }
+
+        .wb-collect-item.disabled { background: #f6f6f2; opacity: 0.65; }
+
+        .wb-collect-item .ci-top {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .wb-collect-item .ci-word { font-weight: 700; font-size: 1.05em; }
+
+        .wb-collect-item select, .wb-collect-item input[type="text"] {
+            padding: 6px 8px;
+            border: 1px solid #cfd8d2;
+            border-radius: 6px;
+            font-size: 0.85em;
+        }
+
+        .wb-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+
+        .wb-chips .chip {
+            border: 1px solid #cfd8d2;
+            background: #fff;
+            color: #666;
+            border-radius: 12px;
+            padding: 3px 11px;
+            font-size: 0.78em;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .wb-chips .chip.on { background: var(--primary-color); border-color: var(--primary-color); color: #fff; }
+
+        .wb-form-row { margin-bottom: 14px; }
+
+        .wb-form-row label { display: block; font-size: 0.85em; font-weight: 600; color: #555; margin-bottom: 6px; }
+
+        .wb-form-row input[type="text"], .wb-form-row input[type="date"], .wb-form-row select, .wb-form-row textarea {
+            width: 100%;
+            padding: 9px 11px;
+            border: 1px solid #cfd8d2;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .wb-form-row textarea { resize: vertical; min-height: 60px; }
+
+        .wb-form-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+        @media (max-width: 768px) {
+            .wb-dashboard { grid-template-columns: repeat(2, 1fr); }
+            .wb-charts { grid-template-columns: 1fr; }
+            .wb-toolbar select, .wb-toolbar input[type="text"] { flex: 1 1 44%; }
+            .wb-form-grid2 { grid-template-columns: 1fr; }
+            .view-nav button { padding: 12px 8px; font-size: 14px; }
+            .wb-bar-row .bar-label { width: 68px; font-size: 0.92em; }
+        }
     </style>
 </head>
 <body>
@@ -729,6 +1046,11 @@
             <h1>TOEFL Reading Complete the Words</h1>
             <p>托福阅读·填空题练习系统 - 提升词汇量与阅读能力</p>
         </header>
+
+        <nav class="view-nav">
+            <button id="navPractice" class="active" onclick="switchView('practice')">✏️ 练习模式</button>
+            <button id="navWrongbook" onclick="switchView('wrongbook')">📕 错题本</button>
+        </nav>
 
         <div class="main-content">
             <div class="upload-section" id="uploadSection" style="display: none;">
@@ -791,6 +1113,55 @@
                     <button class="btn btn-primary" id="nextBtn" onclick="nextPassage()">下一篇 →</button>
                 </div>
             </div>
+
+            <!-- ============ 错题本视图 ============ -->
+            <div id="wrongbookSection" style="display: none;">
+                <div class="wb-dashboard" id="wbDashboard"></div>
+                <div class="wb-charts">
+                    <div class="wb-chart-card">
+                        <h4>📊 各学科错题占比（全部数据）</h4>
+                        <div id="wbDisciplineChart"></div>
+                    </div>
+                    <div class="wb-chart-card">
+                        <h4>🔥 高频错误原因排行 Top 5</h4>
+                        <div id="wbReasonChart"></div>
+                    </div>
+                </div>
+                <div class="wb-chart-card" style="margin-bottom: 20px;">
+                    <h4>🏷️ 知识点频次</h4>
+                    <div class="wb-kp-cloud" id="wbKpCloud"></div>
+                </div>
+
+                <div class="wb-toolbar">
+                    <select id="wbDisciplineFilter" onchange="renderWrongBook()">
+                        <option value="">全部学科</option>
+                    </select>
+                    <select id="wbKpFilter" onchange="renderWrongBook()">
+                        <option value="">全部知识点</option>
+                    </select>
+                    <select id="wbDateFilter" onchange="renderWrongBook()">
+                        <option value="">全部时间</option>
+                        <option value="7d">近 7 天</option>
+                        <option value="30d">近 30 天</option>
+                        <option value="90d">近 90 天</option>
+                    </select>
+                    <select id="wbStatusFilter" onchange="renderWrongBook()">
+                        <option value="">全部状态（未归档）</option>
+                        <option value="未掌握">未掌握</option>
+                        <option value="复习中">复习中</option>
+                        <option value="已掌握">已掌握</option>
+                    </select>
+                    <input type="text" id="wbSearch" placeholder="🔍 搜索单词 / 备注关键词" oninput="debouncedWbRender()">
+                    <span class="spacer"></span>
+                    <button class="btn btn-primary" style="padding: 8px 16px; font-size: 13px;" onclick="openWbForm(null)">＋ 添加错题</button>
+                    <button class="wb-mini-btn" onclick="exportWrongBook()" title="下载 JSON 备份">📤 导出</button>
+                    <button class="wb-mini-btn" onclick="document.getElementById('wbImportFile').click()" title="从 JSON 备份恢复">📥 导入</button>
+                    <input type="file" id="wbImportFile" accept=".json" style="display:none" onchange="importWrongBook(this)">
+                </div>
+
+                <div id="wbList"></div>
+                <div id="wbArchive"></div>
+            </div>
         </div>
     </div>
 
@@ -802,6 +1173,95 @@
             </div>
             <div class="modal-body" id="errorModalBody">
                 </div>
+        </div>
+    </div>
+
+    <!-- 错词收录弹窗 -->
+    <div class="modal-overlay" id="wbCollectOverlay">
+        <div class="error-modal" style="max-width: 620px;">
+            <div class="modal-header">
+                <h2>📥 收录错词到错题本</h2>
+                <button class="modal-close" onclick="closeWbCollect()" title="关闭">×</button>
+            </div>
+            <div class="modal-body">
+                <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:6px;">
+                    <span style="font-size:0.85em; color:#666;">批量设置原因：</span>
+                    <select id="wbBatchReason" onchange="applyBatchReason(this.value)" style="padding:6px 8px; border:1px solid #cfd8d2; border-radius:6px; font-size:0.85em;"></select>
+                </div>
+                <div class="wb-collect-list" id="wbCollectList"></div>
+                <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:10px;">
+                    <button class="btn btn-secondary" style="padding:9px 20px; font-size:14px;" onclick="closeWbCollect()">取消</button>
+                    <button class="btn btn-primary" style="padding:9px 20px; font-size:14px;" onclick="saveCollected()">💾 保存所选</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 错题 添加/编辑 弹窗 -->
+    <div class="modal-overlay" id="wbFormOverlay">
+        <div class="error-modal" style="max-width: 560px;">
+            <div class="modal-header">
+                <h2 id="wbFormTitle">＋ 添加错题</h2>
+                <button class="modal-close" onclick="closeWbForm()" title="关闭">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="wb-form-row">
+                    <label>完整单词 *</label>
+                    <input type="text" id="wbFormWord" placeholder="如 ecosystem">
+                </div>
+                <div class="wb-form-grid2">
+                    <div class="wb-form-row">
+                        <label>我的错误答案（缺失字母）</label>
+                        <input type="text" id="wbFormMine" placeholder="如 osysten">
+                    </div>
+                    <div class="wb-form-row">
+                        <label>正确答案（缺失字母）*</label>
+                        <input type="text" id="wbFormRight" placeholder="如 osystem">
+                    </div>
+                </div>
+                <div class="wb-form-grid2">
+                    <div class="wb-form-row">
+                        <label>所属学科 *</label>
+                        <input type="text" id="wbFormDiscipline" list="wbDisciplineList" placeholder="选择或输入">
+                        <datalist id="wbDisciplineList">
+                            <option value="生命科学"></option>
+                            <option value="自然科学"></option>
+                            <option value="社会科学"></option>
+                            <option value="艺术"></option>
+                        </datalist>
+                    </div>
+                    <div class="wb-form-row">
+                        <label>录入日期 *</label>
+                        <input type="date" id="wbFormDate">
+                    </div>
+                </div>
+                <div class="wb-form-row">
+                    <label>知识点标签（点击多选）</label>
+                    <div class="wb-chips" id="wbFormKpChips"></div>
+                </div>
+                <div class="wb-form-grid2">
+                    <div class="wb-form-row">
+                        <label>错误原因 *</label>
+                        <select id="wbFormReason"></select>
+                    </div>
+                    <div class="wb-form-row">
+                        <label>掌握状态</label>
+                        <select id="wbFormStatus">
+                            <option>未掌握</option>
+                            <option>复习中</option>
+                            <option>已掌握</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="wb-form-row">
+                    <label>错误原因分析（备注）</label>
+                    <textarea id="wbFormNote" placeholder="可选：如双写字母遗漏、词根记混……"></textarea>
+                </div>
+                <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:6px;">
+                    <button class="btn btn-secondary" style="padding:9px 20px; font-size:14px;" onclick="closeWbForm()">取消</button>
+                    <button class="btn btn-primary" style="padding:9px 20px; font-size:14px;" onclick="saveWbForm()">💾 保存</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -882,6 +1342,7 @@
             });
 
             document.getElementById('dbToolbar').style.display = 'flex';
+            dbToolbarVisible = true;
             applyFilters();
         }
 
@@ -1125,6 +1586,7 @@
 
             allQuestions = questions;
             document.getElementById('dbToolbar').style.display = 'none';  // 自定义导入无筛选维度
+            dbToolbarVisible = false;
             passageCompleted = new Array(questions.length).fill(false);
             currentPassageIndex = 0;
             stats.total = questions.length;
@@ -1582,6 +2044,28 @@
                 updateNavigationButtons();
             }
 
+            // ===== 错题本自动收录：词级错误检测（填错或未填写的空都算）=====
+            if (hasAnswerData && filledBlanks > 0) {
+                const wordErrors = [];
+                (currentQuestion.blanks || []).forEach((b, bi) => {
+                    const group = blankGroups[bi];
+                    const userStr = group ? group.map(inp => inp.value.trim().toLowerCase()).join('') : '';
+                    if (userStr !== (b.answer || '').toLowerCase()) {
+                        wordErrors.push({ word: b.word, prefix: b.prefix || '', myAnswer: userStr, correctAnswer: b.answer });
+                    }
+                });
+                if (wordErrors.length > 0) {
+                    offerWrongBookCollection(wordErrors, currentQuestion);
+                    const fb = document.getElementById('feedback-current');
+                    if (fb) {
+                        const div = document.createElement('div');
+                        div.style.marginTop = '10px';
+                        div.innerHTML = `<button class="view-error-btn" onclick="openCollectModal()">📥 收录 ${wordErrors.length} 个错词到错题本</button>`;
+                        fb.appendChild(div);
+                    }
+                }
+            }
+
             updateProgress();
             saveProgress();
         }
@@ -2008,6 +2492,441 @@
                 });
             }
         }
+
+        // ============ 错题本模块 ============
+        const WB_KEY = 'wrongBook_v1';
+        const WB_REASONS = ['拼写错误', '词汇不认识', '形近词混淆', '语境理解偏差', '语法搭配', '粗心失误', '其他'];
+        const WB_KPS = ['拼写规则', '词根词缀', '学科词汇', '形近词', '固定搭配'];
+        const WB_STATUSES = ['未掌握', '复习中', '已掌握'];
+        const WB_DISCIPLINES = ['生命科学', '自然科学', '社会科学', '艺术'];
+        let dbToolbarVisible = false; // 题库模式下工具栏是否应显示（自定义导入后为 false）
+
+        let wrongBookItems = [];
+        let wbArchiveOpen = false;
+        let wbEditingId = null;
+        let wbPendingCollect = [];
+        let wbFormKpSelected = [];
+        let wbRenderTimer = null;
+
+        function wbId() {
+            return 'wb-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 8);
+        }
+
+        function wbToday() {
+            const d = new Date();
+            return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+        }
+
+        function loadWrongBook() {
+            try {
+                const raw = JSON.parse(localStorage.getItem(WB_KEY) || 'null');
+                if (raw && Array.isArray(raw.items)) {
+                    wrongBookItems = raw.items.filter(it => it && it.id && it.word);
+                }
+            } catch (e) { wrongBookItems = []; }
+        }
+
+        function saveWrongBook() {
+            try {
+                localStorage.setItem(WB_KEY, JSON.stringify({ schemaVersion: '1.0', savedAt: new Date().toISOString(), items: wrongBookItems }));
+                return true;
+            } catch (e) { return false; }
+        }
+
+        function switchView(view) {
+            const isPractice = view === 'practice';
+            document.getElementById('navPractice').classList.toggle('active', isPractice);
+            document.getElementById('navWrongbook').classList.toggle('active', !isPractice);
+            document.getElementById('wrongbookSection').style.display = isPractice ? 'none' : 'block';
+            document.getElementById('dbToolbar').style.display = isPractice && dbToolbarVisible ? 'flex' : 'none';
+            document.getElementById('uploadSection').style.display = (!isPractice || dbToolbarVisible || typeof QUESTION_DB !== 'undefined') ? 'none' : 'block';
+            document.getElementById('questionsSection').style.display = isPractice ? 'block' : 'none';
+            if (!isPractice) renderWrongBook();
+        }
+
+        // ---------- 渲染 ----------
+        function debouncedWbRender() {
+            clearTimeout(wbRenderTimer);
+            wbRenderTimer = setTimeout(renderWrongBook, 250);
+        }
+
+        function renderWrongBook() {
+            renderWbDashboard();
+            renderWbFilterOptions();
+            renderWbList();
+        }
+
+        function renderWbDashboard() {
+            const items = wrongBookItems;
+            const byStatus = s => items.filter(it => it.status === s).length;
+            document.getElementById('wbDashboard').innerHTML = `
+                <div class="wb-stat-card"><div class="num">${items.length}</div><div class="lbl">错题总数</div></div>
+                <div class="wb-stat-card st-undo"><div class="num">${byStatus('未掌握')}</div><div class="lbl">🔴 未掌握</div></div>
+                <div class="wb-stat-card st-doing"><div class="num">${byStatus('复习中')}</div><div class="lbl">🟡 复习中</div></div>
+                <div class="wb-stat-card st-done"><div class="num">${byStatus('已掌握')}</div><div class="lbl">🟢 已掌握</div></div>`;
+
+            // 学科占比条形图
+            const discCount = {};
+            items.forEach(it => { const d = it.discipline || '未分类'; discCount[d] = (discCount[d] || 0) + 1; });
+            const discMax = Math.max(1, ...Object.values(discCount));
+            const discHTML = Object.entries(discCount).sort((a, b) => b[1] - a[1]).map(([d, n]) => `
+                <div class="wb-bar-row">
+                    <span class="bar-label">${escapeHtml(d)}</span>
+                    <div class="bar-track"><div class="bar-fill" style="width:${Math.round(n / discMax * 100)}%"></div></div>
+                    <span class="bar-val">${n}</span>
+                </div>`).join('');
+            document.getElementById('wbDisciplineChart').innerHTML = discHTML || '<div style="color:#aaa;font-size:0.85em;">暂无数据</div>';
+
+            // 高频错误原因排行 Top5
+            const reasonCount = {};
+            items.forEach(it => { if (it.reasonCategory) reasonCount[it.reasonCategory] = (reasonCount[it.reasonCategory] || 0) + 1; });
+            const rMax = Math.max(1, ...Object.values(reasonCount));
+            const reasonHTML = Object.entries(reasonCount).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([r, n]) => `
+                <div class="wb-bar-row">
+                    <span class="bar-label">${escapeHtml(r)}</span>
+                    <div class="bar-track"><div class="bar-fill" style="width:${Math.round(n / rMax * 100)}%; background:var(--warning-color);"></div></div>
+                    <span class="bar-val">${n}</span>
+                </div>`).join('');
+            document.getElementById('wbReasonChart').innerHTML = reasonHTML || '<div style="color:#aaa;font-size:0.85em;">暂无数据</div>';
+
+            // 知识点频次
+            const kpCount = {};
+            items.forEach(it => (it.knowledgePoints || []).forEach(k => { kpCount[k] = (kpCount[k] || 0) + 1; }));
+            const kpMax = Math.max(1, ...Object.values(kpCount));
+            const kpHTML = Object.entries(kpCount).sort((a, b) => b[1] - a[1]).map(([k, n]) => {
+                const f = n / kpMax > 0.6 ? 'f3' : (n / kpMax > 0.3 ? 'f2' : '');
+                return `<span class="wb-kp-tag ${f}">${escapeHtml(k)} ×${n}</span>`;
+            }).join('');
+            document.getElementById('wbKpCloud').innerHTML = kpHTML || '<span style="color:#aaa;font-size:0.85em;">暂无数据</span>';
+        }
+
+        function renderWbFilterOptions() {
+            // 学科与知识点下拉选项（保留当前选择）
+            const discSel = document.getElementById('wbDisciplineFilter');
+            const kpSel = document.getElementById('wbKpFilter');
+            const curD = discSel.value, curK = kpSel.value;
+
+            const discs = [...new Set(wrongBookItems.map(it => it.discipline).filter(Boolean))].sort();
+            discSel.innerHTML = '<option value="">全部学科</option>' + discs.map(d => `<option${d === curD ? ' selected' : ''}>${escapeHtml(d)}</option>`).join('');
+
+            const kps = [...new Set(wrongBookItems.flatMap(it => it.knowledgePoints || []))].sort();
+            kpSel.innerHTML = '<option value="">全部知识点</option>' + kps.map(k => `<option${k === curK ? ' selected' : ''}>${escapeHtml(k)}</option>`).join('');
+        }
+
+        function wbMatches(it) {
+            const d = document.getElementById('wbDisciplineFilter').value;
+            const k = document.getElementById('wbKpFilter').value;
+            const range = document.getElementById('wbDateFilter').value;
+            const s = document.getElementById('wbStatusFilter').value;
+            const kw = document.getElementById('wbSearch').value.trim().toLowerCase();
+
+            if (d && it.discipline !== d) return false;
+            if (k && !(it.knowledgePoints || []).includes(k)) return false;
+            if (s && it.status !== s) return false;
+            if (!s && it.status === '已掌握') return false; // 默认视图不含已归档
+            if (range) {
+                const days = parseInt(range);
+                const limit = new Date(Date.now() - days * 86400000);
+                if (new Date(it.date || '1970-01-01') < limit) return false;
+            }
+            if (kw) {
+                const hay = (it.word + ' ' + (it.reasonNote || '') + ' ' + (it.myAnswer || '') + ' ' + (it.reasonCategory || '')).toLowerCase();
+                if (!hay.includes(kw)) return false;
+            }
+            return true;
+        }
+
+        function wbCardHTML(it) {
+            const stIdx = WB_STATUSES.indexOf(it.status);
+            const kpBadges = (it.knowledgePoints || []).map(k => `<span class="wb-badge">${escapeHtml(k)}</span>`).join(' ');
+            const mine = it.myAnswer ? (escapeHtml(it.prefix || '') + '<span class="mine">' + escapeHtml(it.myAnswer) + '</span>') : '<span style="color:#999;">（未填写）</span>';
+            return `
+                <div class="wb-card st-${stIdx === 2 ? 'done' : (stIdx === 1 ? 'doing' : 'undo')}">
+                    <div class="wb-card-head">
+                        <span class="word">${escapeHtml(it.word)}</span>
+                        <span class="wb-badge">${escapeHtml(it.discipline || '未分类')}</span>
+                        ${kpBadges}
+                        <span class="wb-badge date">📅 ${escapeHtml(it.date || '')}</span>
+                    </div>
+                    <div class="wb-compare">我填：${mine}　→　正确：<span class="right">${escapeHtml(it.prefix || '')}${escapeHtml(it.correctAnswer)}</span></div>
+                    <div class="wb-reason">错误原因：<strong>${escapeHtml(it.reasonCategory || '未分类')}</strong>${it.reasonNote ? ' — ' + escapeHtml(it.reasonNote) : ''}</div>
+                    <div class="wb-card-foot">
+                        <div class="wb-status-group">
+                            ${WB_STATUSES.map((st, i) => `<button class="${i === stIdx ? (i === 0 ? 'on-undo' : (i === 1 ? 'on-doing' : 'on-done')) : ''}" onclick="wbSetStatus('${it.id}', '${st}')">${['🔴 未掌握', '🟡 复习中', '🟢 已掌握'][i]}</button>`).join('')}
+                        </div>
+                        <span style="flex:1;"></span>
+                        <button class="wb-mini-btn" onclick="openWbForm('${it.id}')">✏️ 编辑</button>
+                        <button class="wb-mini-btn" id="del-${it.id}" onclick="wbDeleteClick('${it.id}')">🗑️ 删除</button>
+                    </div>
+                </div>`;
+        }
+
+        function renderWbList() {
+            const listEl = document.getElementById('wbList');
+            const archiveEl = document.getElementById('wbArchive');
+            const visible = wrongBookItems.filter(wbMatches);
+
+            if (visible.length === 0) {
+                listEl.innerHTML = `
+                    <div class="wb-empty">
+                        <div class="icon">${wrongBookItems.length === 0 ? '📕' : '🔍'}</div>
+                        <h3>${wrongBookItems.length === 0 ? '错题本还是空的' : '没有符合条件的错题'}</h3>
+                        <p>${wrongBookItems.length === 0 ? '去练习模式提交答案，答错的词可一键收录；也可点上方「＋ 添加错题」手动录入' : '试试放宽筛选条件'}</p>
+                    </div>`;
+            } else {
+                listEl.innerHTML = visible.map(wbCardHTML).join('');
+            }
+
+            // 已掌握归档区
+            const done = wrongBookItems.filter(it => it.status === '已掌握');
+            if (done.length === 0) {
+                archiveEl.innerHTML = '';
+                return;
+            }
+            archiveEl.innerHTML = `
+                <div class="wb-archive-head" onclick="wbArchiveOpen = !wbArchiveOpen; renderWbList();">
+                    <span>${wbArchiveOpen ? '▾' : '▸'} 📦 已掌握归档（${done.length} 题）</span>
+                    <span style="font-size:0.8em; font-weight:400; color:#8aa694;">点击${wbArchiveOpen ? '收起' : '展开'} · 可回退状态</span>
+                </div>
+                ${wbArchiveOpen ? done.map(wbCardHTML).join('') : ''}`;
+        }
+
+        // ---------- 状态与删除 ----------
+        function wbSetStatus(id, status) {
+            const it = wrongBookItems.find(x => x.id === id);
+            if (!it) return;
+            it.status = status;
+            it.updatedAt = new Date().toISOString();
+            saveWrongBook();
+            renderWrongBook();
+        }
+
+        let wbDeleteArmed = null;
+        let wbDeleteTimer = null;
+        function wbDeleteClick(id) {
+            const btn = document.getElementById('del-' + id);
+            if (wbDeleteArmed === id) {
+                wrongBookItems = wrongBookItems.filter(x => x.id !== id);
+                clearTimeout(wbDeleteTimer);
+                wbDeleteArmed = null;
+                saveWrongBook();
+                renderWrongBook();
+                return;
+            }
+            if (wbDeleteArmed) {
+                const oldBtn = document.getElementById('del-' + wbDeleteArmed);
+                if (oldBtn) { oldBtn.classList.remove('danger-armed'); oldBtn.textContent = '🗑️ 删除'; }
+                clearTimeout(wbDeleteTimer);
+            }
+            wbDeleteArmed = id;
+            if (btn) { btn.classList.add('danger-armed'); btn.textContent = '⚠️ 再点一次确认'; }
+            wbDeleteTimer = setTimeout(() => {
+                if (wbDeleteArmed === id) {
+                    wbDeleteArmed = null;
+                    if (btn) { btn.classList.remove('danger-armed'); btn.textContent = '🗑️ 删除'; }
+                }
+            }, 3000);
+        }
+
+        // ---------- 自动收录 ----------
+        function offerWrongBookCollection(wordErrors, question) {
+            wbPendingCollect = wordErrors.map(e => ({
+                ...e,
+                checked: true,
+                exists: wrongBookItems.some(it => it.word === e.word && (it.questionId || '') === (question.id || '')),
+                reason: '拼写错误',
+                note: '',
+                kps: []
+            }));
+        }
+
+        function openCollectModal() {
+            if (wbPendingCollect.length === 0) return;
+            const batchSel = document.getElementById('wbBatchReason');
+            batchSel.innerHTML = WB_REASONS.map(r => `<option>${r}</option>`).join('');
+            renderWbCollectList();
+            document.getElementById('wbCollectOverlay').style.display = 'flex';
+        }
+
+        function renderWbCollectList() {
+            const el = document.getElementById('wbCollectList');
+            el.innerHTML = wbPendingCollect.map((c, i) => `
+                <div class="wb-collect-item ${c.exists ? 'disabled' : ''}">
+                    <div class="ci-top">
+                        <input type="checkbox" ${c.checked && !c.exists ? 'checked' : ''} ${c.exists ? 'disabled' : ''} onchange="wbPendingCollect[${i}].checked = this.checked">
+                        <span class="ci-word">${escapeHtml(c.word)}</span>
+                        ${c.exists ? '<span class="wb-badge" style="background:#f0f0ea;color:#999;">已在错题本</span>' : ''}
+                        <span style="flex:1"></span>
+                        <span style="font-family:monospace; font-size:0.82em; color:#999;">${escapeHtml(c.prefix)}<span style="color:var(--error-color);">${escapeHtml(c.myAnswer || '未填写')}</span> → ${escapeHtml(c.word)}</span>
+                    </div>
+                    ${c.exists ? '' : `
+                    <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+                        <select onchange="wbPendingCollect[${i}].reason = this.value">${WB_REASONS.map(r => `<option${r === c.reason ? ' selected' : ''}>${r}</option>`).join('')}</select>
+                        <input type="text" placeholder="可选：错因备注" style="flex:1; min-width:140px;" value="${escapeHtml(c.note || '')}" oninput="wbPendingCollect[${i}].note = this.value">
+                    </div>
+                    <div class="wb-chips">
+                        ${WB_KPS.map(k => `<span class="chip ${c.kps.includes(k) ? 'on' : ''}" onclick="wbToggleCollectKp(${i}, '${k}')">${k}</span>`).join('')}
+                    </div>`}
+                </div>`).join('');
+        }
+
+        function wbToggleCollectKp(i, k) {
+            const arr = wbPendingCollect[i].kps;
+            const idx = arr.indexOf(k);
+            idx >= 0 ? arr.splice(idx, 1) : arr.push(k);
+            renderWbCollectList();
+        }
+
+        function applyBatchReason(reason) {
+            wbPendingCollect.forEach(c => { if (!c.exists) c.reason = reason; });
+            renderWbCollectList();
+        }
+
+        function closeWbCollect() {
+            document.getElementById('wbCollectOverlay').style.display = 'none';
+        }
+
+        function saveCollected() {
+            const question = questions[currentPassageIndex] || {};
+            let added = 0;
+            wbPendingCollect.forEach(c => {
+                if (!c.checked || c.exists) return;
+                wrongBookItems.push({
+                    id: wbId(),
+                    questionId: question.id || '',
+                    word: c.word,
+                    prefix: c.prefix || '',
+                    myAnswer: c.myAnswer || '',
+                    correctAnswer: c.correctAnswer || '',
+                    discipline: question.discipline || '未分类',
+                    knowledgePoints: [...c.kps],
+                    reasonCategory: c.reason,
+                    reasonNote: c.note || '',
+                    date: wbToday(),
+                    status: '未掌握',
+                    createdAt: new Date().toISOString()
+                });
+                added++;
+            });
+            if (added > 0) saveWrongBook();
+            closeWbCollect();
+            if (added > 0) {
+                const fb = document.getElementById('feedback-current');
+                if (fb) fb.innerHTML += `<div style="margin-top:8px; font-size:0.85em; color:var(--primary-color);">📥 已收录 ${added} 个错词到错题本（状态：未掌握）</div>`;
+            }
+        }
+
+        // ---------- 手动添加 / 编辑 ----------
+        function openWbForm(id) {
+            wbEditingId = id || null;
+            document.getElementById('wbFormTitle').textContent = id ? '✏️ 编辑错题' : '＋ 添加错题';
+            const it = id ? wrongBookItems.find(x => x.id === id) : null;
+            document.getElementById('wbFormWord').value = it ? it.word : '';
+            document.getElementById('wbFormMine').value = it ? (it.myAnswer || '') : '';
+            document.getElementById('wbFormRight').value = it ? it.correctAnswer : '';
+            document.getElementById('wbFormDiscipline').value = it ? (it.discipline || '') : '';
+            document.getElementById('wbFormDate').value = it ? (it.date || wbToday()) : wbToday();
+            document.getElementById('wbFormReason').innerHTML = WB_REASONS.map(r => `<option${it && it.reasonCategory === r ? ' selected' : ''}>${r}</option>`).join('');
+            document.getElementById('wbFormStatus').value = it ? it.status : '未掌握';
+            document.getElementById('wbFormNote').value = it ? (it.reasonNote || '') : '';
+            wbFormKpSelected = it ? [...(it.knowledgePoints || [])] : [];
+            renderWbFormChips();
+            document.getElementById('wbFormOverlay').style.display = 'flex';
+        }
+
+        function renderWbFormChips() {
+            document.getElementById('wbFormKpChips').innerHTML = WB_KPS.map(k =>
+                `<span class="chip ${wbFormKpSelected.includes(k) ? 'on' : ''}" onclick="wbToggleFormKp('${k}')">${k}</span>`).join('');
+        }
+
+        function wbToggleFormKp(k) {
+            const idx = wbFormKpSelected.indexOf(k);
+            idx >= 0 ? wbFormKpSelected.splice(idx, 1) : wbFormKpSelected.push(k);
+            renderWbFormChips();
+        }
+
+        function closeWbForm() {
+            document.getElementById('wbFormOverlay').style.display = 'none';
+        }
+
+        function saveWbForm() {
+            const word = document.getElementById('wbFormWord').value.trim();
+            const right = document.getElementById('wbFormRight').value.trim();
+            const disc = document.getElementById('wbFormDiscipline').value.trim();
+            const date = document.getElementById('wbFormDate').value;
+            if (!word || !right || !disc || !date) { alert('请填写完整：单词、正确答案、学科、日期为必填项'); return; }
+
+            const data = {
+                word, correctAnswer: right,
+                myAnswer: document.getElementById('wbFormMine').value.trim(),
+                prefix: '',
+                discipline: disc, date,
+                knowledgePoints: [...wbFormKpSelected],
+                reasonCategory: document.getElementById('wbFormReason').value,
+                reasonNote: document.getElementById('wbFormNote').value.trim(),
+                status: document.getElementById('wbFormStatus').value,
+                updatedAt: new Date().toISOString()
+            };
+
+            if (wbEditingId) {
+                const it = wrongBookItems.find(x => x.id === wbEditingId);
+                if (it) Object.assign(it, data);
+            } else {
+                wrongBookItems.push({ id: wbId(), questionId: '', ...data, createdAt: new Date().toISOString() });
+            }
+            saveWrongBook();
+            closeWbForm();
+            renderWrongBook();
+        }
+
+        // ---------- 导出 / 导入 ----------
+        function exportWrongBook() {
+            if (wrongBookItems.length === 0) { alert('错题本为空，无需备份'); return; }
+            const payload = { app: 'toefl-complete-the-words', type: 'wrongbook-backup', schemaVersion: '1.0', exportedAt: new Date().toISOString(), items: wrongBookItems };
+            const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = '错题本备份_' + wbToday() + '.json';
+            a.click();
+            URL.revokeObjectURL(a.href);
+        }
+
+        function importWrongBook(input) {
+            const file = input.files[0];
+            input.value = '';
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = () => {
+                try {
+                    const data = JSON.parse(reader.result);
+                    const items = Array.isArray(data) ? data : (Array.isArray(data.items) ? data.items : null);
+                    if (!items) { alert('文件格式不正确：未找到错题数据'); return; }
+                    let added = 0, skipped = 0;
+                    items.forEach(raw => {
+                        if (!raw || !raw.id || !raw.word) { skipped++; return; }
+                        if (wrongBookItems.some(it => it.id === raw.id)) { skipped++; return; }
+                        wrongBookItems.push({
+                            id: raw.id, questionId: raw.questionId || '', word: raw.word,
+                            prefix: raw.prefix || '', myAnswer: raw.myAnswer || '',
+                            correctAnswer: raw.correctAnswer || '', discipline: raw.discipline || '未分类',
+                            knowledgePoints: Array.isArray(raw.knowledgePoints) ? raw.knowledgePoints : [],
+                            reasonCategory: raw.reasonCategory || '其他', reasonNote: raw.reasonNote || '',
+                            date: raw.date || wbToday(), status: WB_STATUSES.includes(raw.status) ? raw.status : '未掌握',
+                            createdAt: raw.createdAt || new Date().toISOString()
+                        });
+                        added++;
+                    });
+                    saveWrongBook();
+                    renderWrongBook();
+                    alert(`导入完成：新增 ${added} 条${skipped ? '，跳过 ' + skipped + ' 条（重复或无效）' : ''}`);
+                } catch (e) {
+                    alert('导入失败：文件不是有效的 JSON');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        loadWrongBook();
 
         window.addEventListener('load', () => {
             document.addEventListener('dblclick', handleDoubleClick);

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOEFL Reading Complete the Words 练习系统</title>
-    <script src="https://cdn.bootcdn.net/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'"></script>
+    <title>TOEFL Reading Complete the Words 练习系统 v4</title>
+    <script src="xlsx.full.min.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'"></script>
     <script src="questions-data.js"></script>
     <style>
         :root {
@@ -381,6 +381,34 @@
         .q-status-pill.st-wrong { background: #ffebee; color: var(--error-color, #c62828); border: 1px solid var(--error-color, #c62828); }
         .q-status-pill.st-partial { background: #fff8e1; color: #b28704; border: 1px solid var(--warning-color, #e6a817); }
         .q-status-pill.st-done { background: #e0f7fa; color: #00838f; border: 1px solid #00838f; }
+
+        /* ===== 题目标注徽章：待校验 ===== */
+        .q-flag-pill {
+            display: inline-block;
+            font-size: 0.72em;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 999px;
+            margin-left: 8px;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        .q-flag-pill.fl-draft { background: #ffebee; color: #c62828; border: 1.5px dashed #c62828; animation: draftPulse 2s ease-in-out infinite; }
+        @keyframes draftPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(198, 40, 40, 0.25); }
+            50% { box-shadow: 0 0 0 4px rgba(198, 40, 40, 0.12); }
+        }
+        .q-flag-note {
+            margin-top: 8px;
+            padding: 9px 13px;
+            background: #fff8e1;
+            border-left: 3px solid #e6a817;
+            border-radius: 6px;
+            font-size: 0.82em;
+            color: #8a6d1a;
+            line-height: 1.75;
+        }
+        .q-flag-note.fl-draft-note { background: #ffebee; border-left-color: #c62828; color: #a03030; }
 
         .feedback-answer-list .answer-word {
             display: inline-block;
@@ -1103,7 +1131,7 @@
     <div class="container">
         <header>
             <h1>TOEFL Reading Complete the Words</h1>
-            <p>托福阅读·填空题练习系统 - 提升词汇量与阅读能力</p>
+            <p>托福阅读·填空题练习系统 v4 · 231 题全量题库（152 题同步版）</p>
         </header>
 
         <nav class="view-nav">
@@ -1336,7 +1364,7 @@
         };
 
         // ============ 题库数据库模式 ============
-        let allQuestions = [];        // 全量 active 题目
+        let allQuestions = [];        // 全量题目（active + draft 待校验）
         let filterState = { month: '', source: '', topic: '', difficulty: '', keyword: '' };
 
         function initFromDB() {
@@ -1344,7 +1372,7 @@
                 document.getElementById('uploadSection').style.display = 'block';
                 return;
             }
-            allQuestions = QUESTION_DB.questions.filter(q => q.status === 'active');
+            allQuestions = QUESTION_DB.questions;  // 含 draft（题卡带「⚠️ 待校验」标注）
 
             // v3：做题痕迹库初始化 + 旧版进度一次性迁移（须在 applyFilters 之前）
             loadTraceStore();
@@ -1841,6 +1869,18 @@
                 ? `<span class="q-status-pill st-${st}">${stMeta.label}</span>`
                 : '';
 
+            // 待校验标注（draft 由构建期写入数据；存疑标记已随 v4.6 数据修正全部清除）
+            const flags = q.flags || [];
+            const hasDraft = q.status === 'draft' || flags.some(f => f.type === 'draft');
+            const flagBadges =
+                (hasDraft ? `<span class="q-flag-pill fl-draft" title="该题数据源对齐失败，暂无标准答案，需人工校验">⚠️ 待校验</span>` : '');
+            const flagNoteHtml = hasDraft
+                ? `<div class="q-flag-note fl-draft-note">` +
+                  `<strong>⚠️ 草稿题（待校验）（供人工核对）：</strong><br>` +
+                  flags.filter(f => f.type === 'draft').map(f => `• ${escapeHtml(f.note)}`).join('<br>') +
+                  `</div>`
+                : '';
+
             // 渲染带有标题和标签的头部
             header.innerHTML = `
                 <div class="title-area">
@@ -1848,8 +1888,10 @@
                         ${displayTitle}
                         <span class="question-id-sub">(编号: ${escapeHtml(q.id)})</span>
                         ${statusBadge}
+                        ${flagBadges}
                     </div>
                     ${tagsHtml}
+                    ${flagNoteHtml}
                 </div>
                 <div style="text-align: right;">
                     <span class="question-badge">Complete the Words</span>
@@ -2157,7 +2199,14 @@
 
             if (filledBlanks === 0) {
                 feedback.className = 'feedback show error';
-                feedback.innerHTML = '<strong>⚠️ 还没有填写任何空白</strong> 请至少填写一个单词后再提交。';
+                if (totalBlanks === 0) {
+                    // 草稿题：无空位输入框，仅供阅读浏览
+                    passageCompleted[currentPassageIndex] = true;
+                    feedback.className = 'feedback show';
+                    feedback.innerHTML = '<strong>⚠️ 草稿题（待校验）</strong> 该题数据源暂无法对齐标准答案，仅供阅读浏览，请参考题卡顶部的待校验说明。';
+                } else {
+                    feedback.innerHTML = '<strong>⚠️ 还没有填写任何空白</strong> 请至少填写一个单词后再提交。';
+                }
             } else {
                 if (!hasAnswers || totalBlanks === 0) {
                     passageCompleted[currentPassageIndex] = true;

@@ -139,9 +139,9 @@ window.QUESTION_DB = {
      "index": 5,
      "prefix": "T",
      "underscores": 2,
-     "word": "Ttical",
-     "answer": "tical",
-     "slots": 5,
+     "word": "The",
+     "answer": "he",
+     "slots": 2,
      "marker": "T_ _ ",
      "start": 197,
      "end": 202
@@ -223,7 +223,7 @@ window.QUESTION_DB = {
     },
     {
      "word": "The",
-     "reason": "art.定冠词 ⚠片段列误为\"tical\"，应为\"The\"（缺\"he\"），AB\"Ttical\"属错位"
+     "reason": "art. 定冠词"
     },
     {
      "word": "political",

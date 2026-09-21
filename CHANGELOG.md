@@ -1,5 +1,11 @@
 # Complete the Words 版本更新日志
 
+## v4.6.1（2026-09-21）
+
+- 真题-036「South Pacific History」第 6 空修复：题干改为前缀 "T"，答案 "he"（拼接为完整词 "The"，2 格下划线）。原数据 answer="tical"/word="Ttical"/slots=5 系源表答案列错位污染（与第 7 空 political 的尾巴串位），正文 marker 本就为 2 格，与 "he" 长度吻合
+- 同步清理解析词条批注：The 词条 reason 由校对警示语更新为 "art. 定冠词"（所描述的数据错误已修复）
+- 全库 228 题渲染契约校验通过；浏览器实测 "T + he" 判分正确、上下文 "structures. T__ region's poli…" 连贯无歧义
+
 ## v4.6（2026-09-16）当前版本
 
 - 笔误更正：20260708B-2 Critical Thinking 正文 "a clrear" 更正为 "a clear"

@@ -1,19 +1,21 @@
-/* TOEFL Complete the Words 题库数据库 v4.6（题目修正版·五）
- * 由 patch5.py 生成于 2026-09-16，基于 v4.5
- * 总题量 228（active 226）
- * 人工审校后续修正：clrear→clear、Wind Formation 首句语义修复、清除全部存疑标记
+/* TOEFL Complete the Words 题库数据库 v4.7
+ * 由 build_v47.py + export_v47.py 生成于 2026-10-27，基于 v4.6.1
+ * 总题量 287（active 285）
+ * v4.7：CW 8月/9月素材同步——新增 59 题，94 条场次复用，1 处库题修正
+ * v4.7.1：人工难度标签同步——按 complete the words(152)【加标签】.xlsx I列星标更新 138 题（★简单/★★/★★★中等/★★★★/★★★★★困难）
  */
 window.QUESTION_DB = {
  "meta": {
   "schemaVersion": "1.2.3",
-  "updatedAt": "2026-09-16",
+  "updatedAt": "2026-10-27",
   "sources": [
    "complete the words(152).xlsx（高级班讲义题库，2026-08-28 同步）",
-   "questions-data.js v1.1（旧库，未匹配题保留）"
+   "questions-data.js v1.1（旧库，未匹配题保留）",
+   "CW 8月/CW 9月.xlsx（2026-10-27 同步，新增 59 题 + 场次复用 94 条）"
   ],
-  "totalQuestions": 228,
-  "activeQuestions": 226,
-  "note": "152题同步：61题替换（保留旧id）+ 91题新增（id=套题码）；来源精确到场次套题码；月份按考试日期细分；v4.2 题目修正版：人工审校修正 14 空 + 真题-079 旧库恢复；v4.3：套题清单四项任务（5题答案修改+Fossils删词+5道draft重建）；v4.4：21道待校验题按源表K/V/X三列材料重建；v4.5：人工审校批量修正——13处答案修正（含前缀/空格数同步）、Wind Formation 删第1空、Cognition 增补 though 空、Transitional Fossils 去重删除20260722D；v4.6：clrear→clear、Wind Formation 首句语义修复、清除全部存疑标记（suspect flags）"
+  "totalQuestions": 287,
+  "activeQuestions": 285,
+  "note": "152题同步：61题替换（保留旧id）+ 91题新增（id=套题码）；来源精确到场次套题码；月份按考试日期细分；v4.2 题目修正版：人工审校修正 14 空 + 真题-079 旧库恢复；v4.3：套题清单四项任务（5题答案修改+Fossils删词+5道draft重建）；v4.4：21道待校验题按源表K/V/X三列材料重建；v4.5：人工审校批量修正——13处答案修正（含前缀/空格数同步）、Wind Formation 删第1空、Cognition 增补 though 空、Transitional Fossils 去重删除20260722D；v4.6：clrear→clear、Wind Formation 首句语义修复、清除全部存疑标记（suspect flags）；v4.7：8/9月素材同步——新增 59 题（46 全新 + 13 同底文本变体），94 条场次复用追加到 source；素材修复：完整词剥前缀 37 空、格数按答案校正、答案列错位残留剔除 4 行、个案笔误修正 6 处；库题修正 20260601A-2 空5 material→materials；2 行素材待人工核对（Extinction Events、Paint History）；v4.7.1：人工难度标签同步——152标签表134题→库内138题更新（含等价重复与同底变体），70题难度实际变化"
  },
  "months": [
   {
@@ -54,7 +56,12 @@ window.QUESTION_DB = {
   {
    "id": "2026年8月",
    "label": "2026年8月",
-   "count": 5
+   "count": 27
+  },
+  {
+   "id": "2026年9月",
+   "label": "2026年9月",
+   "count": 37
   },
   {
    "id": "1-7月合集",
@@ -71,13 +78,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-036",
    "month": "2026年1月",
-   "source": "20260121A OFFICIAL20260518B / 20260726C",
+   "source": "20260121A OFFICIAL20260518B / 20260726C / 20260804A / 20260921A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "South Pacific History",
    "discipline": "社会科学",
    "topic": "历史",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "The history of the South Pacific is marked by diverse cultures and significant events. Indigenous popul_ _ _ _ _ _ developed com_ _ _ _ societies wi_ _ rich tradi_ _ _ _ _ and soc_ _ _ structures. T_ _ region's poli_ _ _ _ _ and econ_ _ _ _ landscapes exper_ _ _ _ _ _ profound cha_ _ _ _ following colonization by Europeans. Studying this history allows for a greater understanding of cultural interactions and the ongoing effects of historical events on contemporary South Pacific societies. Traditional navigation techniques using stars and ocean swells enabled remarkable voyaging achievements, while contemporary movements focus on cultural preservation, language revitalization, and addressing climate change impacts on island nations.",
    "blanks": [
     {
@@ -451,7 +458,7 @@ window.QUESTION_DB = {
    "title": "Photoperiodism",
    "discipline": "生命科学",
    "topic": "生物",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "The reaction of plants and animals to sunlight and seasonal changes, known as photoperiodism or seasonality, is vital to many biological and behavioral processes. Photoperiods, toge_ _ _ _ with tempe_ _ _ _ _ _ changes, imp_ _ _ seasonal migr_ _ _ _ _, mating rit_ _ _ _, and hiber_ _ _ _ _ _. In ma_ _ birds, hor_ _ _ _ levels incr_ _ _ _ in spr_ _ _, which leads to an increase in singing frequency in males and mating behaviors. Photoperiodism allows plants and animals to respond to changes in the environment associated with changing seasons and varying day length.",
    "blanks": [
     {
@@ -815,7 +822,7 @@ window.QUESTION_DB = {
    "title": "Captain Cook",
    "discipline": "社会科学",
    "topic": "历史",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "James Cook was a British naval officer, explorer, and cartographer born in 1728. He i_ best kn_ _ _ for h_ _ three voy_ _ _ _ across t_ _ Pacific Oc_ _ _, during wh_ _ _ he meticu_ _ _ _ _ _ mapped coast_ _ _ _ _ and coll_ _ _ _ _ data on astronomy, natural history, and oceanography. Cook is the first European to circumnavigate New Zealand and make contact with the Hawaiian Islands. He is also notable for implementing health measures aboard his ships, such as dietary changes to prevent the disease scurvy.",
    "blanks": [
     {
@@ -1002,7 +1009,7 @@ window.QUESTION_DB = {
    "title": "Mass Extinction",
    "discipline": "自然科学",
    "topic": "地质学",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Mass extinctions have periodically reshaped the diversity of life on Earth, representing significant biological and ecological shifts. The most famous event, the Cretaceous-Paleogene extinction, occurred approximately 66 million years ago and led to the demise of the dinosaurs. Large-scale los_ _ _ of spe_ _ _ _ are of_ _ _ caused b_ catastrophic eve_ _ _ such a_ volcanic erup_ _ _ _ _, asteroid imp_ _ _ _, and cli_ _ _ _ change. T_ _ resulting damage to biodiversity disrupts ecosystems and alters evolutionary trajectories. Studying past extinctions provides insights into the resilience and adaptability of life, helping scientists predict and mitigate future biodiversity loss.",
    "blanks": [
     {
@@ -1184,13 +1191,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-069",
    "month": "2026年1月",
-   "source": "20260128NOON",
+   "source": "20260128NOON / 20260908A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Crop Rotation",
    "discipline": "社会科学",
    "topic": "历史",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Crop rotation is a farming technique that involves growing a series of different types of crops in the same area across a sequence of seasons. Different crops use different nutrients from the soil, so rotating them prevents the soil from becoming depleted. Th_ _ method he_ _ _ to red_ _ _ pests a_ _ diseases; i_ also decr_ _ _ _ _ the ne_ _ for chem_ _ _ _ fertilizers, prom_ _ _ _ _ sustainable agric_ _ _ _ _ _. Farmers use this practice to improve crop yields and maintain healthy soil.",
    "blanks": [
     {
@@ -1378,7 +1385,7 @@ window.QUESTION_DB = {
    "title": "Species Extinction",
    "discipline": "生命科学",
    "topic": "生物",
-   "difficulty": "简单",
+   "difficulty": "中等",
    "passage": "Extinctions are a natural part of Earth's history, marking the end of species that die out and paving the way for new ones. These inci_ _ _ _ _ can b_ caused b_ varying fac_ _ _ _, such a_ environmental cha_ _ _ _, habitat lo_ _, and catast_ _ _ _ _ _ events. Stud_ _ _ _ extinctions he_ _ _ scientists understand biodiversity and the resilience of ecosystems. Notable extinctions, like the one that wiped out most of the dinosaurs, offer insights into how life on Earth can dramatically shift. Modern conservation efforts aim to prevent human-induced extinctions and preserve remaining species.",
    "blanks": [
     {
@@ -1566,7 +1573,7 @@ window.QUESTION_DB = {
    "title": "Subsea Stone Wall",
    "discipline": "社会科学",
    "topic": "考古",
-   "difficulty": "简单",
+   "difficulty": "中等",
    "passage": "Archaeologists typically study human history and prehistory through the excavation of artifacts buried underground. Sometimes, how_ _ _ _ , they disc_ _ _ _ artifacts subm_ _ _ _ _ underwater. A stone wall w_ _ found ben_ _ _ _ the Baltic Sea i_ 2012 th_ _ dates t_ over 10,000 ye_ _ _ ago. Resea_ _ _ _ _ _ believe it was used by hunter-gatherer societies to guide and trap reindeer. The wall consists of approximately 1,670 stones and is considered one of the oldest documented hunting structures made by humans.",
    "blanks": [
     {
@@ -1753,7 +1760,7 @@ window.QUESTION_DB = {
    "title": "Global Warming",
    "discipline": "自然科学",
    "topic": "环境科学",
-   "difficulty": "困难",
+   "difficulty": "简单",
    "passage": "Global temperatures and weather patterns are experiencing notable shifts, which scientific research strongly associates with human-related factors. Activities su_ _ as t_ _ use o_ fossil fu_ _ _ , changes i_ land u_ _, and industrial produ_ _ _ _ _ contribute t_ the accumu_ _ _ _ _ _ of green_ _ _ _ _ gases in the atmosphere. These gases retain heat, gradually increasing the Earth's average temperature. If emissions continue at current levels, potential outcomes may include more frequent extreme weather events, rising sea levels, and disruptions to ecosystems. Experts emphasize that timely and coordinated efforts are essential to reduce risks and promote long-term environmental stability.",
    "blanks": [
     {
@@ -2123,13 +2130,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-052",
    "month": "2026年2月",
-   "source": "20260202AM",
+   "source": "20260202AM / 20260907A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Academic Success",
    "discipline": "社会科学",
    "topic": "教育",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "What are some foundational skills for academic success? Critical thin_ _ _ _ allows stud_ _ _ _ to appr_ _ _ _ problems systema_ _ _ _ _ _ _, analyze infor_ _ _ _ _ _ , and ma_ _ connections bet_ _ _ _ ideas. Al_ _ important a_ _ soft skills li_ _ time management and social skills. Time management is helpful for balancing studies, extracurricular activities, and personal life in an efficient manner. Social skills are good predictors of academic success because those who communicate effectively can form positive relationships with their peers and professors.",
    "blanks": [
     {
@@ -2499,7 +2506,7 @@ window.QUESTION_DB = {
   {
    "id": "真题-096",
    "month": "2026年2月",
-   "source": "20260201AM",
+   "source": "20260201AM / 20260908B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Public Health",
@@ -2879,7 +2886,7 @@ window.QUESTION_DB = {
    "title": "Reusable Rockets",
    "discipline": "社会科学",
    "topic": "科技",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "Space exploration has advanced significantly with the development of rockets that can be reused. Traditional rockets were discarded after a single use, but new designs allow them to return to Earth and be refurbished for multiple missions. This innov_ _ _ _ _ reduces t_ _ cost assoc_ _ _ _ _ with sp_ _ _ travel a_ _ increases freq_ _ _ _ _ of miss_ _ _ _. Companies li_ _ SpaceX ha_ _ pioneered reus_ _ _ _ rocket technology, successfully launching and landing rockets. These advancements pave the way for more ambitious projects, including potential manned missions to Mars and beyond.",
    "blanks": [
     {
@@ -3067,7 +3074,7 @@ window.QUESTION_DB = {
    "title": "Greek Theater",
    "discipline": "艺术",
    "topic": "戏剧",
-   "difficulty": "简单",
+   "difficulty": "中等",
    "passage": "Theater has been an integral part of human culture for centuries, providing a medium for storytelling and artistic expression. Many feat_ _ _ _ of Anc_ _ _ _ Greek theater a_ _ still fo_ _ _ in mod_ _ _ theater, such a_ wearing ma_ _ _ and us_ _ _ a chorus. Dur_ _ _ the Renaissance, theater flour_ _ _ _ _ as playwrights, like Shakespeare, created enduring works. Modern theater continues to evolve, incorporating technology and diverse narratives. The communal experience of live performance remains a powerful way to explore human emotions and societal issues.",
    "blanks": [
     {
@@ -3248,7 +3255,7 @@ window.QUESTION_DB = {
   {
    "id": "真题-090",
    "month": "2026年3月",
-   "source": "山猫2026真题23",
+   "source": "山猫2026真题23 / 20260930B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Archaeology",
@@ -3628,7 +3635,7 @@ window.QUESTION_DB = {
    "title": "Rotational Farming",
    "discipline": "社会科学",
    "topic": "应用社科",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "Crop rotation is an essential practice in sustainable agriculture. Crop rotation involves the sequential plan_ _ _ _ of diff_ _ _ _ _ crops i_ the sa_ _ area acr_ _ _ various sea_ _ _ _ . This tech_ _ _ _ _ significantly impr_ _ _ _ soil hea_ _ _ by divers_ _ _ _ _ _ the nutrients extracted from, and returned to, the soil. When one crop depletes certain nutrients, another crop can replenish them, creating a balanced ecosystem. This method also helps in controlling pests and diseases, as rotating crops disrupt their reproductive cycles, reducing their prevalence without the need for chemical pesticides.",
    "blanks": [
     {
@@ -3809,13 +3816,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-083",
    "month": "2026年4月",
-   "source": "山猫2026真题24",
+   "source": "山猫2026真题24 / 20260930C",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "North American Bison",
    "discipline": "社会科学",
    "topic": "历史",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "The Great Plains of North America were once home to vast herds of bison, which played a crucial role in the lives of Indigenous peoples, who made use of bison meat, hides, and bones. These commu_ _ _ _ _ _ relied o_ bison f_ _ food, clot_ _ _ _ , and she_ _ _ _ . Hunting prac_ _ _ _ _ were of_ _ _ sophisticated, invo_ _ _ _ _ coordinated eff_ _ _ _ to dr_ _ _ bison into traps or over cliffs. The arrival of European settlers dramatically altered the landscape, leading to overhunting and near extinction of bison populations. Conservation efforts in the twentieth century helped restore bison numbers, symbolizing resilience and recovery.",
    "blanks": [
     {
@@ -4183,13 +4190,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-088",
    "month": "2026年4月",
-   "source": "20260405A",
+   "source": "20260405A / 20260908B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Deductive Reasoning",
    "discipline": "社会科学",
    "topic": "哲学",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "Logical reasoning is a cornerstone of academic methodology, providing a structured approach to analyzing arguments and evidence. Deductive reas_ _ _ _ _starts wi_ _ general princ_ _ _ _ _ and der_ _ _ _ specific concl_ _ _ _ _ _, while indu_ _ _ _ _ thinking invo_ _ _ _ drawing br_ _ _ generalizations fr_ _ specific observ_ _ _ _ _ _. Critical thinking skills enable scholars to identify logical fallacies, assess the credibility of sources, and construct coherent arguments. The application of logic extends across disciplines, from mathematics to philosophy to the natural sciences. Developing proficiency in logical reasoning enhances the ability to solve complex problems and communicate effectively, fostering intellectual rigor and innovation.",
    "blanks": [
     {
@@ -4376,7 +4383,7 @@ window.QUESTION_DB = {
    "title": "Raven Intelligence",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "简单",
+   "difficulty": "中等",
    "passage": "Ravens are highly intelligent birds known for their problem-solving abilities and complex social behaviors. They u_ _ tools, su_ _ as sti_ _ _, to obt_ _ _ food a_ _ have be_ _ observed enga_ _ _ _ in pla_ _ _ _ behaviors li_ _ sliding o_ snow. Ravens communicate with a wide range of vocalizations, conveying different messages to their peers. Their adaptability allows them to thrive in various environments, from forests to urban areas. Studying raven behavior provides insights into avian intelligence and the evolutionary mechanisms that support cognitive development.",
    "blanks": [
     {
@@ -4557,7 +4564,7 @@ window.QUESTION_DB = {
   {
    "id": "真题-028",
    "month": "2026年4月",
-   "source": "20260405C",
+   "source": "20260405C / 20260921B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Paleontology",
@@ -4740,7 +4747,7 @@ window.QUESTION_DB = {
    "title": "Brain Plasticity",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "简单",
+   "difficulty": "中等",
    "passage": "We are exquisitely sensitive to our surroundings, and environment plays a critical role in the development of a child's brain. But wh_ _ happens on_ _ we've rea_ _ _ _ adulthood? C_ _ the br_ _ _ still und_ _ _ _ the ki_ _ of cha_ _ _ it d_ _ when w_ were younger? By the time we are twenty-five years old, the brain transformations of childhood are finally over and our brain appears to be fully developed. You might think that who we are as adults is then fixed in place, immovable. But it's not: in adulthood our brains continue to change.",
    "blanks": [
     {
@@ -4926,7 +4933,7 @@ window.QUESTION_DB = {
    "title": "Weather Forecasting",
    "discipline": "自然科学",
    "topic": "环境科学",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Weather patterns are influenced by a variety of factors, including atmospheric pressure, temperature, and humidity.Meteorologists st_ _ _ these fac_ _ _ _ to pre_ _ _ _ weather condi_ _ _ _ _ and under_ _ _ _ _ climate cha_ _ _.Tools li_ _ satellites a_ _ radar al_ _ _ meteorologists t_ monitor weather systems in great detail. Accurate weather forecasting is crucial for agriculture, disaster preparedness, and daily planning. It should be noted, however, that despite technological advancements, weather is inherently unpredictable due to the numerous atmospheric variables that can change rapidly.",
    "blanks": [
     {
@@ -5111,13 +5118,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-074",
    "month": "2026年4月",
-   "source": "20260413C",
+   "source": "20260413C / 20260812A / 20260929A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Black Holes",
    "discipline": "自然科学",
    "topic": "天文学",
-   "difficulty": "简单",
+   "difficulty": "中等",
    "passage": "The universe is a vast expanse, filled with mysteries that have intrigued humans for centuries. Black holes are reg_ _ _ _ in sp_ _ _ where gra_ _ _ _ is s_ strong th_ _ nothing, n_ _ even li_ _ _, can esc_ _ _. Even tho_ _ _ they a_ _ invisible, black holes can be detected by observing their effects on nearby matter. Black holes play a crucial role in astrophysics, influencing galaxy formation and offering insights into the nature of space, time, and gravity.",
    "blanks": [
     {
@@ -5656,7 +5663,7 @@ window.QUESTION_DB = {
   {
    "id": "真题-063",
    "month": "2026年4月",
-   "source": "20260419D",
+   "source": "20260419D / 20260831A / 20260831B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Biochemistry",
@@ -5842,13 +5849,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-095",
    "month": "2026年4月",
-   "source": "20260419D",
+   "source": "20260419D / 20260906A / 20260906C",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Bicycle History",
    "discipline": "社会科学",
    "topic": "历史",
-   "difficulty": "简单",
+   "difficulty": "中等",
    "passage": "The earliest ancestor of the modern bicycle is probably amachine used in England in the early 1800s called a hobbyhorse. It h_ _ two whe_ _ _ and a pl_ _ _ to s_ _ , but n_pedals; rid_ _ _ would pu_ _ it al_ _ _ with th_ _ _ feet. La_ _ _, an inventor added pedals directly to the front wheel, like a modern child's tricycle. This version, with a huge front wheel, was faster, but it was unsafe. Riders were high off the ground, and the two wheels were close together, making both balance and stopping difficult.",
    "blanks": [
     {
@@ -6035,7 +6042,7 @@ window.QUESTION_DB = {
    "title": "Classical Civilization",
    "discipline": "社会科学",
    "topic": "历史",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "The study of the classical world involves examining the cultural, political, and social structures of ancient civilizations such as Greece and Rome. These soci_ _ _ _ _ have gre_ _ _ _ influenced mod _ _ _ governance, philo_ _ _ _ _, and a_ _. The con_ _ _ _ of demo_ _ _ _ _ originated i_ Athens, a_ _ Romans we_ _ superb engineers, building roads, aqueducts, and impressive buildings like the Pantheon. By understanding their advancements and contributions, we gain insight into the foundations of contemporary society. Archaeologists and historians employ various methods to uncover artifacts and interpret historical records from ancient times.",
    "blanks": [
     {
@@ -6216,13 +6223,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-023",
    "month": "2026年5月",
-   "source": "20260506B",
+   "source": "20260506B / 20260902B / 20260915A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Rock Layer Records",
    "discipline": "自然科学",
    "topic": "地质学",
-   "difficulty": "简单",
+   "difficulty": "困难",
    "passage": "The study of geological formations provides insights into Earth's dynamic processes. Metamorphic rocks are rocks that have been transformed by heat and pressure. Sedimentary rocks fo_ _ as lay_ _ of mate_ _ _ build u_ over ti_ _ and a_ _ eventually pre_ _ _ _ and fu_ _ together t_ create so_ _ _ rock. The strata inside these formations serve as historical records of environmental conditions, revealing changes in climate, sea levels, and biological evolution. Analyzing rocks allows geologists to reconstruct past geological events.",
    "blanks": [
     {
@@ -6409,7 +6416,7 @@ window.QUESTION_DB = {
    "title": "Economics",
    "discipline": "社会科学",
    "topic": "政治经济",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "Economics is the social science that studies the production, distribution, and consumption of goods and services. It exam_ _ _ _ how indiv_ _ _ _ _ _ , households, busin_ _ _ _ _ , and gover_ _ _ _ _ _ make cho_ _ _ _ about reso_ _ _ _ allocation a_ _ how su_ _ decisions aff_ _ _ overall stab_ _ _ _ _ and growth in the economy. Through the application of theoretical models and the collection of empirical data, economists can help policymakers formulate strategies to address issues such as inflation, unemployment, and trade imbalances, thereby improving societal well-being.",
    "blanks": [
     {
@@ -6778,13 +6785,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-012",
    "month": "2026年5月",
-   "source": "20260523A",
+   "source": "20260523A / 20260808D / 20260824A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Terrestrial Mammals",
    "discipline": "生命科学",
    "topic": "生物",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "Terrestrial mammals exhibit a fascinating array of adaptations that help them survive and thrive in diverse environments. From com_ _ _ _ social intera_ _ _ _ _ _ that imp_ _ _ _ group surv_ _ _ _ to ingen_ _ _ _ _ _ designed lu_ _ _ that enh_ _ _ _ oxygen absor_ _ _ _ _, these crea_ _ _ _ _ are bu_ _ _ for resilience. Some have evolved powerful limbs for digging deep burrows, while others have agile bodies perfect for scaling trees or sprinting across open plains. Their sharp senses and stealthy movements are often the result of a high-stakes evolutionary arms race between predator and prey.",
    "blanks": [
     {
@@ -6965,13 +6972,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-104",
    "month": "2026年5月",
-   "source": "来源未标注",
+   "source": "来源未标注 / 20260920C",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Skyscrapers",
    "discipline": "艺术",
    "topic": "音乐",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "During the late nineteenth and early twentieth centuries, the landscape of North American urban centers underwent dramatic transformations as industrialization accelerated. Cities expanded rap_ _ _ _, fueled b_ the arr_ _ _ _ of immig_ _ _ _ _ and ru_ _ _ populations see_ _ _ _ employment i_ factories. This dyn_ _ _ _ era witn_ _ _ _ _ the ri_ _ of skyscrapers, symbolizing progress and technological triumph. Architects and planners grappled with the challenges posed by such quick growth, including overcrowding and sanitation issues. Public transit systems, like streetcars, emerged as pivotal solutions to urban congestion, altering the rhythm of daily life.",
    "blanks": [
     {
@@ -7151,7 +7158,7 @@ window.QUESTION_DB = {
   {
    "id": "真题-114",
    "month": "2026年6月",
-   "source": "20260603A",
+   "source": "20260603A / 20260905A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Agricultural Revolution",
@@ -7522,7 +7529,7 @@ window.QUESTION_DB = {
    "title": "Chiaroscuro",
    "discipline": "艺术",
    "topic": "艺术史",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "In the world of academia, art history is more than just studying paintings—it is about decoding the emotional language of visual storytelling. For example, chiaroscuro is a tech_ _ _ _ _ that origi_ _ _ _ _ during t_ _ Renaissance. Exemp_ _ _ _ _ _ by str_ _ _ contrast bet_ _ _ _ light a_ _ shadow, the st_ _ _ evokes dr_ _ _ through sele_ _ _ _ _ illumination. Artists like Caravaggio mastered this interplay, using it to pull viewers into the heart of his scenes, guiding their eyes and stirring their emotions with every flicker of light.",
    "blanks": [
     {
@@ -7708,7 +7715,7 @@ window.QUESTION_DB = {
    "title": "Prehistoric Art",
    "discipline": "艺术",
    "topic": "艺术史",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Prehistoric art and religion provide invaluable insights into the spiritual life of early humans. Cave paintings and carvings often depict animals and symbolic figures, reflecting the beliefs and rituals of ancient communities. These artworks se_ _ _ as a win_ _ _ into t_ _ social struc_ _ _ _ _ and cult_ _ _ _ practices o_ prehistoric ti_ _ _. By stud_ _ _ _ them, resea_ _ _ _ _ _ can bet_ _ _ understand the evolution of human thought and spirituality. These early forms of art show that even long ago, people had deep feelings, ideas, and questions about life and the world around them.",
    "blanks": [
     {
@@ -8077,13 +8084,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-017",
    "month": "2026年5月",
-   "source": "20260616A",
+   "source": "20260616A / 20260823",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Shadow Puppetry",
    "discipline": "艺术",
    "topic": "音乐",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "Shadow puppetry is an ancient form of storytelling that uses flat, articulated (movable) figures cast onto a screen by a light source. Shadow puppetry comb_ _ _ _ visual arti_ _ _ _ with dram_ _ _ _ narration, crea_ _ _ _ engaging perfor_ _ _ _ _ _ that con_ _ _ traditional ta_ _ _ and mo_ _ _ lessons. Th_ _ art fo_ _ originated in Asia and spread to various cultures around the world. The puppets are typically made of leather or paper and manipulated by sticks or strings. Performers narrate stories, often accompanied by music or sound effects.",
    "blanks": [
     {
@@ -8439,7 +8446,7 @@ window.QUESTION_DB = {
   {
    "id": "真题-003",
    "month": "2026年6月",
-   "source": "20260630B / 20260804A",
+   "source": "20260630B / 20260804A / 20260818B / 20260915A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Kinship Systems",
@@ -8625,7 +8632,7 @@ window.QUESTION_DB = {
   {
    "id": "真题-024",
    "month": "2026年6月",
-   "source": "20260630B",
+   "source": "20260630B / 20260802A / 20260818B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Handicrafts",
@@ -8817,7 +8824,7 @@ window.QUESTION_DB = {
    "title": "Geographic Education",
    "discipline": "自然科学",
    "topic": "环境科学",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "Geographic education equips students with the tools to understand global issues through a spatial lens. For example, studying how rising sea levels affect coastal communities helps learners connect physical geography with human impact. This know_ _ _ _ _ is esse_ _ _ _ _ for plan_ _ _ _ disaster resp_ _ _ _ _, managing reso_ _ _ _ _, and addre_ _ _ _ _ climate cha_ _ _. Geographic lite_ _ _ _ also fos_ _ _ _ critical thin_ _ _ _ about migration, urban development, and environmental sustainability. By teaching students to analyze maps, data, and patterns, geography empowers them to make informed decisions in an increasingly interconnected and environmentally challenged world.",
    "blanks": [
     {
@@ -9004,7 +9011,7 @@ window.QUESTION_DB = {
    "title": "Goose Migration",
    "discipline": "生命科学",
    "topic": "生物",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Geese undertake seasonal migrations between breeding and wintering grounds, often covering thousands of miles. This move_ _ _ _ is gui_ _ _ by th_ _ _ ability t_ recognize enviro_ _ _ _ _ _ _ cues su_ _ as dayl_ _ _ _ duration a_ _ geographic feat_ _ _ _, supported b_ strong spatial memory. Most species, including the Canada goose, follow established flyways and use landmarks like rivers and mountain ranges for navigation. Migration is also a social activity; geese typically travel in family groups, reinforcing cohesion and increasing survival rates through coordinated actions and shared knowledge of migratory routes.",
    "blanks": [
     {
@@ -9372,13 +9379,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-022",
    "month": "2026年7月",
-   "source": "20260708A",
+   "source": "20260708A / 20260902A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Sustainable Agriculture",
    "discipline": "自然科学",
    "topic": "环境科学",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Agricultural practices have evolved to meet growing worldwide nutritional requirements. Sustainable farming offers a promising path, emphasizing ecological balance and resource conservation. Techniques like crop rotation, polyculture, and organic farming main_ _ _ _ soil hea_ _ _ and decr_ _ _ _ pesticide u_ _. These met_ _ _ _ improve fo_ _ security a_ _ reduce environ_ _ _ _ _ _ harm. Far_ _ _ _ often ben_ _ _ _ from higher yields and lower long-term costs. Although traditional methods dominate due to short-term profits, the future of agriculture may depend on embracing sustainability.",
    "blanks": [
     {
@@ -9559,13 +9566,13 @@ window.QUESTION_DB = {
   {
    "id": "真题-078",
    "month": "2026年7月",
-   "source": "20260721A",
+   "source": "20260721A / 20260811A / 20260907B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Oceanography",
    "discipline": "自然科学",
    "topic": "环境科学",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Oceanography is the study of the physical, chemical, and biological aspects of the ocean. This fi_ _ _ encompasses t_ _ exploration o_ ocean curr_ _ _ _, marine ecosy_ _ _ _ _, and geolo_ _ _ _ _ seabed struc_ _ _ _ _. Oceanographers u_ _ satellites a_ _ other adva_ _ _ _ technology to monitor and analyze ocean conditions. By tracking sea surface temperatures, currents, salinity, and other features, researchers contribute to our understanding of climate change. Their work is vital for sustaining ocean health and preserving marine biodiversity.",
    "blanks": [
     {
@@ -9939,7 +9946,7 @@ window.QUESTION_DB = {
    "title": "Camel Fat Storage",
    "discipline": "自然科学",
    "topic": "环境科学",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Camels live in the desert where the weather is hot and dry. Sometimes i _ the des_ _, camels ha_ _ to tra_ _ _ for a lo_ _ time wit_ _ _ finding a_ _ food o_ water. S_ when cam_ _ _ do find food, they are able to eat and drink a lot. Camels turn extra food into fat and store this fat in a special hump on their back. Then they change this fat into energy to help them cross the desert.",
    "blanks": [
     {
@@ -10470,7 +10477,7 @@ window.QUESTION_DB = {
    "title": "Glacier Landforms",
    "discipline": "自然科学",
    "topic": "地质学",
-   "difficulty": "简单",
+   "difficulty": "中等",
    "passage": "Glaciers are massive, slow-moving bodies of ice that form in areas where snow accumulates over time and compresses into ice. Th_ _ can cha_ _ _ landscapes thr_ _ _ _ processes li_ _ erosion and deposition. A_ glaciers mo_ _ they ca_ _ _ out val_ _ _ _ and fjords, lea_ _ _ _ behind distinct geological features. Scientists study glaciers to understand past climate conditions and predict future changes. Glaciers are of particular concern today because their melting contributes to rising sea levels, impacting coastal communities worldwide.",
    "blanks": [
     {
@@ -10642,7 +10649,7 @@ window.QUESTION_DB = {
    "title": "Spix's Macaw",
    "discipline": "生命科学",
    "topic": "生物",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "The Spix's Macaw, native to Brazil and famously known as the inspiration for the animated movie Rio, is critically endangered, with fewer than a hundred individuals remaining. The popu_ _ _ _ _ of th_ _ vibrant bl_ _ bird decl_ _ _ _ because o_ habitat lo_ _ and ill_ _ _ _ trapping f_ _ sale abr_ _ _ , where pri_ _ _ _ collectors and pet stores spent large sums of money on the birds. Conservationists have initiated captive breeding programs and habitat restoration efforts to reintroduce the Spix's Macaw into the wild, where it was officially declared extinct in 2019.",
    "blanks": [
     {
@@ -11204,7 +11211,7 @@ window.QUESTION_DB = {
    "title": "Child Development",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "Child development milestones are key indicators of a child's growth. They enco_ _ _ _ _ various asp_ _ _ _ of development, incl_ _ _ _ _ language acqui_ _ _ _ _ _, motor ski _ _ _ and soc_ _ _ interactions. O_ _ example i_ taking a fi_ _ _ step, wh_ _ _ typically occurs around the age of twelve months. These milestones are useful in helping parents and caretakers monitor a child's progress. It is important to remember, however, that these milestones only provide a general guide, and each child develops at their own pace.",
    "blanks": [
     {
@@ -12141,7 +12148,7 @@ window.QUESTION_DB = {
    "title": "Logical Reasoning",
    "discipline": "社会科学",
    "topic": "哲学",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "Logic and reasoning are essential components of academic methodology. These ski_ _ _ involve evalu_ _ _ _ _ arguments, ident_ _ _ _ _ _ fallacies, a_ _ constructing cohe_ _ _ _ conclusions ba_ _ _ on evid_ _ _ _ . Mastering log_ _ _ _ principles enha_ _ _ _ critical thin_ _ _ _ and problem-solving abilities. In various disciplines, from science to philosophy, these principles are used to analyze complex issues and develop informed perspectives, contributing to intellectual growth and effective decision-making. Formal logic systems include propositional and predicate logic, while informal logic addresses everyday reasoning, helping individuals recognize cognitive biases and construct more persuasive and sound arguments.",
    "blanks": [
     {
@@ -12516,7 +12523,7 @@ window.QUESTION_DB = {
    "title": "Language Development",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "简单",
+   "difficulty": "中等",
    "passage": "Language development in children is a complex process influenced by both genetics and environment. From bi_ _ _, infants be_ _ _ to recognize sou_ _ _ and patt_ _ _ _ in spe_ _ _. By o_ _ year o_ age, mo_ _ can s_ _ simple wo_ _ _ like\" mama\" or\"dada\". As they grow, their vocabulary expands rapidly. Interacting with caregivers and peers plays a crucial role in this development. Reading to children and engaging in conversations are effective ways to support language acquisition.",
    "blanks": [
     {
@@ -12703,7 +12710,7 @@ window.QUESTION_DB = {
    "title": "Ocean Currents",
    "discipline": "自然科学",
    "topic": "环境科学",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "Ocean currents are critical components of Earth's climate system, influencing weather patterns and marine ecosystems. Driven b_ wind, tempe_ _ _ _ _ _ changes, a_ _ differences i_ salinity, ocean currents distr_ _ _ _ _ heat acr_ _ _ the gl_ _ _ . The Gulf Stream, f_ _ instance, wa_ _ _ the North Atlantic Current, affe_ _ _ _ _ climate in Europe. Deep ocean currents, known as thermohaline circulation, play a role in regulating global temperatures and carbon dioxide levels. Research in oceanography continues to reveal the complexities of these dynamic systems.",
    "blanks": [
     {
@@ -14004,13 +14011,13 @@ window.QUESTION_DB = {
   {
    "id": "20260506B-2",
    "month": "2026年5月",
-   "source": "20260506B",
+   "source": "20260506B / 20260906B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Music & Change",
    "discipline": "艺术",
    "topic": "音乐",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "Music has long served as a powerful tool for cultural expression and social change. Comp_ _ _ _ _ and musi_ _ _ _ _ have us_ _ their wo_ _ to chal_ _ _ _ _ norms a_ _ reflect poli_ _ _ _ _ realities. Beethoven’s symph_ _ _ _ _, for exa_ _ _ _, echoed t_ _ revolutionary spirit of his time. In the twentieth century, protest songs became anthems for civil rights and anti-war movements, helping to mobilize public sentiment. These examples show how music can influence thought and action. Studying these intersections reveals music's lasting role in shaping cultural and ideological shifts throughout history.",
    "blanks": [
     {
@@ -14574,7 +14581,7 @@ window.QUESTION_DB = {
    "title": "Philosophy",
    "discipline": "社会科学",
    "topic": "哲学",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Philosophy investigates the nature of reality, existence, and knowledge through critical thinking and reasoning. It expl____ fundamental ques_ _ _ _ _ about t_ _ human exper_ _ _ _ _, ethics, a_ _ the mi_ _. Philosophers dev_ _ _ _ theories t_ better under_ _ _ _ _ the wo_ _ _ and our place in it. This discipline challenges individuals to reflect deeply on their beliefs and assumptions, fostering intellectual growth and enlightenment. Contemporary philosophical branches include bioethics, philosophy of mind, and environmental philosophy, addressing modern challenges such as artificial intelligence consciousness, genetic engineering ethics, and humanity’s relationship with nature.",
    "blanks": [
     {
@@ -14944,13 +14951,13 @@ window.QUESTION_DB = {
   {
    "id": "20260518B",
    "month": "2026年5月",
-   "source": "20260518B",
+   "source": "20260518B / 20260824A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Theater's Power",
    "discipline": "艺术",
    "topic": "戏剧",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "Unlike literature or visual arts, theater engages audiences through live performances, creating an immediate emotional connection. The collab_ _ _ _ _ _ _ nature o_ theater fos_ _ _ _ a dyn_ _ _ _ exchange am_ _ _ professionals th_ _ spurs creat_ _ _ _ _. Theater c_ _ challenge precon_ _ _ _ _ _ notions a_ _ invite audiences to consider diverse perspectives. Its ephemeral quality—existing only in the moment of performance—heightens the impact, forcing both performers and viewers to engage with the present, ultimately transforming their understanding of human experiences.",
    "blanks": [
     {
@@ -15132,13 +15139,13 @@ window.QUESTION_DB = {
   {
    "id": "20260520A",
    "month": "2026年5月",
-   "source": "20260520A",
+   "source": "20260520A / 20260922A / 20260922B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Geology",
    "discipline": "自然科学",
    "topic": "地质学",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Geology is the scientific study of our planet, including its composition, structure, and processes. Geolo_ _ _ _ _ _ analyze ro_ _ _, minerals, a_ _ the nat_ _ _ _ _ forces th_ _ change t_ _ outer la_ _ _ of Ea_ _ _ over ti_ _. This know_ _ _ _ _ helps scientists understand the planet's history and predict future changes. It is essential for natural resource management, hazard mitigation, and environmental protection. Advances in geologic research—such as satellite-based remote sensing, deep-Earth imaging, and isotopic dating—have greatly improved our ability to monitor earthquakes, track volcanic activity, and assess groundwater resources.",
    "blanks": [
     {
@@ -15320,13 +15327,13 @@ window.QUESTION_DB = {
   {
    "id": "20260520A-2",
    "month": "2026年5月",
-   "source": "20260520A",
+   "source": "20260520A / 20260805A / 20260810A / 20260928A / 20260930B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Musical Evolution",
    "discipline": "艺术",
    "topic": "音乐",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "The transition from Baroque to Classical music reflected broader cultural shifts in eighteenth-century Europe. Baroque music, with its elaborate textures and emotional intensity, mirrored the grandeur of monarchies and the Church. As Enlightenment ide_ _ _ gained infl_ _ _ _ _, Classical music eme_ _ _ _ with sim_ _ _ _, less orn_ _ _ structures, bala_ _ _ _ phrasing, and a fo_ _ _ on rea_ _ _ and or_ _ _. Composers li_ _ Haydn and Mozart embraced simplicity and symmetry, aligning with the era’s intellectual and political movements that favored rational thought over divine authority. This stylistic shift marked a move toward accessibility and elegance in musical expression.",
    "blanks": [
     {
@@ -15702,7 +15709,7 @@ window.QUESTION_DB = {
    "title": "Urban Innovation",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "Cities, with their diverse populations and large industrial and commercial sectors, offer unparalleled opportunities for innovation and cultural exchange. The concen_ _ _ _ _ _ _ of peo_ _ _ and reso_ _ _ _ _ in ur_ _ _ areas ma_ _ _ it eas_ _ _ for indiv_ _ _ _ _ _ and instit_ _ _ _ _ _ to con_ _ _ _, share id_ _ _, and work together, which in turn drives innovation and economic development. This constant interaction fuels creativity and problem-solving, making urban centers fertile ground for artistic expression, scientific breakthroughs, and the evolution of social norms.",
    "blanks": [
     {
@@ -15889,7 +15896,7 @@ window.QUESTION_DB = {
    "title": "Comparative Advantage",
    "discipline": "社会科学",
    "topic": "政治经济",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "In analyzing global trade dynamics, the principle of comparative advantage plays a foundational role. It suggests that nations should specialize in producing goods they can create most efficiently, thereby enhancing ove_ _ _ _ economic produc_ _ _ _ _ _ and fost_ _ _ _ _ international interde_ _ _ _ _ _ _ _. However, exce_ _ _ _ _ reliance o_ this mo_ _ _ can exp_ _ _ economies t_ significant ri_ _ _. Countries that concentrate on a limited range of exports may become vulnerable to market volatility, such as shifts in global demand or price fluctuations. While comparative advantage can stimulate growth, it must be strategically managed to ensure long-term economic sustainability.",
    "blanks": [
     {
@@ -16075,7 +16082,7 @@ window.QUESTION_DB = {
    "title": "Color & Pigment",
    "discipline": "艺术",
    "topic": "画",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "In visual arts, the interplay between color and pigment is fundamental in shaping artistic expression. Pigments, the materials that give color to paint, are der_ _ _ _ from var_ _ _ _ sources, incl_ _ _ _ _ minerals, pla_ _ _, and synt_ _ _ _ _ compounds. Art_ _ _ _ selected mate_ _ _ _ _ based o_ their abi_ _ _ _ to con_ _ _ _ underlying layers (opacity) and resist fading over time. The transformation of pigments into vibrant colors involves the complex interaction of light with the pigment's molecular structure. This interaction determines the color's intensity and luminosity.",
    "blanks": [
     {
@@ -16256,7 +16263,7 @@ window.QUESTION_DB = {
   {
    "id": "20260601A-2",
    "month": "2026年6月",
-   "source": "20260601A",
+   "source": "20260601A / 20260916A / 20260930C",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "River Deltas",
@@ -16312,9 +16319,9 @@ window.QUESTION_DB = {
     {
      "index": 4,
      "prefix": "mate",
-     "answer": "rial",
-     "word": "material",
-     "slots": 4,
+     "answer": "rials",
+     "word": "materials",
+     "slots": 5,
      "underscores": 5,
      "marker": "mate_ _ _ _ _ ",
      "start": 223,
@@ -16439,18 +16446,23 @@ window.QUESTION_DB = {
    ],
    "status": "active",
    "blankCount": 10,
-   "flags": []
+   "flags": [
+    {
+     "type": "note",
+     "note": "v4.7 校验发现：空5 passage 有 5 格下划线但 slots=4（v4.4 重建遗留，marker 恰为正文子串故渲染校验未拦截）；按 9月行62 素材（materials，5格）修正 answer rial→rials、slots 4→5、marker 同步"
+    }
+   ]
   },
   {
    "id": "20260601B",
    "month": "2026年6月",
-   "source": "20260601B",
+   "source": "20260601B / 20260920C",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Theatrical Realism",
    "discipline": "艺术",
    "topic": "戏剧",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "Realism in theater is a movement that emerged in the 19th century, aiming to portray everyday life with authenticity and truthfulness. It rejects exaggerated sentime_ _ _ _ _ _ _ and theat_ _ _ _ _ conventions, ins_ _ _ _ focusing o_ believable chara_ _ _ _ _, natural conver_ _ _ _ _ _, and sett_ _ _ _ that ref_ _ _ _ real soc_ _ _ environments. Rea_ _ _ _ plays often explore complex moral and social issues, emphasizing psychological depth and the influence of environment and circumstance on human behavior. Realism continues to influence contemporary theatre by encouraging honest, nuanced storytelling.",
    "blanks": [
     {
@@ -16630,7 +16642,7 @@ window.QUESTION_DB = {
   {
    "id": "未标注-71",
    "month": "2026年6月",
-   "source": "来源未标注",
+   "source": "来源未标注 / 20260823",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Urbanization",
@@ -17009,7 +17021,7 @@ window.QUESTION_DB = {
    "title": "Oceanography",
    "discipline": "自然科学",
    "topic": "环境科学",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Oceanography is the study of the physical, chemical, and biological aspects of the ocean. This fi_ _ _ encompasses t_ _ exploration o_ ocean curr_ _ _ marine ecosy_ _ _ _ _, and geolo_ _ _ _ _ seabed struc_ _ _ _ _. Oceanographers u_ _ satellites a_ _ other adva_ _ _ _ technology to monitor and analyze ocean conditions. By tracking sea surface temperatures, currents, salinity, and other features, researchers contribute to our understanding of climate change. Their work is vital for sustaining ocean health and preserving marine biodiversity.",
    "blanks": [
     {
@@ -17190,13 +17202,13 @@ window.QUESTION_DB = {
   {
    "id": "20260603A",
    "month": "2026年6月",
-   "source": "20260603A",
+   "source": "20260603A / 20260809A / 20260810A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "3D Printing",
    "discipline": "社会科学",
    "topic": "科技",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "The advancement of 3D printing technology has revolutionized manufacturing by enabling precise, layer-by-layer fabrication of complex objects. 3D printing can use div_ _ _ _ materials su_ _ as plas_ _ _ _, metals, a_ _ ceramics. Engi_ _ _ _ _ are ab_ _ to fabr_ _ _ _ _ lightweight, str_ _ _ components wi_ _ internal struc_ _ _ _ _ that are impossible to produce using traditional methods. In the medical field, 3D printing facilitates the production of patient-specific implants and prosthetics tailored to anatomical data from imaging scans. 3D printing enhances design flexibility and production efficiency by streamlining prototyping and reducing material waste.",
    "blanks": [
     {
@@ -17378,13 +17390,13 @@ window.QUESTION_DB = {
   {
    "id": "20260603A-2",
    "month": "2026年6月",
-   "source": "20260603A",
+   "source": "20260603A / 20260809A / 20260902C",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Ancient Indian History",
    "discipline": "社会科学",
    "topic": "历史",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "Throughout history, the Indian subcontinent has been a cultural crossroads that has facilitated the exchange of ideas, goods, and philosophies between East and West. The Mauryan Empire, established in 322 BCE, represented one of the earliest fo_ _ _ of consol_ _ _ _ _ _ rule i_ the reg_ _ _ and la_ _ the ground_ _ _ _ for fut_ _ _ administrative mod_ _ _. A not_ _ _ _ achievement w_ _ the spread of Buddhism under the emperor Ashoka, who propagated its teachings beyond India into Central Asia. The Gupta period, often termed the golden age, witnessed advancements in sciences, mathematics, and art.",
    "blanks": [
     {
@@ -17566,13 +17578,13 @@ window.QUESTION_DB = {
   {
    "id": "20260607A OFFICIAL20260607B",
    "month": "2026年6月",
-   "source": "20260607A OFFICIAL20260607B",
+   "source": "20260607A OFFICIAL20260607B / 20260831A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Color Psychology",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "Throughout history, color and pigment have played a central role in art, shaping how we perceive and interpret visual experiences. Artists ha_ _ long under_ _ _ _ _ the emot_ _ _ _ _ and psycho_ _ _ _ _ _ _ power o_ color, util_ _ _ _ _ it t_ convey mo_ _, create emph_ _ _ _, and ev_ _ _ responses. For example, red often symbolizes passion, while blue can elicit calmness. These symbolic associations can vary across cultures and time periods, allowing artists to communicate deeper layers of meaning through their color choices.",
    "blanks": [
     {
@@ -17946,7 +17958,7 @@ window.QUESTION_DB = {
    "title": "Attachment Theory",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Attachment theory, developed by John Bowlby, emphasizes the importance of early emotional bonds between infants and caregivers and how they impact future social and emotional outcomes. Secure attachment, formed through consistent and responsive caregiving, fos_ _ _ _ confidence, suppo_ _ _ _ _ relationships, a_ _ emotional regulation. Alternatively, inse_ _ _ _ attachment c_ _ lead t_ anxiety, po_ _ social ski_ _ _, and men_ _ _ health chall_ _ _ _ _. Researchers have linked attachment styles to long-term personality development and psychological outcomes. These insights inform parenting strategies and early interventions that promote better developmental paths.",
    "blanks": [
     {
@@ -18316,13 +18328,13 @@ window.QUESTION_DB = {
   {
    "id": "20260609A",
    "month": "2026年6月",
-   "source": "20260609A / 20260722C",
+   "source": "20260609A / 20260722C / 20260927A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Homo Sapiens Origins",
    "discipline": "社会科学",
    "topic": "考古学",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Archaeological evidence suggests that Homo sapiens first emerged in Africa approximately 300,000 years ago. These early humans were adept at utilizing the resources available to them, including plants and animals that supplied materials for food, clothing, and shelter. They crafted to_ _ _ from st_ _ _ and ani_ _ _ bones a_ _ _ adapted th_ _ _ hunting techn_ _ _ _ _ to t_ _ changing clim_ _ _ and lands_ _ _ _ _, thus ensu_ _ _ _ their survival. As they migrated out of Africa, they encountered diverse environments, leading to cultural and technological innovations.",
    "blanks": [
     {
@@ -18504,13 +18516,13 @@ window.QUESTION_DB = {
   {
    "id": "20260610A",
    "month": "2026年4月",
-   "source": "20260610A",
+   "source": "20260610A / 20260817A / 20260915B / 20260916A / 20260916B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Rocks & Strata",
    "discipline": "自然科学",
    "topic": "地质学",
-   "difficulty": "简单",
+   "difficulty": "中等",
    "passage": "Rock formations offer valuable insights into Earth's history. Sedimentary layers, for example, reveal past environments. By analyzing their composition and arrangement, geologists can determine if an area was once underwater or exposed. Over time, pressure trans_ _ _ _ _ sediments in_ _ solid ro_ _, preserving evid_ _ _ _ of anc_ _ _ _ climates a_ _ geological eve_ _ _. Fossils wit_ _ _ layers sh_ _ what orga_ _ _ _ _ once lived there. Through such studies, scientists reconstruct Earth's past and gain a deeper understanding of the dynamic processes that continue to shape the planet's surface.",
    "blanks": [
     {
@@ -18692,7 +18704,7 @@ window.QUESTION_DB = {
   {
    "id": "20260610A-2",
    "month": "2026年6月",
-   "source": "20260610A",
+   "source": "20260610A / 20260915B / 20260916B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Urban Heat Island",
@@ -18880,13 +18892,13 @@ window.QUESTION_DB = {
   {
    "id": "20260610A-3",
    "month": "2026年5月",
-   "source": "20260610A",
+   "source": "20260610A / 20260915B / 20260920B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Medieval Exchange",
    "discipline": "社会科学",
    "topic": "哲学",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "The cultural exchange between Europe and the Near East during the medieval period had a lasting impact on art, science, and philosophy. Although the Crusades were primarily military campaigns, they facil_ _ _ _ _ _ contact th_ _ led t_ the tran_ _ _ _ of id_ _ _ and techno_ _ _ _ _ _. European scho_ _ _ _ gained acc_ _ _ to adva_ _ _ _ knowledge i_ mathematics and medicine from the Islamic world, sparking renewed intellectual activity. Translations of Arabic philosophical texts, including commentaries on Aristotle, challenged existing doctrines and inspired new schools of thought. This exchange helped reshape European intellectual life.",
    "blanks": [
     {
@@ -19068,7 +19080,7 @@ window.QUESTION_DB = {
   {
    "id": "20260614A",
    "month": "2026年6月",
-   "source": "20260614A",
+   "source": "20260614A / 20260810A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Exoplanets",
@@ -19444,13 +19456,13 @@ window.QUESTION_DB = {
   {
    "id": "20260614A-3",
    "month": "2026年6月",
-   "source": "20260614A",
+   "source": "20260614A / 20260901A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Artisan Craft",
    "discipline": "艺术",
    "topic": "工艺",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "Craftsmanship has undergone a profound transformation over the centuries, shifing from a demonstration of manualskil to an expression of artistic vision and communal identity. In medieval Europe, skilled makers-known as artisans-were highly valued not only for their tech_ _ _ _ _ expertise b_ _ also f_ _ their abi_ _ _ _ to inf_ _ _ their crea_ __ __ __ _ with mea_ _ _ _ and repr_ _ _ __ _ deeper spir_ __ __ __ _ or cult_ _ _ _ themes. The intricate details in woodwork, textiles, and pottery served as a testament to the craftsman's mastery and the motifs prevalent during that era .",
    "blanks": [
     {
@@ -20529,7 +20541,7 @@ window.QUESTION_DB = {
    "title": "Louisiana Purchase",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "中等",
+   "difficulty": "困难",
    "passage": "The Louisiana Purchase of 1803 was a landmark diplomatic agreements in which the United States acquired approximately 828,000 square miles of territory from France for $ 15 million,Negotiated under President Thomas Jefferson, the acqui_ _ _ _ _ _ nearly dou_ _ _ _ the la_ _ area o_ the nat_ _ _ and sec_ _ _ _ access t_ key inl_ _ _ waterways a_ _ trade hu_ _ essential for economic expansions .The purchase also affirmed the principle of implied powers within the United States Constitution, setting a precedent for future territorial growth.",
    "blanks": [
     {
@@ -20715,7 +20727,7 @@ window.QUESTION_DB = {
    "title": "Medieval Society",
    "discipline": "社会科学",
    "topic": "历史",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "Medieval European history, lasting approximately from 500 C.E. to 1500 C.E., is marked by significant cultural, political, and economic changes. Feudalism domi_ _ _ _ _ the soc_ _ _ structure, wi_ _ lords gove_ _ _ _ _ _ lands a_ _ vassals prov_ _ _ _ _ military se_ _ _ _. The Church exe_ _ _ _ substantial infl_ _ _ _ _ over da_ _ _ life and governance. Trade routes expanded, facilitating the exchange of goods and ideas. Art and architecture flourished, exemplified by Gothic cathedrals and illuminated manuscripts. Studying this era involves analyzing historical documents, artifacts, and architectural remains to understand the complexities of medieval society.\"",
    "blanks": [
     {
@@ -20896,13 +20908,13 @@ window.QUESTION_DB = {
   {
    "id": "20260623A",
    "month": "2026年6月",
-   "source": "20260623A",
+   "source": "20260623A / 20260808B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Ant Society",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "Ants display highly organized social behavior, characterized by a structured division of labor and cooperative interaction. Worker ants, which are sterile females, perform specialized tasks such as foraging, brood care, nest maintenance, and defense. These ro_ _ _ often va_ _ based o_ age o_ physical tra_ _ _, enhancing col_ _ _ efficiency. Commun_ _ _ _ _ _ _ occurs prim_ _ _ _ _ through chem_ _ _ _ signals cal_ _ _ pheromones, enabling coordination across large groups. The complexity of ant societies offers insight into how evolutionary pressures can produce adaptive social systems.",
    "blanks": [
     {
@@ -21269,7 +21281,7 @@ window.QUESTION_DB = {
   {
    "id": "20260629A",
    "month": "2026年6月",
-   "source": "20260629A",
+   "source": "20260629A / 20260808A / 20260808B / 20260819B / 20260831A / 20260831B / 20260901A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Last Ice Age",
@@ -21462,7 +21474,7 @@ window.QUESTION_DB = {
    "title": "Cognition & Consciousness",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "Understanding the relationship between cognition and consciousness is pivotal for unraveling the complexities of human thinking and behavior, as both are fundamental activities of the brain. Cognition is the men_ _ _ process b_ which indiv_ _ _ _ _ acquire know_ _ _ _ _ and unders_ _ _ _ _ _ _ through tho_ _ _ , experience, a_ _ the sen_ _ _. Consciousness ref_ _ _ to t_ _ state of being aware of and responsive to one's surroundings. The advancements of neuroimaging technologies have provided insights into how consciousness arises from neural networks and how cognitive processes can occur both with and without conscious awareness.",
    "blanks": [
     {
@@ -21639,13 +21651,13 @@ window.QUESTION_DB = {
   {
    "id": "20260630B",
    "month": "2026年2月",
-   "source": "20260630B",
+   "source": "20260630B / 20260818B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Museums",
    "discipline": "社会科学",
    "topic": "历史",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "Museums play a crucial role in preserving and showcasing art, history, and culture. They pro_ _ _ _ a sp_ _ _ where peo_ _ _ can eng_ _ _ with mult_ _ _ _ forms o_ artistic expre_ _ _ _ _ and histo_ _ _ _ _ artifacts.. Ma_ _ museums al_ _ offer educational programs and workshops, fostering a deeper understanding of the subjects they display. In addition, digital innovations have enabled museums to reach global audiences through virtual tours and online collections. The patronage of visual arts by individuals and organizations helps support artists and ensures the continued growth and diversity of the cultural landscape.",
    "blanks": [
     {
@@ -22012,13 +22024,13 @@ window.QUESTION_DB = {
   {
    "id": "20260701A-2",
    "month": "2026年7月",
-   "source": "20260701A",
+   "source": "20260701A / 20260817A / 20260906C / 20260922A / 20260922B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Neolithic Pottery",
    "discipline": "艺术",
    "topic": "工艺",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "During the Neolithic period, craftspeople began producing pottery that served both practical and aesthetic purposes. Initially created f_ _ storing fo_ _ and wa_ _ _, these cl_ _ vessels event_ _ _ _ _ featured decor_ _ _ _ _ elements su_ _ as care_ _ _ _ _ incised patt_ _ _ _ and pai_ _ _ _ designs. This dual function—utility and beauty—marks one of the earliest examples of craftsmanship evolving into artistic expression. The refinement of pottery techniques, including firing and glazing, reflected growing technical skill and cultural values.",
    "blanks": [
     {
@@ -22205,7 +22217,7 @@ window.QUESTION_DB = {
    "title": "Herd Society",
    "discipline": "生命科学",
    "topic": "生物",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "In studying animal behavior, it becomes apparent that social hierarchies play a significant role in the lives of many terrestrial mammals. These hierarchies, often established through displays of dominance and submission, dictate acc_ _ _ to reso_ _ _ _ _ such a_ food, ma_ _ _, and she_ _ _ _, thereby influ_ _ _ _ _ _ survival a_ _ reproductive suc_ _ _ _. Behavioral ecolo_ _ _ _ _ have obse_ _ _ _ that such complex social structures can lead to increased group stability, as roles are clearly defined, reducing the frequency of potentially harmful disputes and promoting cooperation among group members.",
    "blanks": [
     {
@@ -22386,7 +22398,7 @@ window.QUESTION_DB = {
   {
    "id": "20260705B",
    "month": "2026年7月",
-   "source": "20260705B",
+   "source": "20260705B / 20260812B / 20260914B / 20260920C",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Public Health",
@@ -22946,7 +22958,7 @@ window.QUESTION_DB = {
   {
    "id": "20260708A",
    "month": "2026年7月",
-   "source": "20260708A",
+   "source": "20260708A / 20260808D / 20260819A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Film Industry",
@@ -23325,7 +23337,7 @@ window.QUESTION_DB = {
    "title": "Critical Thinking",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "Critical thinking is a vital skill that involves analyzing information objectively and making reasoned judgments.This process requ_ _ _ _ a clear, rati_ _ _ _ approach t_ problem-solving, wh_ _ _ one asse_ _ _ _ evidence.ident_ _ _ _ _ biases, a_ _ evaluates argu_ _ _ _ _.Critical thin_ _ _ _ are ab_ _ to distinguish between fact and opinion, and they ask probing questions to gain deeper insights. In academic contexts, this skill helps students develop well-founded conclusions and become more effective learners. Encouraging critical thinking is essential for fostering intellectual growth and informed decision-making.",
    "blanks": [
     {
@@ -23886,7 +23898,7 @@ window.QUESTION_DB = {
    "title": "Animal Communication",
    "discipline": "生命科学",
    "topic": "生物",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "In the complex social structures of many terrestrial mammals, communication plays an essential role in maintaining group cohesion and ensuring survival. For example, elephants use diff_ _ _ _ _ sounds, incl_ _ _ _ _ infrasonic ca_ _ _ that tra_ _ _ long dist_ _ _ _ _, to he_ _ them mo_ _ together a_ _ warn ea_ _ other ab_ _ _ danger. Similarly, prairie dogs employ a sophisticated system of vocalizations to share information about predator types, size, and speed. These communicative behaviors are critical, as they allow individual animals to respond promptly to threats and sustain group unity.",
    "blanks": [
     {
@@ -24067,7 +24079,7 @@ window.QUESTION_DB = {
   {
    "id": "20260721B",
    "month": "2026年7月",
-   "source": "20260721B",
+   "source": "20260721B / 20260921B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Animal Sociality",
@@ -24447,7 +24459,7 @@ window.QUESTION_DB = {
    "title": "Homo Sapiens Origins",
    "discipline": "生命科学",
    "topic": "生物",
-   "difficulty": "中等",
+   "difficulty": "简单",
    "passage": "Archaeological evidence suggests that Homo sapiens first emerged in Africa approximately 300,000 years ago.These early humans were adept at utilizing the resources available to them,including plants and animals that supplied materials for food,clothing and shelter.They crafted to_ _ _ from st_ _ _ and ani_ _ _ bones a_ _ adapted th_ _ _ hunting techn_ _ _ _ _ _ to t_ _ changing clim_ _ _ _ and lands_ _ _ _ _, thus ensu_ _ _ _ their survival.As they migrated out of Africa, they encountered diverse environments,leading to cultural and technological innovations.",
    "blanks": [
     {
@@ -25008,7 +25020,7 @@ window.QUESTION_DB = {
    "title": "Rise of Factories",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "困难",
+   "difficulty": "简单",
    "passage": "The rise of industrialization in the eighteenth and nineteenth centuries brought about a dramatic shift in how goods were made, leading to the widespread development of factories. These centralized workp_ _ _ _ _ replaced tradi_ _ _ _ _ _ handcrafting a_ _ cottage indus_ _ _ _ _ with mechanized produ_ _ _ _ _ systems pow_ _ _ _ by st_ _ _, water, o_ electricity, allo_ _ _ _ for gre_ _ _ _ efficiency in the manufacturing of good. Factories not only transformed economies and labor systems but also reshaped urban landscapes, contributing to population growth, environmental changes, and new social dynamics.",
    "blanks": [
     {
@@ -25189,13 +25201,13 @@ window.QUESTION_DB = {
   {
    "id": "20260725A",
    "month": "2026年7月",
-   "source": "20260725A",
+   "source": "20260725A / 20260824A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Prehistoric Society",
    "discipline": "社会科学",
    "topic": "历史",
-   "difficulty": "困难",
+   "difficulty": "中等",
    "passage": "In the prehistoric era, social organization was intricately linked to the prevailing environmental conditions, which dictated the migratory patterns and settlement choices of early human groups. These commu_ _ _ _ _ _ often deve_ _ _ _ _ cohesive un_ _ _ based o_ kinship ti_ _, establishing a sim_ _ _ social stru_ _ _ _ _ that facil_ _ _ _ _ _ cooperative hun_ _ _ _ and gath_ _ _ _ _ of food. Leadership roles emerged naturally, typically assumed by individuals possessing superior survival skills or profound knowledge of the terrain. The distribution of resources, particularly food, was a critical factor, often determining the power dynamics within the group.",
    "blanks": [
     {
@@ -25376,7 +25388,7 @@ window.QUESTION_DB = {
   {
    "id": "20260725B",
    "month": "2026年7月",
-   "source": "20260725B",
+   "source": "20260725B / 20260824B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Desert Adaptations",
@@ -26122,7 +26134,7 @@ window.QUESTION_DB = {
   {
    "id": "20260804A",
    "month": "2026年8月",
-   "source": "20260804A",
+   "source": "20260804A / 20260920A / 20260921A / 20260921B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Spacetime",
@@ -26496,13 +26508,13 @@ window.QUESTION_DB = {
   {
    "id": "20260805A-2",
    "month": "2026年8月",
-   "source": "20260805A",
+   "source": "20260805A / 20260928A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "Early Socialization",
    "discipline": "社会科学",
    "topic": "心理学",
-   "difficulty": "困难",
+   "difficulty": "简单",
    "passage": "Social interaction plays a key role in early childhood development. Numerous studies indicate that early exposure to diverse social environments enhances cognitive and emotional growth. Social exch_ _ _ _ _ not on_ _ foster commun_ _ _ _ _ _ _ skills b_ _ also cult_ _ _ _ _ empathy a_ _ understanding. Chil_ _ _ _ learn t_ navigate com_ _ _ _ social dyna_ _ _ _, promoting resilience and adaptability. Furthermore, peer engagement has been shown to accelerate language acquisition and problem-solving capabilities. Advocates argue that investing in such experiences early on can yield lifelong benefits.",
    "blanks": [
     {
@@ -27118,7 +27130,7 @@ window.QUESTION_DB = {
   {
    "id": "真题-005",
    "month": "1-7月合集",
-   "source": "1-7月真题",
+   "source": "1-7月真题 / 20260922A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "",
@@ -29722,7 +29734,7 @@ window.QUESTION_DB = {
   {
    "id": "真题-047",
    "month": "1-7月合集",
-   "source": "1-7月真题",
+   "source": "1-7月真题 / 20260914A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "",
@@ -32107,7 +32119,7 @@ window.QUESTION_DB = {
   {
    "id": "真题-080",
    "month": "1-7月合集",
-   "source": "1-7月真题",
+   "source": "1-7月真题 / 20260808C / 20260819A / 20260902B",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "",
@@ -32603,7 +32615,7 @@ window.QUESTION_DB = {
   {
    "id": "真题-087",
    "month": "1-7月合集",
-   "source": "1-7月真题",
+   "source": "1-7月真题 / 20260908A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "",
@@ -32975,7 +32987,7 @@ window.QUESTION_DB = {
   {
    "id": "真题-100",
    "month": "1-7月合集",
-   "source": "1-7月真题",
+   "source": "1-7月真题 / 20260812A / 20260913A",
    "type": "complete_words",
    "instruction": "Fill in the missing letters in the paragraph.",
    "title": "",
@@ -37716,6 +37728,8668 @@ window.QUESTION_DB = {
    ],
    "status": "active",
    "blankCount": 10
+  },
+  {
+   "id": "20260808A",
+   "month": "2026年8月",
+   "source": "20260808A / 20260819A / 20260901A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Archaeology",
+   "discipline": "社会科学",
+   "topic": "历史",
+   "difficulty": "中等",
+   "passage": "Archaeology provides essential insights into past human societies through the meticulous examination of material remains. By studying artifacts, structures, and biofacts, archaeologists recon_ _ _ _ _ _  the da_ _ _  lives, soc_ _ _  structures, a_ _  cultural prac_ _ _ _ _  of anc_ _ _ _  civilizations. Excav_ _ _ _ _ _  often yi_ _ _  pottery frag_ _ _ _ _, remnants o_  early dwellings, and tools, which reveal how people interacted with their environment. Radiocarbon dating, among other techniques, allows researchers to determine the age of these findings, placing them within a historical context.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "社会科学",
+    "archaeology"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "recon",
+     "answer": "struct",
+     "word": "reconstruct",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "recon_ _ _ _ _ _ ",
+     "start": 186,
+     "end": 203
+    },
+    {
+     "index": 1,
+     "prefix": "da",
+     "answer": "ily",
+     "word": "daily",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "da_ _ _ ",
+     "start": 208,
+     "end": 216
+    },
+    {
+     "index": 2,
+     "prefix": "soc",
+     "answer": "ial",
+     "word": "social",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "soc_ _ _ ",
+     "start": 224,
+     "end": 233
+    },
+    {
+     "index": 3,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 246,
+     "end": 251
+    },
+    {
+     "index": 4,
+     "prefix": "prac",
+     "answer": "tices",
+     "word": "practices",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "prac_ _ _ _ _ ",
+     "start": 261,
+     "end": 275
+    },
+    {
+     "index": 5,
+     "prefix": "anc",
+     "answer": "ient",
+     "word": "ancient",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "anc_ _ _ _ ",
+     "start": 279,
+     "end": 290
+    },
+    {
+     "index": 6,
+     "prefix": "Excav",
+     "answer": "ations",
+     "word": "Excavations",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "Excav_ _ _ _ _ _ ",
+     "start": 306,
+     "end": 323
+    },
+    {
+     "index": 7,
+     "prefix": "yi",
+     "answer": "eld",
+     "word": "yield",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "yi_ _ _ ",
+     "start": 330,
+     "end": 338
+    },
+    {
+     "index": 8,
+     "prefix": "frag",
+     "answer": "ments",
+     "word": "fragments",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "frag_ _ _ _ _",
+     "start": 347,
+     "end": 360
+    },
+    {
+     "index": 9,
+     "prefix": "o",
+     "answer": "f",
+     "word": "of",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 371,
+     "end": 374
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行12]）"
+    }
+   ]
+  },
+  {
+   "id": "20260808A-2",
+   "month": "2026年8月",
+   "source": "20260808A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Craftsmanship Evolution",
+   "discipline": "生命科学",
+   "topic": "生物",
+   "difficulty": "中等",
+   "passage": "Craftsmanship has undergone a profound transformation over the centuries, shifting from a demonstration of manual skill to an expression of artistic vision and communal identity. In medieval Europe, skilled makers—known as artisans—were highly valued not only for their tech_ _ _ _ _  expertise b_ _  also f_ _  their abi_ _ _ _  to inf_ _ _  their crea_ _ _ _ _  with mea_ _ _ _  and repr_ _ _ _ _  deeper spir_ _ _ _ _  or cult_ _ _ _  themes.The intricate details in woodwork, textiles, and pottery served as a testament to the craftsman's mastery and the motifs prevalent during that era.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "生命科学",
+    "craftsmanship evolution"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "tech",
+     "answer": "nical",
+     "word": "technical",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "tech_ _ _ _ _ ",
+     "start": 270,
+     "end": 284
+    },
+    {
+     "index": 1,
+     "prefix": "b",
+     "answer": "ut",
+     "word": "but",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "b_ _ ",
+     "start": 295,
+     "end": 300
+    },
+    {
+     "index": 2,
+     "prefix": "f",
+     "answer": "or",
+     "word": "for",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "f_ _ ",
+     "start": 306,
+     "end": 311
+    },
+    {
+     "index": 3,
+     "prefix": "abi",
+     "answer": "lity",
+     "word": "ability",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "abi_ _ _ _ ",
+     "start": 318,
+     "end": 329
+    },
+    {
+     "index": 4,
+     "prefix": "inf",
+     "answer": "use",
+     "word": "infuse",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "inf_ _ _ ",
+     "start": 333,
+     "end": 342
+    },
+    {
+     "index": 5,
+     "prefix": "crea",
+     "answer": "tions",
+     "word": "creations",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "crea_ _ _ _ _ ",
+     "start": 349,
+     "end": 363
+    },
+    {
+     "index": 6,
+     "prefix": "mea",
+     "answer": "ning",
+     "word": "meaning",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "mea_ _ _ _ ",
+     "start": 369,
+     "end": 380
+    },
+    {
+     "index": 7,
+     "prefix": "repr",
+     "answer": "esent",
+     "word": "represent",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "repr_ _ _ _ _ ",
+     "start": 385,
+     "end": 399
+    },
+    {
+     "index": 8,
+     "prefix": "spir",
+     "answer": "itual",
+     "word": "spiritual",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "spir_ _ _ _ _ ",
+     "start": 407,
+     "end": 421
+    },
+    {
+     "index": 9,
+     "prefix": "cult",
+     "answer": "ural",
+     "word": "cultural",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "cult_ _ _ _ ",
+     "start": 425,
+     "end": 437
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行13]）"
+    },
+    {
+     "type": "note",
+     "note": "空1: 正文下划线4格，按答案 'nical' 校正为5格（词 technical）"
+    },
+    {
+     "type": "note",
+     "note": "空6: 正文下划线4格，按答案 'tions' 校正为5格（词 creations）"
+    },
+    {
+     "type": "note",
+     "note": "空8: 正文下划线4格，按答案 'esent' 校正为5格（词 represent）"
+    },
+    {
+     "type": "note",
+     "note": "空9: 正文下划线4格，按答案 'itual' 校正为5格（词 spiritual）"
+    }
+   ]
+  },
+  {
+   "id": "20260808B",
+   "month": "2026年8月",
+   "source": "20260808B / 20260915C",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Roman Social Classes",
+   "discipline": "社会科学",
+   "topic": "历史",
+   "difficulty": "中等",
+   "passage": "The society of ancient Rome was a complex hierarchy, featuring a distinct class system. At the top were the patricians, the el_ _ _  aristocratic fami_ _ _ _  who he_ _  the majo_ _ _ _  of t_ _  political po_ _ _. Most o_  the popul_ _ _ _ _  had lim_ _ _ _  privileges, infl_ _ _ _ _, and rights. They were called plebeians. Despite their larger numbers, plebeians were largely excluded from formal political decision-making in the early Republic. Over time, however, they fought for and gradually secured more privileges, such as the ability to hold public office.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "社会科学",
+    "roman social classes"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "el",
+     "answer": "ite",
+     "word": "elite",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "el_ _ _ ",
+     "start": 124,
+     "end": 132
+    },
+    {
+     "index": 1,
+     "prefix": "fami",
+     "answer": "lies",
+     "word": "families",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "fami_ _ _ _ ",
+     "start": 146,
+     "end": 158
+    },
+    {
+     "index": 2,
+     "prefix": "he",
+     "answer": "ld",
+     "word": "held",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "he_ _ ",
+     "start": 163,
+     "end": 169
+    },
+    {
+     "index": 3,
+     "prefix": "majo",
+     "answer": "rity",
+     "word": "majority",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "majo_ _ _ _ ",
+     "start": 174,
+     "end": 186
+    },
+    {
+     "index": 4,
+     "prefix": "t",
+     "answer": "he",
+     "word": "the",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "t_ _ ",
+     "start": 190,
+     "end": 195
+    },
+    {
+     "index": 5,
+     "prefix": "po",
+     "answer": "wer",
+     "word": "power",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "po_ _ _",
+     "start": 206,
+     "end": 213
+    },
+    {
+     "index": 6,
+     "prefix": "o",
+     "answer": "f",
+     "word": "of",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 220,
+     "end": 223
+    },
+    {
+     "index": 7,
+     "prefix": "popul",
+     "answer": "ation",
+     "word": "population",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "popul_ _ _ _ _ ",
+     "start": 228,
+     "end": 243
+    },
+    {
+     "index": 8,
+     "prefix": "lim",
+     "answer": "ited",
+     "word": "limited",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "lim_ _ _ _ ",
+     "start": 248,
+     "end": 259
+    },
+    {
+     "index": 9,
+     "prefix": "infl",
+     "answer": "uence",
+     "word": "influence",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "infl_ _ _ _ _",
+     "start": 272,
+     "end": 285
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行16]）"
+    },
+    {
+     "type": "note",
+     "note": "个案修复：空8 答案 'lation' → 'ation'"
+    },
+    {
+     "type": "note",
+     "note": "空1: 正文下划线4格，按答案 'ite' 校正为3格（词 elite）"
+    },
+    {
+     "type": "note",
+     "note": "空3: 正文下划线4格，按答案 'ld' 校正为2格（词 held）"
+    },
+    {
+     "type": "note",
+     "note": "空5: 正文下划线4格，按答案 'he' 校正为2格（词 the）"
+    },
+    {
+     "type": "note",
+     "note": "空6: 正文下划线4格，按答案 'wer' 校正为3格（词 power）"
+    },
+    {
+     "type": "note",
+     "note": "空7: 正文下划线4格，按答案 'f' 校正为1格（词 of）"
+    },
+    {
+     "type": "note",
+     "note": "空8: 正文下划线4格，按答案 'ation' 校正为5格（词 population）"
+    },
+    {
+     "type": "note",
+     "note": "空10: 正文下划线4格，按答案 'uence' 校正为5格（词 influence）"
+    },
+    {
+     "type": "note",
+     "note": "答案列笔误：第8空 lation→ation（popul+ation=population），格数按答案校正"
+    }
+   ]
+  },
+  {
+   "id": "20260808C",
+   "month": "2026年8月",
+   "source": "20260808C",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Film Industry",
+   "discipline": "社会科学",
+   "topic": "政治经济",
+   "difficulty": "中等",
+   "passage": "The evolution of the film industry has been shaped by major technological shifts, especially the move from silent films to movies with sound. In the silent era, filmmakers relied entirely on visual storytelling, using expressive acting and title cards to convey dialogue and emotion. The intro_ _ _ _ _ _ _of synchronized so_ _ _-where au_ _ _was mat_ _ _ _precisely wi_ _the mov_ _ _image-all_ _ _ _audiences t_hear act_ _ _speak f_ _the first time, transforming the cinematic experience. This breakthrough laid the foundation for later innovations like CGI and immersive sound design, expanding how stories could be told on screen.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "社会科学",
+    "film industry"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "intro",
+     "answer": "duction",
+     "word": "introduction",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "intro_ _ _ _ _ _ _",
+     "start": 288,
+     "end": 306
+    },
+    {
+     "index": 1,
+     "prefix": "so",
+     "answer": "und",
+     "word": "sound",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "so_ _ _",
+     "start": 322,
+     "end": 329
+    },
+    {
+     "index": 2,
+     "prefix": "au",
+     "answer": "dio",
+     "word": "audio",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "au_ _ _",
+     "start": 336,
+     "end": 343
+    },
+    {
+     "index": 3,
+     "prefix": "mat",
+     "answer": "ched",
+     "word": "matched",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "mat_ _ _ _",
+     "start": 347,
+     "end": 357
+    },
+    {
+     "index": 4,
+     "prefix": "wi",
+     "answer": "th",
+     "word": "with",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "wi_ _",
+     "start": 367,
+     "end": 372
+    },
+    {
+     "index": 5,
+     "prefix": "mov",
+     "answer": "ing",
+     "word": "moving",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "mov_ _ _",
+     "start": 376,
+     "end": 384
+    },
+    {
+     "index": 6,
+     "prefix": "all",
+     "answer": "owed",
+     "word": "allowed",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "all_ _ _ _",
+     "start": 390,
+     "end": 400
+    },
+    {
+     "index": 7,
+     "prefix": "t",
+     "answer": "o",
+     "word": "to",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "t_",
+     "start": 410,
+     "end": 412
+    },
+    {
+     "index": 8,
+     "prefix": "act",
+     "answer": "ors",
+     "word": "actors",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "act_ _ _",
+     "start": 417,
+     "end": 425
+    },
+    {
+     "index": 9,
+     "prefix": "f",
+     "answer": "or",
+     "word": "for",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "f_ _",
+     "start": 431,
+     "end": 435
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行17]）"
+    },
+    {
+     "type": "note",
+     "note": "个案修复：空1 答案 'uction' → 'duction'"
+    },
+    {
+     "type": "note",
+     "note": "空1: 正文下划线6格，按答案 'duction' 校正为7格（词 introduction）"
+    },
+    {
+     "type": "note",
+     "note": "空5: 正文下划线3格，按答案 'th' 校正为2格（词 with）"
+    },
+    {
+     "type": "note",
+     "note": "空6: 正文下划线4格，按答案 'ing' 校正为3格（词 moving）"
+    },
+    {
+     "type": "note",
+     "note": "空7: 正文下划线5格，按答案 'owed' 校正为4格（词 allowed）"
+    },
+    {
+     "type": "note",
+     "note": "空8: 正文下划线3格，按答案 'o' 校正为1格（词 to）"
+    },
+    {
+     "type": "note",
+     "note": "空9: 正文下划线4格，按答案 'ors' 校正为3格（词 actors）"
+    },
+    {
+     "type": "note",
+     "note": "空10: 正文下划线3格，按答案 'or' 校正为2格（词 for）"
+    },
+    {
+     "type": "note",
+     "note": "答案列笔误：第1空 uction→duction（intro+duction=introduction）"
+    }
+   ]
+  },
+  {
+   "id": "20260808C-2",
+   "month": "2026年8月",
+   "source": "20260808C",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Human Origins",
+   "discipline": "社会科学",
+   "topic": "综合",
+   "difficulty": "中等",
+   "passage": "Archaeological evidence suggests that Homo sapiens first emerged in Africa approximately 300,000 years ago. These early humans were adept at utilizing the resources available to them, including plants and animals that supplied materials for food, clothing, and shelter. They crafted to_ _ _  from st_ _ _  and ani_ _ _  bones a_ _  adapted th_ _ _  hunting techn_ _ _ _ _  to t_ _  changing clim_ _ _ _  and lands_ _ _ _ _, thus ensu_ _ _ _  their survival. As they migrated out of Africa, they encountered diverse environments, leading to cultural and technological innovations.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "社会科学",
+    "human origins"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "to",
+     "answer": "ols",
+     "word": "tools",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "to_ _ _ ",
+     "start": 283,
+     "end": 291
+    },
+    {
+     "index": 1,
+     "prefix": "st",
+     "answer": "one",
+     "word": "stone",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "st_ _ _ ",
+     "start": 297,
+     "end": 305
+    },
+    {
+     "index": 2,
+     "prefix": "ani",
+     "answer": "mal",
+     "word": "animal",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ani_ _ _ ",
+     "start": 310,
+     "end": 319
+    },
+    {
+     "index": 3,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 326,
+     "end": 331
+    },
+    {
+     "index": 4,
+     "prefix": "th",
+     "answer": "eir",
+     "word": "their",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "th_ _ _ ",
+     "start": 340,
+     "end": 348
+    },
+    {
+     "index": 5,
+     "prefix": "techn",
+     "answer": "iques",
+     "word": "techniques",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "techn_ _ _ _ _ ",
+     "start": 357,
+     "end": 372
+    },
+    {
+     "index": 6,
+     "prefix": "t",
+     "answer": "he",
+     "word": "the",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "t_ _ ",
+     "start": 376,
+     "end": 381
+    },
+    {
+     "index": 7,
+     "prefix": "clim",
+     "answer": "ates",
+     "word": "climates",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "clim_ _ _ _ ",
+     "start": 391,
+     "end": 403
+    },
+    {
+     "index": 8,
+     "prefix": "lands",
+     "answer": "capes",
+     "word": "landscapes",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "lands_ _ _ _ _",
+     "start": 408,
+     "end": 422
+    },
+    {
+     "index": 9,
+     "prefix": "ensu",
+     "answer": "ring",
+     "word": "ensuring",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "ensu_ _ _ _ ",
+     "start": 429,
+     "end": 441
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行18]）"
+    },
+    {
+     "type": "note",
+     "note": "空4: 正文下划线3格，按答案 'nd' 校正为2格（词 and）"
+    },
+    {
+     "type": "note",
+     "note": "空6: 正文下划线3格，按答案 'iques' 校正为5格（词 techniques）"
+    },
+    {
+     "type": "note",
+     "note": "空7: 正文下划线3格，按答案 'he' 校正为2格（词 the）"
+    },
+    {
+     "type": "note",
+     "note": "空8: 正文下划线3格，按答案 'ates' 校正为4格（词 climates）"
+    },
+    {
+     "type": "note",
+     "note": "空9: 正文下划线3格，按答案 'capes' 校正为5格（词 landscapes）"
+    },
+    {
+     "type": "note",
+     "note": "空10: 正文下划线3格，按答案 'ring' 校正为4格（词 ensuring）"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 20260609A,20260722A-2 同底文本、挖空不同"
+    }
+   ]
+  },
+  {
+   "id": "20260809A",
+   "month": "2026年8月",
+   "source": "20260809A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Cognition and Consciousness",
+   "discipline": "生命科学",
+   "topic": "心理学",
+   "difficulty": "中等",
+   "passage": "Understanding the relationship between cognition and consciousness is pivotal for unraveling the complexities of human thinking and behavior, as both are fundamental activities of the brain. Cognition is the men_ _ _  process b_  which indiv_ _ _ _ _ _  acquire know_ _ _ _ _  and unders_ _ _ _ _ _ _  through tho_ _ _ _, experience, a_ _  the sen_ _ _. Consciousness ref_ _ _  to t_ _  state of being aware of and responsive to one's surroundings. The advancements of neuroimaging technologies have provided insights into how consciousness arises from neural networks and how cognitive processes can occur both with and without conscious awareness.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "生命科学",
+    "cognition and consciousness"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "men",
+     "answer": "tal",
+     "word": "mental",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "men_ _ _ ",
+     "start": 208,
+     "end": 217
+    },
+    {
+     "index": 1,
+     "prefix": "b",
+     "answer": "y",
+     "word": "by",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "b_ ",
+     "start": 226,
+     "end": 229
+    },
+    {
+     "index": 2,
+     "prefix": "indiv",
+     "answer": "iduals",
+     "word": "individuals",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "indiv_ _ _ _ _ _ ",
+     "start": 236,
+     "end": 253
+    },
+    {
+     "index": 3,
+     "prefix": "know",
+     "answer": "ledge",
+     "word": "knowledge",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "know_ _ _ _ _ ",
+     "start": 262,
+     "end": 276
+    },
+    {
+     "index": 4,
+     "prefix": "unders",
+     "answer": "tanding",
+     "word": "understanding",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "unders_ _ _ _ _ _ _ ",
+     "start": 281,
+     "end": 301
+    },
+    {
+     "index": 5,
+     "prefix": "tho",
+     "answer": "ught",
+     "word": "thought",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "tho_ _ _ _",
+     "start": 310,
+     "end": 320
+    },
+    {
+     "index": 6,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 334,
+     "end": 339
+    },
+    {
+     "index": 7,
+     "prefix": "sen",
+     "answer": "ses",
+     "word": "senses",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "sen_ _ _",
+     "start": 344,
+     "end": 352
+    },
+    {
+     "index": 8,
+     "prefix": "ref",
+     "answer": "ers",
+     "word": "refers",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ref_ _ _ ",
+     "start": 368,
+     "end": 377
+    },
+    {
+     "index": 9,
+     "prefix": "t",
+     "answer": "he",
+     "word": "the",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "t_ _ ",
+     "start": 381,
+     "end": 386
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行22]）"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 20260630A,真题-006 同底文本、挖空不同"
+    }
+   ]
+  },
+  {
+   "id": "20260811A",
+   "month": "2026年8月",
+   "source": "20260811A / 20260907A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Keystone Species",
+   "discipline": "生命科学",
+   "topic": "生物",
+   "difficulty": "中等",
+   "passage": "In the realm of conservation ecology, the role of keystone species is profoundly significant. These species, although not necessarily abundant, exert a substantial influence on their ecosystems' structure and functioning. Beavers, for example, transform landscapes by building dams that cre_ _ _  wetlands, habi_ _ _ _  rich i_  biodiversity a_ _  vital f_ _  water purifi_ _ _ _ _ _  and fl_ _ _  control. Their rem_ _ _ _  often trig_ _ _ _  a cas_ _ _ _  of ecological changes, potentially leading to the decline or transformation of the ecosystem. Consequently, conservation efforts frequently prioritize the protection of these pivotal organisms to maintain ecological balance.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "生命科学",
+    "keystone species"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "cre",
+     "answer": "ate",
+     "word": "create",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "cre_ _ _ ",
+     "start": 287,
+     "end": 296
+    },
+    {
+     "index": 1,
+     "prefix": "habi",
+     "answer": "tats",
+     "word": "habitats",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "habi_ _ _ _ ",
+     "start": 307,
+     "end": 319
+    },
+    {
+     "index": 2,
+     "prefix": "i",
+     "answer": "n",
+     "word": "in",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "i_ ",
+     "start": 325,
+     "end": 328
+    },
+    {
+     "index": 3,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 342,
+     "end": 347
+    },
+    {
+     "index": 4,
+     "prefix": "f",
+     "answer": "or",
+     "word": "for",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "f_ _ ",
+     "start": 354,
+     "end": 359
+    },
+    {
+     "index": 5,
+     "prefix": "purifi",
+     "answer": "cation",
+     "word": "purification",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "purifi_ _ _ _ _ _ ",
+     "start": 366,
+     "end": 384
+    },
+    {
+     "index": 6,
+     "prefix": "fl",
+     "answer": "ood",
+     "word": "flood",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "fl_ _ _ ",
+     "start": 389,
+     "end": 397
+    },
+    {
+     "index": 7,
+     "prefix": "rem",
+     "answer": "oval",
+     "word": "removal",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "rem_ _ _ _ ",
+     "start": 413,
+     "end": 424
+    },
+    {
+     "index": 8,
+     "prefix": "trig",
+     "answer": "gers",
+     "word": "triggers",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "trig_ _ _ _ ",
+     "start": 431,
+     "end": 443
+    },
+    {
+     "index": 9,
+     "prefix": "cas",
+     "answer": "cade",
+     "word": "cascade",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "cas_ _ _ _ ",
+     "start": 446,
+     "end": 457
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行29]）"
+    }
+   ]
+  },
+  {
+   "id": "20260811A-2",
+   "month": "2026年8月",
+   "source": "20260811A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Sleep and Health",
+   "discipline": "生命科学",
+   "topic": "心理学",
+   "difficulty": "中等",
+   "passage": "Sleep is essential for maintaining health and well‑being. During sleep, the body rests and repairs itself, and the brain processes information from the day. Getting eno_ _ _  sleep he_ _ _  improve mem_ _ _, mood, a_ _  overall phys_ _ _ _  health. Disru_ _ _ _ _ _  to patt_ _ _ _  of sl_ _ _  can le_ _  to prob_ _ _ _  like fatigue and poor concentration. The circadian rhythm, an internal clock, regulates sleep‑wake cycles and is influenced by light and darkness. Sleep research has increased our knowledge about habits that contribute to a better night’s sleep and a healthier lifestyle.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "生命科学",
+    "sleep and health"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "eno",
+     "answer": "ugh",
+     "word": "enough",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "eno_ _ _ ",
+     "start": 165,
+     "end": 174
+    },
+    {
+     "index": 1,
+     "prefix": "he",
+     "answer": "lps",
+     "word": "helps",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "he_ _ _ ",
+     "start": 181,
+     "end": 189
+    },
+    {
+     "index": 2,
+     "prefix": "mem",
+     "answer": "ory",
+     "word": "memory",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "mem_ _ _",
+     "start": 198,
+     "end": 206
+    },
+    {
+     "index": 3,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 214,
+     "end": 219
+    },
+    {
+     "index": 4,
+     "prefix": "phys",
+     "answer": "ical",
+     "word": "physical",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "phys_ _ _ _ ",
+     "start": 228,
+     "end": 240
+    },
+    {
+     "index": 5,
+     "prefix": "Disru",
+     "answer": "ptions",
+     "word": "Disruptions",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "Disru_ _ _ _ _ _ ",
+     "start": 249,
+     "end": 266
+    },
+    {
+     "index": 6,
+     "prefix": "patt",
+     "answer": "erns",
+     "word": "patterns",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "patt_ _ _ _ ",
+     "start": 270,
+     "end": 282
+    },
+    {
+     "index": 7,
+     "prefix": "sl",
+     "answer": "eep",
+     "word": "sleep",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "sl_ _ _ ",
+     "start": 286,
+     "end": 294
+    },
+    {
+     "index": 8,
+     "prefix": "le",
+     "answer": "ad",
+     "word": "lead",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "le_ _ ",
+     "start": 299,
+     "end": 305
+    },
+    {
+     "index": 9,
+     "prefix": "prob",
+     "answer": "lems",
+     "word": "problems",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "prob_ _ _ _ ",
+     "start": 309,
+     "end": 321
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行30]）"
+    }
+   ]
+  },
+  {
+   "id": "20260812A",
+   "month": "2026年8月",
+   "source": "20260812A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Neolithic Pottery",
+   "discipline": "社会科学",
+   "topic": "历史",
+   "difficulty": "中等",
+   "passage": "During the Neolithic period, craftspeople began producing pottery that served both practical and aesthetic purposes. Initially created for storing food and wa_ _ _, these cl_ _  vessels event_ _ _ _ _  featured decor_ _ _ _ _  elements su_ _  as care_ _ _ _ _  incised patt_ _ _ _  and pai_ _ _ _  designs. This dual function—utility and beauty—marks one of the earliest examples of craftsmanship evolving into artistic expression. The refinement of pottery techniques, including firing and glazing, reflected growing technical skill and cultural values.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "社会科学",
+    "neolithic pottery"
+   ],
+   "status": "active",
+   "blankCount": 8,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "wa",
+     "answer": "ter",
+     "word": "water",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "wa_ _ _",
+     "start": 156,
+     "end": 163
+    },
+    {
+     "index": 1,
+     "prefix": "cl",
+     "answer": "ay",
+     "word": "clay",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "cl_ _ ",
+     "start": 171,
+     "end": 177
+    },
+    {
+     "index": 2,
+     "prefix": "event",
+     "answer": "ually",
+     "word": "eventually",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "event_ _ _ _ _ ",
+     "start": 186,
+     "end": 201
+    },
+    {
+     "index": 3,
+     "prefix": "decor",
+     "answer": "ative",
+     "word": "decorative",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "decor_ _ _ _ _ ",
+     "start": 211,
+     "end": 226
+    },
+    {
+     "index": 4,
+     "prefix": "su",
+     "answer": "ch",
+     "word": "such",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "su_ _ ",
+     "start": 236,
+     "end": 242
+    },
+    {
+     "index": 5,
+     "prefix": "care",
+     "answer": "fully",
+     "word": "carefully",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "care_ _ _ _ _ ",
+     "start": 246,
+     "end": 260
+    },
+    {
+     "index": 6,
+     "prefix": "patt",
+     "answer": "erns",
+     "word": "patterns",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "patt_ _ _ _ ",
+     "start": 269,
+     "end": 281
+    },
+    {
+     "index": 7,
+     "prefix": "pai",
+     "answer": "nted",
+     "word": "painted",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "pai_ _ _ _ ",
+     "start": 286,
+     "end": 297
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行31]）"
+    },
+    {
+     "type": "note",
+     "note": "答案列含错位残留 ['or', 'od']，已剔除后子序列对齐"
+    },
+    {
+     "type": "note",
+     "note": "空1: 正文下划线4格，按答案 'ter' 校正为3格（词 water）"
+    },
+    {
+     "type": "note",
+     "note": "空2: 正文下划线4格，按答案 'ay' 校正为2格（词 clay）"
+    },
+    {
+     "type": "note",
+     "note": "空3: 正文下划线4格，按答案 'ually' 校正为5格（词 eventually）"
+    },
+    {
+     "type": "note",
+     "note": "空4: 正文下划线4格，按答案 'ative' 校正为5格（词 decorative）"
+    },
+    {
+     "type": "note",
+     "note": "空5: 正文下划线4格，按答案 'ch' 校正为2格（词 such）"
+    },
+    {
+     "type": "note",
+     "note": "空6: 正文下划线4格，按答案 'fully' 校正为5格（词 carefully）"
+    }
+   ]
+  },
+  {
+   "id": "20260812B",
+   "month": "2026年8月",
+   "source": "20260812B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Cultural Exchange",
+   "discipline": "社会科学",
+   "topic": "综合",
+   "difficulty": "中等",
+   "passage": "The cultural exchange between Europe and the Near East during the medieval period had a lasting impact on art, science, and philosophy. Although the Crusades were primarily military campaigns, they facilitated contact th_ _  led t_  the tran_ _ _ _  of id_ _ _  and techno_ _ _ _ _ _. European scho_ _ _ _  gained acc_ _ _  to adva_ _ _ _  knowledge i_  mathematics and medicine from the Islamic world, sparking renewed intellectual activity. Translations of Arabic philosophical texts, including commentaries on Aristotle, challenged existing doctrines and inspired new schools of thought. This exchange helped reshape European intellectual life.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "社会科学",
+    "cultural exchange"
+   ],
+   "status": "active",
+   "blankCount": 9,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "th",
+     "answer": "at",
+     "word": "that",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "th_ _ ",
+     "start": 218,
+     "end": 224
+    },
+    {
+     "index": 1,
+     "prefix": "t",
+     "answer": "o",
+     "word": "to",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "t_ ",
+     "start": 229,
+     "end": 232
+    },
+    {
+     "index": 2,
+     "prefix": "tran",
+     "answer": "sfer",
+     "word": "transfer",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "tran_ _ _ _ ",
+     "start": 237,
+     "end": 249
+    },
+    {
+     "index": 3,
+     "prefix": "id",
+     "answer": "eas",
+     "word": "ideas",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "id_ _ _ ",
+     "start": 253,
+     "end": 261
+    },
+    {
+     "index": 4,
+     "prefix": "techno",
+     "answer": "logies",
+     "word": "technologies",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "techno_ _ _ _ _ _",
+     "start": 266,
+     "end": 283
+    },
+    {
+     "index": 5,
+     "prefix": "scho",
+     "answer": "lars",
+     "word": "scholars",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "scho_ _ _ _ ",
+     "start": 294,
+     "end": 306
+    },
+    {
+     "index": 6,
+     "prefix": "acc",
+     "answer": "ess",
+     "word": "access",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "acc_ _ _ ",
+     "start": 314,
+     "end": 323
+    },
+    {
+     "index": 7,
+     "prefix": "adva",
+     "answer": "nced",
+     "word": "advanced",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "adva_ _ _ _ ",
+     "start": 327,
+     "end": 339
+    },
+    {
+     "index": 8,
+     "prefix": "i",
+     "answer": "n",
+     "word": "in",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "i_ ",
+     "start": 350,
+     "end": 353
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行34]）"
+    },
+    {
+     "type": "note",
+     "note": "答案列含错位残留 ['itated']，已剔除后子序列对齐"
+    },
+    {
+     "type": "note",
+     "note": "空1: 正文下划线1格，按答案 'at' 校正为2格（词 that）"
+    },
+    {
+     "type": "note",
+     "note": "空5: 正文下划线5格，按答案 'logies' 校正为6格（词 technologies）"
+    }
+   ]
+  },
+  {
+   "id": "20260812B-2",
+   "month": "2026年8月",
+   "source": "20260812B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Building Efficiency",
+   "discipline": "自然科学",
+   "topic": "科技",
+   "difficulty": "中等",
+   "passage": "Energy-efficient building upgrades are important to improve the sustainability of older structures while lowering long-term costs. These improvements may inc_ _ _ _  adding bet_ _ _  insulation, repl_ _ _ _ _  outdated win_ _ _ _, or insta_ _ _ _ _  energy-saving ligh_ _ _ _. Together, su_ _  changes red_ _ _  heat lo_ _, increase ind_ _ _  comfort, and decrease electricity use. Although upgrades require an initial investment, costs are often recovered over time through lower utility bills. In addition, enhancing building efficiency helps decrease energy waste and greenhouse gas emissions.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "自然科学",
+    "building efficiency"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "inc",
+     "answer": "lude",
+     "word": "include",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "inc_ _ _ _ ",
+     "start": 154,
+     "end": 165
+    },
+    {
+     "index": 1,
+     "prefix": "bet",
+     "answer": "ter",
+     "word": "better",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "bet_ _ _ ",
+     "start": 173,
+     "end": 182
+    },
+    {
+     "index": 2,
+     "prefix": "repl",
+     "answer": "acing",
+     "word": "replacing",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "repl_ _ _ _ _ ",
+     "start": 195,
+     "end": 209
+    },
+    {
+     "index": 3,
+     "prefix": "win",
+     "answer": "dows",
+     "word": "windows",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "win_ _ _ _",
+     "start": 219,
+     "end": 229
+    },
+    {
+     "index": 4,
+     "prefix": "insta",
+     "answer": "lling",
+     "word": "installing",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "insta_ _ _ _ _ ",
+     "start": 234,
+     "end": 249
+    },
+    {
+     "index": 5,
+     "prefix": "ligh",
+     "answer": "ting",
+     "word": "lighting",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "ligh_ _ _ _",
+     "start": 264,
+     "end": 275
+    },
+    {
+     "index": 6,
+     "prefix": "su",
+     "answer": "ch",
+     "word": "such",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "su_ _ ",
+     "start": 287,
+     "end": 293
+    },
+    {
+     "index": 7,
+     "prefix": "red",
+     "answer": "uce",
+     "word": "reduce",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "red_ _ _ ",
+     "start": 302,
+     "end": 311
+    },
+    {
+     "index": 8,
+     "prefix": "lo",
+     "answer": "ss",
+     "word": "loss",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "lo_ _",
+     "start": 317,
+     "end": 322
+    },
+    {
+     "index": 9,
+     "prefix": "ind",
+     "answer": "oor",
+     "word": "indoor",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ind_ _ _ ",
+     "start": 333,
+     "end": 342
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行35]）"
+    },
+    {
+     "type": "note",
+     "note": "空2: 正文下划线4格，按答案 'ter' 校正为3格（词 better）"
+    },
+    {
+     "type": "note",
+     "note": "空3: 正文下划线4格，按答案 'acing' 校正为5格（词 replacing）"
+    },
+    {
+     "type": "note",
+     "note": "空5: 正文下划线4格，按答案 'lling' 校正为5格（词 installing）"
+    },
+    {
+     "type": "note",
+     "note": "空7: 正文下划线4格，按答案 'ch' 校正为2格（词 such）"
+    },
+    {
+     "type": "note",
+     "note": "空8: 正文下划线4格，按答案 'uce' 校正为3格（词 reduce）"
+    },
+    {
+     "type": "note",
+     "note": "空9: 正文下划线4格，按答案 'ss' 校正为2格（词 loss）"
+    },
+    {
+     "type": "note",
+     "note": "空10: 正文下划线4格，按答案 'oor' 校正为3格（词 indoor）"
+    }
+   ]
+  },
+  {
+   "id": "20260817A",
+   "month": "2026年8月",
+   "source": "20260817A / 20260906C",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Earth's Atmosphere",
+   "discipline": "自然科学",
+   "topic": "地质学",
+   "difficulty": "中等",
+   "passage": "The atmosphere is a complex and dynamic system that plays a crucial role in regulating Earth's climate. Composed of various ga_ _ _, including nitr_ _ _ _, oxygen, a_ _  trace amo_ _ _ _  of ot_ _ _  elements, t_ _  atmosphere ac_ _  as a prote_ _ _ _ _  shield aga_ _ _ _  harmful so_ _ _  radiation. Weather phenomena such as rain, thunderstorms, and hurricanes are the result of intricate interactions within this system. The movement of air masses, driven by temperature differences, leads to changes in pressure and the formation of weather patterns.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "自然科学",
+    "earth's atmosphere"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "ga",
+     "answer": "ses",
+     "word": "gases",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ga_ _ _",
+     "start": 124,
+     "end": 131
+    },
+    {
+     "index": 1,
+     "prefix": "nitr",
+     "answer": "ogen",
+     "word": "nitrogen",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "nitr_ _ _ _",
+     "start": 143,
+     "end": 154
+    },
+    {
+     "index": 2,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 164,
+     "end": 169
+    },
+    {
+     "index": 3,
+     "prefix": "amo",
+     "answer": "unts",
+     "word": "amounts",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "amo_ _ _ _ ",
+     "start": 176,
+     "end": 187
+    },
+    {
+     "index": 4,
+     "prefix": "ot",
+     "answer": "her",
+     "word": "other",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ot_ _ _ ",
+     "start": 191,
+     "end": 199
+    },
+    {
+     "index": 5,
+     "prefix": "t",
+     "answer": "he",
+     "word": "the",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "t_ _ ",
+     "start": 210,
+     "end": 215
+    },
+    {
+     "index": 6,
+     "prefix": "ac",
+     "answer": "ts",
+     "word": "acts",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "ac_ _ ",
+     "start": 227,
+     "end": 233
+    },
+    {
+     "index": 7,
+     "prefix": "prote",
+     "answer": "ctive",
+     "word": "protective",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "prote_ _ _ _ _ ",
+     "start": 239,
+     "end": 254
+    },
+    {
+     "index": 8,
+     "prefix": "aga",
+     "answer": "inst",
+     "word": "against",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "aga_ _ _ _ ",
+     "start": 262,
+     "end": 273
+    },
+    {
+     "index": 9,
+     "prefix": "so",
+     "answer": "lar",
+     "word": "solar",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "so_ _ _ ",
+     "start": 282,
+     "end": 290
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行38]）"
+    },
+    {
+     "type": "note",
+     "note": "个案修复：空8 答案 'ction' → 'ctive'"
+    },
+    {
+     "type": "note",
+     "note": "空8: 正文下划线6格，按答案 'ctive' 校正为5格（词 protective）"
+    },
+    {
+     "type": "note",
+     "note": "答案列笔误：第8空 ction→ctive（protection→protective；\"acts as a protective shield\" 语义正确，与9月行23素材记录一致）"
+    }
+   ]
+  },
+  {
+   "id": "20260818A",
+   "month": "2026年8月",
+   "source": "20260818A / 20260906B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Price Elasticity",
+   "discipline": "社会科学",
+   "topic": "政治经济",
+   "difficulty": "中等",
+   "passage": "According to the economic concept of elasticity, changes in various factors such as price, income, and the availability of substitutes significantly affect markets. Price elasticity of demand, for instance, measures the responsiveness of quantity demanded to a change in price. Demand f_ _  a pro_ _ _ _  with hi_ _  elasticity wi_ _  change substa_ _ _ _ _ _ _  if t_ _  price shi_ _ _, often refle_ _ _ _ _  that cons_ _ _ _ _  view i_  as non‑essential or easily replaceable. Conversely, inelastic goods, which maintain steady demand despite price fluctuations, are typically necessities lacking close substitutes.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "社会科学",
+    "price elasticity"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "f",
+     "answer": "or",
+     "word": "for",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "f_ _ ",
+     "start": 285,
+     "end": 290
+    },
+    {
+     "index": 1,
+     "prefix": "pro",
+     "answer": "duct",
+     "word": "product",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "pro_ _ _ _ ",
+     "start": 293,
+     "end": 304
+    },
+    {
+     "index": 2,
+     "prefix": "hi",
+     "answer": "gh",
+     "word": "high",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "hi_ _ ",
+     "start": 310,
+     "end": 316
+    },
+    {
+     "index": 3,
+     "prefix": "wi",
+     "answer": "ll",
+     "word": "will",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "wi_ _ ",
+     "start": 328,
+     "end": 334
+    },
+    {
+     "index": 4,
+     "prefix": "substa",
+     "answer": "ntially",
+     "word": "substantially",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "substa_ _ _ _ _ _ _ ",
+     "start": 342,
+     "end": 362
+    },
+    {
+     "index": 5,
+     "prefix": "t",
+     "answer": "he",
+     "word": "the",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "t_ _ ",
+     "start": 366,
+     "end": 371
+    },
+    {
+     "index": 6,
+     "prefix": "shi",
+     "answer": "fts",
+     "word": "shifts",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "shi_ _ _",
+     "start": 378,
+     "end": 386
+    },
+    {
+     "index": 7,
+     "prefix": "refle",
+     "answer": "cting",
+     "word": "reflecting",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "refle_ _ _ _ _ ",
+     "start": 394,
+     "end": 409
+    },
+    {
+     "index": 8,
+     "prefix": "cons",
+     "answer": "umers",
+     "word": "consumers",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "cons_ _ _ _ _ ",
+     "start": 415,
+     "end": 429
+    },
+    {
+     "index": 9,
+     "prefix": "i",
+     "answer": "t",
+     "word": "it",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "i_ ",
+     "start": 435,
+     "end": 438
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行40]）"
+    }
+   ]
+  },
+  {
+   "id": "20260818A-2",
+   "month": "2026年8月",
+   "source": "20260818A / 20260902B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Apartment Laundry",
+   "discipline": "自然科学",
+   "topic": "科技",
+   "difficulty": "困难",
+   "passage": "In‑unit washing machines are undeniably convenient, saving time for apartment residents. However, this convenience has trade‑offs. These machines often consume large amounts of water and electricity, increasing utility costs and environmental impact. Additionally, limited apartment space may make it chall_ _ _ _ _ _  to f_ _  such appli_ _ _ _ _  without sacri_ _ _ _ _ _  living ar_ _ _. Shared lau_ _ _ _  spaces u_ _  resources effic_ _ _ _ _ _  and red_ _ _  maintenance responsi_ _ _ _ _ _ _ _. While convenience is valuable, residents must weigh it against practical and environmental concerns.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "自然科学",
+    "apartment laundry"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "chall",
+     "answer": "enging",
+     "word": "challenging",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "chall_ _ _ _ _ _ ",
+     "start": 301,
+     "end": 318
+    },
+    {
+     "index": 1,
+     "prefix": "f",
+     "answer": "it",
+     "word": "fit",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "f_ _ ",
+     "start": 322,
+     "end": 327
+    },
+    {
+     "index": 2,
+     "prefix": "appli",
+     "answer": "ances",
+     "word": "appliances",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "appli_ _ _ _ _ ",
+     "start": 333,
+     "end": 348
+    },
+    {
+     "index": 3,
+     "prefix": "sacri",
+     "answer": "ficing",
+     "word": "sacrificing",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "sacri_ _ _ _ _ _ ",
+     "start": 357,
+     "end": 374
+    },
+    {
+     "index": 4,
+     "prefix": "ar",
+     "answer": "eas",
+     "word": "areas",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ar_ _ _",
+     "start": 382,
+     "end": 389
+    },
+    {
+     "index": 5,
+     "prefix": "lau",
+     "answer": "ndry",
+     "word": "laundry",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "lau_ _ _ _ ",
+     "start": 398,
+     "end": 409
+    },
+    {
+     "index": 6,
+     "prefix": "u",
+     "answer": "se",
+     "word": "use",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "u_ _ ",
+     "start": 417,
+     "end": 422
+    },
+    {
+     "index": 7,
+     "prefix": "effic",
+     "answer": "iently",
+     "word": "efficiently",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "effic_ _ _ _ _ _ ",
+     "start": 433,
+     "end": 450
+    },
+    {
+     "index": 8,
+     "prefix": "red",
+     "answer": "uce",
+     "word": "reduce",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "red_ _ _ ",
+     "start": 455,
+     "end": 464
+    },
+    {
+     "index": 9,
+     "prefix": "responsi",
+     "answer": "bilities",
+     "word": "responsibilities",
+     "slots": 8,
+     "underscores": 8,
+     "marker": "responsi_ _ _ _ _ _ _ _",
+     "start": 477,
+     "end": 500
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行41]）"
+    }
+   ]
+  },
+  {
+   "id": "20260818A-3",
+   "month": "2026年8月",
+   "source": "20260818A / 20260831A / 20260831B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Biochemistry",
+   "discipline": "社会科学",
+   "topic": "综合",
+   "difficulty": "简单",
+   "passage": "Rooted in both biology and chemistry, modern biochemistry has grown into a foundational science that explores the molecular basis of life. I_  emerged fr_ _  early investi_ _ _ _ _ _ _  into nat_ _ _ _  processes li_ _  fermentation a_ _  digestion and n_ _  encompasses t_ _  study o_  biomolecules su_ _  as proteins, carbohydrates, and nucleic acids. Biochemistry plays a vital role in diverse fields including agriculture, environmental science, and pharmacology, contributing to innovations in areas like crop improvement, pollution control, and drug design, for example. Its broad applications continue to shape our understanding of living systems and support solutions to global challenges.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "社会科学",
+    "biochemistry"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "I",
+     "answer": "t",
+     "word": "It",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "I_ ",
+     "start": 139,
+     "end": 142
+    },
+    {
+     "index": 1,
+     "prefix": "fr",
+     "answer": "om",
+     "word": "from",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "fr_ _ ",
+     "start": 151,
+     "end": 157
+    },
+    {
+     "index": 2,
+     "prefix": "investi",
+     "answer": "gations",
+     "word": "investigations",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "investi_ _ _ _ _ _ _ ",
+     "start": 164,
+     "end": 185
+    },
+    {
+     "index": 3,
+     "prefix": "nat",
+     "answer": "ural",
+     "word": "natural",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "nat_ _ _ _ ",
+     "start": 191,
+     "end": 202
+    },
+    {
+     "index": 4,
+     "prefix": "li",
+     "answer": "ke",
+     "word": "like",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "li_ _ ",
+     "start": 213,
+     "end": 219
+    },
+    {
+     "index": 5,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 233,
+     "end": 238
+    },
+    {
+     "index": 6,
+     "prefix": "n",
+     "answer": "ow",
+     "word": "now",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "n_ _ ",
+     "start": 253,
+     "end": 258
+    },
+    {
+     "index": 7,
+     "prefix": "t",
+     "answer": "he",
+     "word": "the",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "t_ _ ",
+     "start": 271,
+     "end": 276
+    },
+    {
+     "index": 8,
+     "prefix": "o",
+     "answer": "f",
+     "word": "of",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 283,
+     "end": 286
+    },
+    {
+     "index": 9,
+     "prefix": "su",
+     "answer": "ch",
+     "word": "such",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "su_ _ ",
+     "start": 300,
+     "end": 306
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行42]）"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 真题-063 同底文本、挖空不同"
+    }
+   ]
+  },
+  {
+   "id": "20260819B",
+   "month": "2026年8月",
+   "source": "20260819B / 20260927A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Social Insects",
+   "discipline": "生命科学",
+   "topic": "生物",
+   "difficulty": "中等",
+   "passage": "Social insects—like ants, bees, and termites—live in highly organized colonies that function as a single, cooperative unit. The colony members have a strict division of labor, meaning that different insects per_ _ _ _  different ta_ _ _: queens repr_ _ _ _ _, workers gat_ _ _  food a_ _  provide ca_ _  for offs_ _ _ _ _, and sold_ _ _ _  defend t_ _  colony. Ea_ _  individual has a specialized role, and communication via pheromones or dances keeps everyone in sync. Their division of labor ensures survival and efficiency, showcasing nature's remarkable blueprint for teamwork.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "生命科学",
+    "social insects"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "per",
+     "answer": "form",
+     "word": "perform",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "per_ _ _ _ ",
+     "start": 207,
+     "end": 218
+    },
+    {
+     "index": 1,
+     "prefix": "ta",
+     "answer": "sks",
+     "word": "tasks",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ta_ _ _",
+     "start": 229,
+     "end": 236
+    },
+    {
+     "index": 2,
+     "prefix": "repr",
+     "answer": "oduce",
+     "word": "reproduce",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "repr_ _ _ _ _",
+     "start": 245,
+     "end": 258
+    },
+    {
+     "index": 3,
+     "prefix": "gat",
+     "answer": "her",
+     "word": "gather",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "gat_ _ _ ",
+     "start": 268,
+     "end": 277
+    },
+    {
+     "index": 4,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 283,
+     "end": 288
+    },
+    {
+     "index": 5,
+     "prefix": "ca",
+     "answer": "re",
+     "word": "care",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "ca_ _ ",
+     "start": 297,
+     "end": 303
+    },
+    {
+     "index": 6,
+     "prefix": "offs",
+     "answer": "pring",
+     "word": "offspring",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "offs_ _ _ _ _",
+     "start": 308,
+     "end": 321
+    },
+    {
+     "index": 7,
+     "prefix": "sold",
+     "answer": "iers",
+     "word": "soldiers",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "sold_ _ _ _ ",
+     "start": 327,
+     "end": 339
+    },
+    {
+     "index": 8,
+     "prefix": "t",
+     "answer": "he",
+     "word": "the",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "t_ _ ",
+     "start": 347,
+     "end": 352
+    },
+    {
+     "index": 9,
+     "prefix": "Ea",
+     "answer": "ch",
+     "word": "Each",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "Ea_ _ ",
+     "start": 361,
+     "end": 367
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行50]）"
+    }
+   ]
+  },
+  {
+   "id": "20260822",
+   "month": "2026年8月",
+   "source": "20260822",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Microfinance",
+   "discipline": "社会科学",
+   "topic": "政治经济",
+   "difficulty": "困难",
+   "passage": "The concept of microfinance has transformed the way people access financial services. Microfinance institutions provide small loans to individuals or groups who lack access to traditional banking. These loans empower recip_ _ _ _ _  to st_ _ _  or exp_ _ _  small busin_ _ _, improving th_ _ _  living condi_ _ _ _ _  and commu_ _ _ _ _ _. By encou_ _ _ _ _ _  financial lite_ _ _ _  and adva_ _ _ _ _  financial inclusion, microfinance helps reduce poverty, foster economic development, and build long-term stability at the grassroots level. Understanding this system helps design effective financial inclusion strategies.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "社会科学",
+    "microfinance"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "recip",
+     "answer": "ients",
+     "word": "recipients",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "recip_ _ _ _ _ ",
+     "start": 217,
+     "end": 232
+    },
+    {
+     "index": 1,
+     "prefix": "st",
+     "answer": "art",
+     "word": "start",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "st_ _ _ ",
+     "start": 236,
+     "end": 244
+    },
+    {
+     "index": 2,
+     "prefix": "exp",
+     "answer": "and",
+     "word": "expand",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "exp_ _ _ ",
+     "start": 248,
+     "end": 257
+    },
+    {
+     "index": 3,
+     "prefix": "busin",
+     "answer": "ess",
+     "word": "business",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "busin_ _ _",
+     "start": 264,
+     "end": 274
+    },
+    {
+     "index": 4,
+     "prefix": "th",
+     "answer": "eir",
+     "word": "their",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "th_ _ _ ",
+     "start": 286,
+     "end": 294
+    },
+    {
+     "index": 5,
+     "prefix": "condi",
+     "answer": "tions",
+     "word": "conditions",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "condi_ _ _ _ _ ",
+     "start": 302,
+     "end": 317
+    },
+    {
+     "index": 6,
+     "prefix": "commu",
+     "answer": "nities",
+     "word": "communities",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "commu_ _ _ _ _ _",
+     "start": 322,
+     "end": 338
+    },
+    {
+     "index": 7,
+     "prefix": "encou",
+     "answer": "raging",
+     "word": "encouraging",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "encou_ _ _ _ _ _ ",
+     "start": 343,
+     "end": 360
+    },
+    {
+     "index": 8,
+     "prefix": "lite",
+     "answer": "racy",
+     "word": "literacy",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "lite_ _ _ _ ",
+     "start": 371,
+     "end": 383
+    },
+    {
+     "index": 9,
+     "prefix": "adva",
+     "answer": "ncing",
+     "word": "advancing",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "adva_ _ _ _ _ ",
+     "start": 388,
+     "end": 402
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行51]）"
+    },
+    {
+     "type": "note",
+     "note": "空4: 正文下划线5格，按答案 'ess' 校正为3格（词 business）"
+    },
+    {
+     "type": "note",
+     "note": "空6: 正文下划线4格，按答案 'tions' 校正为5格（词 conditions）"
+    },
+    {
+     "type": "note",
+     "note": "空10: 正文下划线4格，按答案 'ncing' 校正为5格（词 advancing）"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 真题-091 同底文本、挖空不同"
+    }
+   ]
+  },
+  {
+   "id": "20260822-2",
+   "month": "2026年8月",
+   "source": "20260822 / 20260902A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Accessory Dwelling Units",
+   "discipline": "社会科学",
+   "topic": "政治经济",
+   "difficulty": "中等",
+   "passage": "Accessory dwelling units (ADUs) offer homeowners flexible ways to use additional space while potentially generating income. These small, secondary residences—often located on the same property as a primary home—can house fam_ _ _  members, cre_ _ _  rental opport_ _ _ _ _ _ _, or func_ _ _ _  as sepa_ _ _ _  workspaces. How_ _ _ _, constructing ADUs requ_ _ _ _  compliance wi_ _  zoning regul_ _ _ _ _ _  and buil_ _ _ _  codes. As urban populations grow, ADUs present an innovative strategy for supporting sustainable development through efficient use of urban land and the potential to ease housing shortages.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "社会科学",
+    "accessory dwelling units"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "fam",
+     "answer": "ily",
+     "word": "family",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "fam_ _ _ ",
+     "start": 221,
+     "end": 230
+    },
+    {
+     "index": 1,
+     "prefix": "cre",
+     "answer": "ate",
+     "word": "create",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "cre_ _ _ ",
+     "start": 240,
+     "end": 249
+    },
+    {
+     "index": 2,
+     "prefix": "opport",
+     "answer": "unities",
+     "word": "opportunities",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "opport_ _ _ _ _ _ _",
+     "start": 257,
+     "end": 276
+    },
+    {
+     "index": 3,
+     "prefix": "func",
+     "answer": "tion",
+     "word": "function",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "func_ _ _ _ ",
+     "start": 281,
+     "end": 293
+    },
+    {
+     "index": 4,
+     "prefix": "sepa",
+     "answer": "rate",
+     "word": "separate",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "sepa_ _ _ _ ",
+     "start": 297,
+     "end": 309
+    },
+    {
+     "index": 5,
+     "prefix": "How",
+     "answer": "ever",
+     "word": "However",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "How_ _ _ _",
+     "start": 322,
+     "end": 332
+    },
+    {
+     "index": 6,
+     "prefix": "requ",
+     "answer": "ires",
+     "word": "requires",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "requ_ _ _ _ ",
+     "start": 352,
+     "end": 364
+    },
+    {
+     "index": 7,
+     "prefix": "wi",
+     "answer": "th",
+     "word": "with",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "wi_ _ ",
+     "start": 376,
+     "end": 382
+    },
+    {
+     "index": 8,
+     "prefix": "regul",
+     "answer": "ations",
+     "word": "regulations",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "regul_ _ _ _ _ _ ",
+     "start": 390,
+     "end": 407
+    },
+    {
+     "index": 9,
+     "prefix": "buil",
+     "answer": "ding",
+     "word": "building",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "buil_ _ _ _ ",
+     "start": 412,
+     "end": 424
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行52]）"
+    }
+   ]
+  },
+  {
+   "id": "20260822-3",
+   "month": "2026年8月",
+   "source": "20260822 / 20260902A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Circulatory System",
+   "discipline": "生命科学",
+   "topic": "生理",
+   "difficulty": "中等",
+   "passage": "The human circulatory system plays a central role in maintaining physiological balance by transporting oxygen, nutrients, and waste products throughout the body. At its core is the heart, which propels blood through arteries and veins to reach tissues such as the brain, muscles, and skin. Blood flow adj_ _ _ _  in resp_ _ _ _  to fac_ _ _ _  like tempe_ _ _ _ _ _, physical acti_ _ _ _, and emot_ _ _ _ _  stress, ensu_ _ _ _  that ea_ _  organ rece_ _ _ _  appropriate sup_ _ _ _. Studying these patterns helps students understand how internal systems coordinate to sustain health and adapt to changing conditions.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "生命科学",
+    "circulatory system"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "adj",
+     "answer": "usts",
+     "word": "adjusts",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "adj_ _ _ _ ",
+     "start": 301,
+     "end": 312
+    },
+    {
+     "index": 1,
+     "prefix": "resp",
+     "answer": "onse",
+     "word": "response",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "resp_ _ _ _ ",
+     "start": 316,
+     "end": 328
+    },
+    {
+     "index": 2,
+     "prefix": "fac",
+     "answer": "tors",
+     "word": "factors",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "fac_ _ _ _ ",
+     "start": 332,
+     "end": 343
+    },
+    {
+     "index": 3,
+     "prefix": "tempe",
+     "answer": "rature",
+     "word": "temperature",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "tempe_ _ _ _ _ _",
+     "start": 349,
+     "end": 365
+    },
+    {
+     "index": 4,
+     "prefix": "acti",
+     "answer": "vity",
+     "word": "activity",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "acti_ _ _ _",
+     "start": 376,
+     "end": 387
+    },
+    {
+     "index": 5,
+     "prefix": "emot",
+     "answer": "ional",
+     "word": "emotional",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "emot_ _ _ _ _ ",
+     "start": 393,
+     "end": 407
+    },
+    {
+     "index": 6,
+     "prefix": "ensu",
+     "answer": "ring",
+     "word": "ensuring",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "ensu_ _ _ _ ",
+     "start": 416,
+     "end": 428
+    },
+    {
+     "index": 7,
+     "prefix": "ea",
+     "answer": "ch",
+     "word": "each",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "ea_ _ ",
+     "start": 434,
+     "end": 440
+    },
+    {
+     "index": 8,
+     "prefix": "rece",
+     "answer": "ives",
+     "word": "receives",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "rece_ _ _ _ ",
+     "start": 447,
+     "end": 459
+    },
+    {
+     "index": 9,
+     "prefix": "sup",
+     "answer": "port",
+     "word": "support",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "sup_ _ _ _",
+     "start": 472,
+     "end": 482
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行53]）"
+    }
+   ]
+  },
+  {
+   "id": "20260823",
+   "month": "2026年8月",
+   "source": "20260823",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Public Health",
+   "discipline": "生命科学",
+   "topic": "生理",
+   "difficulty": "困难",
+   "passage": "Public health initiatives aim to promote well‑being and prevent disease across populations. These strat_ _ _ _ _  often fo_ _ _  on bo_ _  short‑term resp_ _ _ _ _  to emerg_ _ _ _ _ _  and long‑_ _ _ _  investments i_  infrastructure. Eff_ _ _ _  include vacci_ _ _ _ _ _  programs, educ_ _ _ _ _ _ _  campaigns, and the development of policies that ensure access to clean water and nutritious food. Collaboration between governments, nonprofit organizations, and communities is essential for effective public health interventions. Understanding the social determinants of health, such as economic stability and education, helps tailor initiatives to address the specific needs of different populations.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "生命科学",
+    "public health"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "strat",
+     "answer": "egies",
+     "word": "strategies",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "strat_ _ _ _ _ ",
+     "start": 98,
+     "end": 113
+    },
+    {
+     "index": 1,
+     "prefix": "fo",
+     "answer": "cus",
+     "word": "focus",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "fo_ _ _ ",
+     "start": 120,
+     "end": 128
+    },
+    {
+     "index": 2,
+     "prefix": "bo",
+     "answer": "th",
+     "word": "both",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "bo_ _ ",
+     "start": 132,
+     "end": 138
+    },
+    {
+     "index": 3,
+     "prefix": "resp",
+     "answer": "onses",
+     "word": "responses",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "resp_ _ _ _ _ ",
+     "start": 150,
+     "end": 164
+    },
+    {
+     "index": 4,
+     "prefix": "emerg",
+     "answer": "encies",
+     "word": "emergencies",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "emerg_ _ _ _ _ _ ",
+     "start": 168,
+     "end": 185
+    },
+    {
+     "index": 5,
+     "prefix": "",
+     "answer": "term",
+     "word": "term",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "_ _ _ _ ",
+     "start": 195,
+     "end": 203
+    },
+    {
+     "index": 6,
+     "prefix": "i",
+     "answer": "n",
+     "word": "in",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "i_ ",
+     "start": 216,
+     "end": 219
+    },
+    {
+     "index": 7,
+     "prefix": "Eff",
+     "answer": "orts",
+     "word": "Efforts",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "Eff_ _ _ _ ",
+     "start": 236,
+     "end": 247
+    },
+    {
+     "index": 8,
+     "prefix": "vacci",
+     "answer": "nation",
+     "word": "vaccination",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "vacci_ _ _ _ _ _ ",
+     "start": 256,
+     "end": 273
+    },
+    {
+     "index": 9,
+     "prefix": "educ",
+     "answer": "ational",
+     "word": "educational",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "educ_ _ _ _ _ _ _ ",
+     "start": 284,
+     "end": 302
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行56]）"
+    },
+    {
+     "type": "note",
+     "note": "空10: 正文下划线5格，按答案 'ational' 校正为7格（词 educational）"
+    }
+   ]
+  },
+  {
+   "id": "20260824B",
+   "month": "2026年8月",
+   "source": "20260824B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Hand Hygiene",
+   "discipline": "生命科学",
+   "topic": "生理",
+   "difficulty": "中等",
+   "passage": "Washing hands is a simple yet effective way to prevent the spread of diseases. When we wash our hands, we rem_ _ _  dirt a_ _  germs th_ _  we m_ _  have pic_ _ _  up fr_ _  touching surf_ _ _ _. This i_  especially impo_ _ _ _ _  before eat_ _ _  or after using the restroom. Regular hand washing can protect us from illnesses like the flu and colds. Health experts recommend washing hands with soap and water for at least 20 seconds to ensure that all germs are thoroughly removed.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "生命科学",
+    "hand hygiene"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "rem",
+     "answer": "ove",
+     "word": "remove",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "rem_ _ _ ",
+     "start": 106,
+     "end": 115
+    },
+    {
+     "index": 1,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 121,
+     "end": 126
+    },
+    {
+     "index": 2,
+     "prefix": "th",
+     "answer": "at",
+     "word": "that",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "th_ _ ",
+     "start": 133,
+     "end": 139
+    },
+    {
+     "index": 3,
+     "prefix": "m",
+     "answer": "ay",
+     "word": "may",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "m_ _ ",
+     "start": 143,
+     "end": 148
+    },
+    {
+     "index": 4,
+     "prefix": "pic",
+     "answer": "ked",
+     "word": "picked",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "pic_ _ _ ",
+     "start": 154,
+     "end": 163
+    },
+    {
+     "index": 5,
+     "prefix": "fr",
+     "answer": "om",
+     "word": "from",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "fr_ _ ",
+     "start": 167,
+     "end": 173
+    },
+    {
+     "index": 6,
+     "prefix": "surf",
+     "answer": "aces",
+     "word": "surfaces",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "surf_ _ _ _",
+     "start": 183,
+     "end": 194
+    },
+    {
+     "index": 7,
+     "prefix": "i",
+     "answer": "s",
+     "word": "is",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "i_ ",
+     "start": 201,
+     "end": 204
+    },
+    {
+     "index": 8,
+     "prefix": "impo",
+     "answer": "rtant",
+     "word": "important",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "impo_ _ _ _ _ ",
+     "start": 216,
+     "end": 230
+    },
+    {
+     "index": 9,
+     "prefix": "eat",
+     "answer": "ing",
+     "word": "eating",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "eat_ _ _ ",
+     "start": 238,
+     "end": 247
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行61]）"
+    }
+   ]
+  },
+  {
+   "id": "20260831B",
+   "month": "2026年8月",
+   "source": "20260831B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Extraterrestrial Life",
+   "discipline": "社会科学",
+   "topic": "综合",
+   "difficulty": "简单",
+   "passage": "The search for extraterrestrial life often focuses on finding water and volcanic activity on other planets. Water i_  essential f_ _  life a_  we kn_ _  it, a_ _  its pres_ _ _ _  could indi_ _ _ _  habitable condi_ _ _ _ _. Volcanic acti_ _ _ _  reveals insi_ _ _ _  into a planet's geology and thermal dynamics, which can affect its potential to support life. Missions to Mars and distant moons aim to detect signs of these elements, using advanced instruments to analyze surface and atmospheric samples. Discoveries in this field could redefine our understanding of life's possibilities beyond Earth.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "8月",
+    "社会科学",
+    "extraterrestrial life"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "i",
+     "answer": "s",
+     "word": "is",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "i_ ",
+     "start": 114,
+     "end": 117
+    },
+    {
+     "index": 1,
+     "prefix": "f",
+     "answer": "or",
+     "word": "for",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "f_ _ ",
+     "start": 128,
+     "end": 133
+    },
+    {
+     "index": 2,
+     "prefix": "a",
+     "answer": "s",
+     "word": "as",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "a_ ",
+     "start": 139,
+     "end": 142
+    },
+    {
+     "index": 3,
+     "prefix": "kn",
+     "answer": "ow",
+     "word": "know",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "kn_ _ ",
+     "start": 146,
+     "end": 152
+    },
+    {
+     "index": 4,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 157,
+     "end": 162
+    },
+    {
+     "index": 5,
+     "prefix": "pres",
+     "answer": "ence",
+     "word": "presence",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "pres_ _ _ _ ",
+     "start": 167,
+     "end": 179
+    },
+    {
+     "index": 6,
+     "prefix": "indi",
+     "answer": "cate",
+     "word": "indicate",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "indi_ _ _ _ ",
+     "start": 186,
+     "end": 198
+    },
+    {
+     "index": 7,
+     "prefix": "condi",
+     "answer": "tions",
+     "word": "conditions",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "condi_ _ _ _ _",
+     "start": 209,
+     "end": 223
+    },
+    {
+     "index": 8,
+     "prefix": "acti",
+     "answer": "vity",
+     "word": "activity",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "acti_ _ _ _ ",
+     "start": 234,
+     "end": 246
+    },
+    {
+     "index": 9,
+     "prefix": "insi",
+     "answer": "ghts",
+     "word": "insights",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "insi_ _ _ _ ",
+     "start": 255,
+     "end": 267
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（8月素材 [8月行65]）"
+    },
+    {
+     "type": "note",
+     "note": "空3: 正文下划线2格，按答案 's' 校正为1格（词 as）"
+    },
+    {
+     "type": "note",
+     "note": "空9: 正文下划线3格，按答案 'vity' 校正为4格（词 activity）"
+    }
+   ]
+  },
+  {
+   "id": "20260902C",
+   "month": "2026年9月",
+   "source": "20260902C",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Animal Hibernation",
+   "discipline": "生命科学",
+   "topic": "生物",
+   "difficulty": "中等",
+   "passage": "Hibernation is a survival strategy used by certain animals to endure harsh winter conditions. During this period, animals enter a state of dormancy, significantly slo_ _ _ _  their metab_ _ _ _ _, heart ra_ _, and brea_ _ _ _ _  to cons_ _ _ _  energy. Th_ _  sustain thems_ _ _ _ _  while fo_ _  is lim_ _ _ _  by rel_ _ _ _  on stored body fat. Species like bears, bats, and groundhogs hibernate in sheltered environments such as caves or burrows. This natural adaptation helps them survive extreme cold and limited resources until favorable conditions return in spring.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "生命科学",
+    "animal hibernation"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "slo",
+     "answer": "wing",
+     "word": "slowing",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "slo_ _ _ _ ",
+     "start": 163,
+     "end": 174
+    },
+    {
+     "index": 1,
+     "prefix": "metab",
+     "answer": "olism",
+     "word": "metabolism",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "metab_ _ _ _ _",
+     "start": 181,
+     "end": 195
+    },
+    {
+     "index": 2,
+     "prefix": "ra",
+     "answer": "te",
+     "word": "rate",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "ra_ _",
+     "start": 203,
+     "end": 208
+    },
+    {
+     "index": 3,
+     "prefix": "brea",
+     "answer": "thing",
+     "word": "breathing",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "brea_ _ _ _ _ ",
+     "start": 214,
+     "end": 228
+    },
+    {
+     "index": 4,
+     "prefix": "cons",
+     "answer": "erve",
+     "word": "conserve",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "cons_ _ _ _ ",
+     "start": 232,
+     "end": 244
+    },
+    {
+     "index": 5,
+     "prefix": "Th",
+     "answer": "ey",
+     "word": "They",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "Th_ _ ",
+     "start": 253,
+     "end": 259
+    },
+    {
+     "index": 6,
+     "prefix": "thems",
+     "answer": "elves",
+     "word": "themselves",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "thems_ _ _ _ _ ",
+     "start": 268,
+     "end": 283
+    },
+    {
+     "index": 7,
+     "prefix": "fo",
+     "answer": "od",
+     "word": "food",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "fo_ _ ",
+     "start": 290,
+     "end": 296
+    },
+    {
+     "index": 8,
+     "prefix": "lim",
+     "answer": "ited",
+     "word": "limited",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "lim_ _ _ _ ",
+     "start": 300,
+     "end": 311
+    },
+    {
+     "index": 9,
+     "prefix": "rel",
+     "answer": "ying",
+     "word": "relying",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "rel_ _ _ _ ",
+     "start": 315,
+     "end": 326
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行11]）"
+    },
+    {
+     "type": "note",
+     "note": "空2: 答案列给完整词 'metabolism'，剥前缀 → 'olism'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空3: 答案列给完整词 'rate'，剥前缀 → 'te'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空4: 答案列给完整词 'breathing'，剥前缀 → 'thing'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空5: 答案列给完整词 'conserve'，剥前缀 → 'erve'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空6: 答案列给完整词 'They'，剥前缀 → 'ey'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空7: 答案列给完整词 'themselves'，剥前缀 → 'elves'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空8: 答案列给完整词 'food'，剥前缀 → 'od'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空9: 答案列给完整词 'limited'，剥前缀 → 'ited'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空10: 答案列给完整词 'relying'，剥前缀 → 'ying'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空2: 正文下划线6格，按答案 'olism' 校正为5格（词 metabolism）"
+    }
+   ]
+  },
+  {
+   "id": "20260902C-2",
+   "month": "2026年9月",
+   "source": "20260902C",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Sound Insulation",
+   "discipline": "自然科学",
+   "topic": "科技",
+   "difficulty": "中等",
+   "passage": "Apartment living often highlights the challenges of sound insulation. The choice of building materials significantly impacts noise control within shared spaces. Dense materials, such as concrete and brick, are often pref_ _ _ _ _  for their abi_ _ _ _  to red_ _ _  sound transm_ _ _ _ _ _. In cont_ _ _ _, lightweight materials, li_ _  drywall, al_ _ _  sound to pass thr_ _ _ _  more eas_ _ _. To improve perfo_ _ _ _ _ _, some designs incorporate additional layers, such as insulation or acoustic treatments, that block or absorb sound. Selecting effective materials can improve privacy and decrease noise disturbance.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "自然科学",
+    "sound insulation"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "pref",
+     "answer": "erred",
+     "word": "preferred",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "pref_ _ _ _ _ ",
+     "start": 216,
+     "end": 230
+    },
+    {
+     "index": 1,
+     "prefix": "abi",
+     "answer": "lity",
+     "word": "ability",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "abi_ _ _ _ ",
+     "start": 241,
+     "end": 252
+    },
+    {
+     "index": 2,
+     "prefix": "red",
+     "answer": "uce",
+     "word": "reduce",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "red_ _ _ ",
+     "start": 256,
+     "end": 265
+    },
+    {
+     "index": 3,
+     "prefix": "transm",
+     "answer": "ission",
+     "word": "transmission",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "transm_ _ _ _ _ _",
+     "start": 272,
+     "end": 289
+    },
+    {
+     "index": 4,
+     "prefix": "cont",
+     "answer": "rast",
+     "word": "contrast",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "cont_ _ _ _",
+     "start": 294,
+     "end": 305
+    },
+    {
+     "index": 5,
+     "prefix": "li",
+     "answer": "ke",
+     "word": "like",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "li_ _ ",
+     "start": 330,
+     "end": 336
+    },
+    {
+     "index": 6,
+     "prefix": "al",
+     "answer": "low",
+     "word": "allow",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "al_ _ _ ",
+     "start": 346,
+     "end": 354
+    },
+    {
+     "index": 7,
+     "prefix": "thr",
+     "answer": "ough",
+     "word": "through",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "thr_ _ _ _ ",
+     "start": 369,
+     "end": 380
+    },
+    {
+     "index": 8,
+     "prefix": "eas",
+     "answer": "ily",
+     "word": "easily",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "eas_ _ _",
+     "start": 386,
+     "end": 394
+    },
+    {
+     "index": 9,
+     "prefix": "perfo",
+     "answer": "rmance",
+     "word": "performance",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "perfo_ _ _ _ _ _",
+     "start": 407,
+     "end": 423
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行12]）"
+    },
+    {
+     "type": "note",
+     "note": "空2: 答案列给完整词 'ability'，剥前缀 → 'lity'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空3: 答案列给完整词 'reduce'，剥前缀 → 'uce'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空4: 答案列给完整词 'transmission'，剥前缀 → 'ission'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空5: 答案列给完整词 'contrast'，剥前缀 → 'rast'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空6: 答案列给完整词 'like'，剥前缀 → 'ke'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空7: 答案列给完整词 'allow'，剥前缀 → 'low'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空8: 答案列给完整词 'through'，剥前缀 → 'ough'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空9: 答案列给完整词 'easily'，剥前缀 → 'ily'（格数按答案校正）"
+    },
+    {
+     "type": "note",
+     "note": "空10: 答案列给完整词 'performance'，剥前缀 → 'rmance'（格数按答案校正）"
+    }
+   ]
+  },
+  {
+   "id": "20260905A",
+   "month": "2026年9月",
+   "source": "20260905A / 20260914B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Conservation Ecology",
+   "discipline": "自然科学",
+   "topic": "环境科学",
+   "difficulty": "中等",
+   "passage": "In recent years, conservation ecology has emerged as a crucial field, addressing the impacts of human activity on natural ecosystems. Ecologists are increasingly focused on unders_ _ _ _ _ _ _  how spe_ _ _ _  interact bo_ _  with ea_ _  other a_ _  with th_ _ _  environments. Su_ _  knowledge i_  essential f_ _  developing strat_ _ _ _ _  that mitigate biodiversity loss and habitat degradation. The complexity of ecological networks means that conservation efforts require collaboration across disciplines to craft effective policies and practices that ensure the sustainability of our planetary resources.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "自然科学",
+    "conservation ecology"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "unders",
+     "answer": "tanding",
+     "word": "understanding",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "unders_ _ _ _ _ _ _ ",
+     "start": 173,
+     "end": 193
+    },
+    {
+     "index": 1,
+     "prefix": "spe",
+     "answer": "cies",
+     "word": "species",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "spe_ _ _ _ ",
+     "start": 198,
+     "end": 209
+    },
+    {
+     "index": 2,
+     "prefix": "bo",
+     "answer": "th",
+     "word": "both",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "bo_ _ ",
+     "start": 219,
+     "end": 225
+    },
+    {
+     "index": 3,
+     "prefix": "ea",
+     "answer": "ch",
+     "word": "each",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "ea_ _ ",
+     "start": 231,
+     "end": 237
+    },
+    {
+     "index": 4,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 244,
+     "end": 249
+    },
+    {
+     "index": 5,
+     "prefix": "th",
+     "answer": "eir",
+     "word": "their",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "th_ _ _ ",
+     "start": 255,
+     "end": 263
+    },
+    {
+     "index": 6,
+     "prefix": "Su",
+     "answer": "ch",
+     "word": "Such",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "Su_ _ ",
+     "start": 278,
+     "end": 284
+    },
+    {
+     "index": 7,
+     "prefix": "i",
+     "answer": "s",
+     "word": "is",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "i_ ",
+     "start": 295,
+     "end": 298
+    },
+    {
+     "index": 8,
+     "prefix": "f",
+     "answer": "or",
+     "word": "for",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "f_ _ ",
+     "start": 309,
+     "end": 314
+    },
+    {
+     "index": 9,
+     "prefix": "strat",
+     "answer": "egies",
+     "word": "strategies",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "strat_ _ _ _ _ ",
+     "start": 326,
+     "end": 341
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行14]）"
+    }
+   ]
+  },
+  {
+   "id": "20260905A-2",
+   "month": "2026年9月",
+   "source": "20260905A / 20260906A / 20260906C",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Bicycle History",
+   "discipline": "社会科学",
+   "topic": "历史",
+   "difficulty": "中等",
+   "passage": "The earliest ancestor of the modern bicycle is probably a machine used in England in the early 1800s called a hobbyhorse. It h_ _  two whe_ _ _  and a pl_ _ _  to s_ _, but n_  pedals; rid_ _ _  would pu_ _  it al_ _ _  with th_ _ _  feet. La_ _ _, an inventor added pedals directly to the front wheel, like a modern child's tricycle. This version, with a huge front wheel, was faster, but it was unsafe. Riders were high off the ground, and the two wheels were close together, making both balance and stopping difficult.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "bicycle history"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "h",
+     "answer": "ad",
+     "word": "had",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "h_ _ ",
+     "start": 125,
+     "end": 130
+    },
+    {
+     "index": 1,
+     "prefix": "whe",
+     "answer": "els",
+     "word": "wheels",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "whe_ _ _ ",
+     "start": 135,
+     "end": 144
+    },
+    {
+     "index": 2,
+     "prefix": "pl",
+     "answer": "ate",
+     "word": "plate",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "pl_ _ _ ",
+     "start": 151,
+     "end": 159
+    },
+    {
+     "index": 3,
+     "prefix": "s",
+     "answer": "it",
+     "word": "sit",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "s_ _",
+     "start": 163,
+     "end": 167
+    },
+    {
+     "index": 4,
+     "prefix": "n",
+     "answer": "o",
+     "word": "no",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "n_ ",
+     "start": 173,
+     "end": 176
+    },
+    {
+     "index": 5,
+     "prefix": "rid",
+     "answer": "ers",
+     "word": "riders",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "rid_ _ _ ",
+     "start": 185,
+     "end": 194
+    },
+    {
+     "index": 6,
+     "prefix": "pu",
+     "answer": "sh",
+     "word": "push",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "pu_ _ ",
+     "start": 201,
+     "end": 207
+    },
+    {
+     "index": 7,
+     "prefix": "al",
+     "answer": "ong",
+     "word": "along",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "al_ _ _ ",
+     "start": 211,
+     "end": 219
+    },
+    {
+     "index": 8,
+     "prefix": "th",
+     "answer": "eir",
+     "word": "their",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "th_ _ _ ",
+     "start": 225,
+     "end": 233
+    },
+    {
+     "index": 9,
+     "prefix": "La",
+     "answer": "ter",
+     "word": "Later",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "La_ _ _",
+     "start": 240,
+     "end": 247
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行16]）"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 真题-095 同底文本、挖空不同"
+    }
+   ]
+  },
+  {
+   "id": "20260906A",
+   "month": "2026年9月",
+   "source": "20260906A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Coral Reefs",
+   "discipline": "生命科学",
+   "topic": "生物",
+   "difficulty": "中等",
+   "passage": "Coral reefs are among the most diverse and productive ecosystems on Earth. Bu_ _ _  by colo_ _ _ _  of ti_ _  coral polyps, t_ _  underwater struc_ _ _ _ _  support a_  incredible ra_ _ _  of mar_ _ _  life, incl_ _ _ _ _  fish, invert_ _ _ _ _ _ _, and algae. Coral reefs act as nurseries and shelter for various species. However, coral reefs face threats from climate change, pollution, and overfishing. Efforts to conserve and restore these ecosystems are crucial for maintaining biodiversity and the health of the oceans.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "生命科学",
+    "coral reefs"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "Bu",
+     "answer": "ilt",
+     "word": "Built",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "Bu_ _ _ ",
+     "start": 75,
+     "end": 83
+    },
+    {
+     "index": 1,
+     "prefix": "colo",
+     "answer": "nies",
+     "word": "colonies",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "colo_ _ _ _ ",
+     "start": 87,
+     "end": 99
+    },
+    {
+     "index": 2,
+     "prefix": "ti",
+     "answer": "ny",
+     "word": "tiny",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "ti_ _ ",
+     "start": 103,
+     "end": 109
+    },
+    {
+     "index": 3,
+     "prefix": "t",
+     "answer": "he",
+     "word": "the",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "t_ _ ",
+     "start": 124,
+     "end": 129
+    },
+    {
+     "index": 4,
+     "prefix": "struc",
+     "answer": "tures",
+     "word": "structures",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "struc_ _ _ _ _ ",
+     "start": 141,
+     "end": 156
+    },
+    {
+     "index": 5,
+     "prefix": "a",
+     "answer": "n",
+     "word": "an",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "a_ ",
+     "start": 165,
+     "end": 168
+    },
+    {
+     "index": 6,
+     "prefix": "ra",
+     "answer": "nge",
+     "word": "range",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ra_ _ _ ",
+     "start": 180,
+     "end": 188
+    },
+    {
+     "index": 7,
+     "prefix": "mar",
+     "answer": "ine",
+     "word": "marine",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "mar_ _ _ ",
+     "start": 192,
+     "end": 201
+    },
+    {
+     "index": 8,
+     "prefix": "incl",
+     "answer": "uding",
+     "word": "including",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "incl_ _ _ _ _ ",
+     "start": 208,
+     "end": 222
+    },
+    {
+     "index": 9,
+     "prefix": "invert",
+     "answer": "ebrates",
+     "word": "invertebrates",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "invert_ _ _ _ _ _ _",
+     "start": 229,
+     "end": 248
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行17]）"
+    }
+   ]
+  },
+  {
+   "id": "20260906B",
+   "month": "2026年9月",
+   "source": "20260906B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Public Galleries",
+   "discipline": "社会科学",
+   "topic": "社会学",
+   "difficulty": "困难",
+   "passage": "The emergence of public galleries in Europe in the eighteenth century marked a turning point in making art accessible to a wider audience. Britain and France led this movement, with the British Museum (1759) and the Louvre (opened to the public in 1793) setting early examples. These instit_ _ _ _ _ _  were supp_ _ _ _ _  by pat_ _ _ _  and gover_ _ _ _ _ _  who recog_ _ _ _ _  art's educa_ _ _ _ _ _  and cult_ _ _ _  value. Su_ _  investments cre_ _ _ _  spaces n_ _  only for displaying collections but also for encouraging scholarly engagement and public appreciation, laying the groundwork for modern museum culture.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "public galleries"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "instit",
+     "answer": "utions",
+     "word": "institutions",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "instit_ _ _ _ _ _ ",
+     "start": 284,
+     "end": 302
+    },
+    {
+     "index": 1,
+     "prefix": "supp",
+     "answer": "orted",
+     "word": "supported",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "supp_ _ _ _ _ ",
+     "start": 308,
+     "end": 322
+    },
+    {
+     "index": 2,
+     "prefix": "pat",
+     "answer": "rons",
+     "word": "patrons",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "pat_ _ _ _ ",
+     "start": 326,
+     "end": 337
+    },
+    {
+     "index": 3,
+     "prefix": "gover",
+     "answer": "nments",
+     "word": "governments",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "gover_ _ _ _ _ _ ",
+     "start": 342,
+     "end": 359
+    },
+    {
+     "index": 4,
+     "prefix": "recog",
+     "answer": "nized",
+     "word": "recognized",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "recog_ _ _ _ _ ",
+     "start": 364,
+     "end": 379
+    },
+    {
+     "index": 5,
+     "prefix": "educa",
+     "answer": "tional",
+     "word": "educational",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "educa_ _ _ _ _ _ ",
+     "start": 386,
+     "end": 403
+    },
+    {
+     "index": 6,
+     "prefix": "cult",
+     "answer": "ural",
+     "word": "cultural",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "cult_ _ _ _ ",
+     "start": 408,
+     "end": 420
+    },
+    {
+     "index": 7,
+     "prefix": "Su",
+     "answer": "ch",
+     "word": "Such",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "Su_ _ ",
+     "start": 428,
+     "end": 434
+    },
+    {
+     "index": 8,
+     "prefix": "cre",
+     "answer": "ated",
+     "word": "created",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "cre_ _ _ _ ",
+     "start": 447,
+     "end": 458
+    },
+    {
+     "index": 9,
+     "prefix": "n",
+     "answer": "ot",
+     "word": "not",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "n_ _ ",
+     "start": 466,
+     "end": 471
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行19]）"
+    }
+   ]
+  },
+  {
+   "id": "20260907A",
+   "month": "2026年9月",
+   "source": "20260907A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Atmospheric Systems",
+   "discipline": "自然科学",
+   "topic": "地质学",
+   "difficulty": "困难",
+   "passage": "The atmosphere is a dynamic and complex system, shaped by countless interacting variables such as solar radiation, air pressure, and moisture levels. Meteorologists use advanced mod_ _ _  to simu_ _ _ _  these intera_ _ _ _ _ _  , but predi_ _ _ _ _  weather rem_ _ _ _  a chal_ _ _ _ _  due t_  the inher_ _ _ _ _  chaotic nat_ _ _  of atmos_ _ _ _ _ _  processes. Small changes in initial conditions can lead to vastly different outcomes, making long-term forecasts especially uncertain. Despite technological progress, the atmosphere's unpredictability continues to pose limits to accurate and consistent weather prediction.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "自然科学",
+    "atmospheric systems"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "mod",
+     "answer": "els",
+     "word": "models",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "mod_ _ _ ",
+     "start": 178,
+     "end": 187
+    },
+    {
+     "index": 1,
+     "prefix": "simu",
+     "answer": "late",
+     "word": "simulate",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "simu_ _ _ _ ",
+     "start": 191,
+     "end": 203
+    },
+    {
+     "index": 2,
+     "prefix": "intera",
+     "answer": "ctions",
+     "word": "interactions",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "intera_ _ _ _ _ _ ",
+     "start": 210,
+     "end": 228
+    },
+    {
+     "index": 3,
+     "prefix": "predi",
+     "answer": "cting",
+     "word": "predicting",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "predi_ _ _ _ _ ",
+     "start": 235,
+     "end": 250
+    },
+    {
+     "index": 4,
+     "prefix": "rem",
+     "answer": "ains",
+     "word": "remains",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "rem_ _ _ _ ",
+     "start": 259,
+     "end": 270
+    },
+    {
+     "index": 5,
+     "prefix": "chal",
+     "answer": "lenge",
+     "word": "challenge",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "chal_ _ _ _ _ ",
+     "start": 273,
+     "end": 287
+    },
+    {
+     "index": 6,
+     "prefix": "t",
+     "answer": "o",
+     "word": "to",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "t_ ",
+     "start": 292,
+     "end": 295
+    },
+    {
+     "index": 7,
+     "prefix": "inher",
+     "answer": "ently",
+     "word": "inherently",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "inher_ _ _ _ _ ",
+     "start": 300,
+     "end": 315
+    },
+    {
+     "index": 8,
+     "prefix": "nat",
+     "answer": "ure",
+     "word": "nature",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "nat_ _ _ ",
+     "start": 324,
+     "end": 333
+    },
+    {
+     "index": 9,
+     "prefix": "atmos",
+     "answer": "pheric",
+     "word": "atmospheric",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "atmos_ _ _ _ _ _ ",
+     "start": 337,
+     "end": 354
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行25]）"
+    },
+    {
+     "type": "note",
+     "note": "空10 素材缺答案，从库题 20260506B 同前缀空补全 → 'pheric'"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 20260506B 同底文本、挖空不同"
+    }
+   ]
+  },
+  {
+   "id": "20260907B",
+   "month": "2026年9月",
+   "source": "20260907B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Consciousness Studies",
+   "discipline": "生命科学",
+   "topic": "心理学",
+   "difficulty": "中等",
+   "passage": "In philosophy of mind, questions about consciousness and self-awareness focus on mental capacities like thoughts, beliefs, and desires that shape behavior. Thinkers such as Descartes and Locke examined the nature of inner experience and recognized the limits of understanding other minds. Over ti_ _  , this philos_ _ _ _ _ _ _  idea w_ _  adopted b_  cognitive scien_ _ _ _ _  who be_ _ _  studying h_ _  we iden_ _ _ _  and inte_ _ _ _ _  mental sta_ _ _  in ourselves and others. This shift enabled deeper insights into empathy, communication, and social understanding, offering a bridge between abstract thought and observable human behavior.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "生命科学",
+    "consciousness studies"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "ti",
+     "answer": "me",
+     "word": "time",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "ti_ _ ",
+     "start": 294,
+     "end": 300
+    },
+    {
+     "index": 1,
+     "prefix": "philos",
+     "answer": "ophical",
+     "word": "philosophical",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "philos_ _ _ _ _ _ _ ",
+     "start": 308,
+     "end": 328
+    },
+    {
+     "index": 2,
+     "prefix": "w",
+     "answer": "as",
+     "word": "was",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "w_ _ ",
+     "start": 334,
+     "end": 339
+    },
+    {
+     "index": 3,
+     "prefix": "b",
+     "answer": "y",
+     "word": "by",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "b_ ",
+     "start": 348,
+     "end": 351
+    },
+    {
+     "index": 4,
+     "prefix": "scien",
+     "answer": "tists",
+     "word": "scientists",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "scien_ _ _ _ _ ",
+     "start": 362,
+     "end": 377
+    },
+    {
+     "index": 5,
+     "prefix": "be",
+     "answer": "gan",
+     "word": "began",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "be_ _ _ ",
+     "start": 382,
+     "end": 390
+    },
+    {
+     "index": 6,
+     "prefix": "h",
+     "answer": "ow",
+     "word": "how",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "h_ _ ",
+     "start": 400,
+     "end": 405
+    },
+    {
+     "index": 7,
+     "prefix": "iden",
+     "answer": "tity",
+     "word": "identity",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "iden_ _ _ _ ",
+     "start": 409,
+     "end": 421
+    },
+    {
+     "index": 8,
+     "prefix": "inte",
+     "answer": "rpret",
+     "word": "interpret",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "inte_ _ _ _ _ ",
+     "start": 426,
+     "end": 440
+    },
+    {
+     "index": 9,
+     "prefix": "sta",
+     "answer": "tes",
+     "word": "states",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "sta_ _ _ ",
+     "start": 448,
+     "end": 457
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行29]）"
+    },
+    {
+     "type": "note",
+     "note": "空2: 正文下划线8格，按答案 'ophical' 校正为7格（词 philosophical）"
+    }
+   ]
+  },
+  {
+   "id": "20260907B-2",
+   "month": "2026年9月",
+   "source": "20260907B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Sleep and Health",
+   "discipline": "生命科学",
+   "topic": "心理学",
+   "difficulty": "中等",
+   "passage": "Sleep is essential for maintaining health and well-being. During sleep, the body rests and repairs itself, and the brain processes information from the day. Getting eno_ _ _  sleep he_ _ _  improve mem_ _ _  , mood, a_ _  overall phys_ _ _ _  health. Disru_ _ _ _ _ _  to patt_ _ _  of sl_ _ _  can le_ _  to prob_ _ _  like fatigue and poor concentration. The circadian rhythm, an internal clock, regulates sleep-wake cycles and is influenced by light and darkness. Sleep research has increased our knowledge about habits that contribute to a better night's sleep and a healthier lifestyle.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "生命科学",
+    "sleep and health"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "eno",
+     "answer": "ugh",
+     "word": "enough",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "eno_ _ _ ",
+     "start": 165,
+     "end": 174
+    },
+    {
+     "index": 1,
+     "prefix": "he",
+     "answer": "lps",
+     "word": "helps",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "he_ _ _ ",
+     "start": 181,
+     "end": 189
+    },
+    {
+     "index": 2,
+     "prefix": "mem",
+     "answer": "ory",
+     "word": "memory",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "mem_ _ _ ",
+     "start": 198,
+     "end": 207
+    },
+    {
+     "index": 3,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 216,
+     "end": 221
+    },
+    {
+     "index": 4,
+     "prefix": "phys",
+     "answer": "ical",
+     "word": "physical",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "phys_ _ _ _ ",
+     "start": 230,
+     "end": 242
+    },
+    {
+     "index": 5,
+     "prefix": "Disru",
+     "answer": "ptions",
+     "word": "Disruptions",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "Disru_ _ _ _ _ _ ",
+     "start": 251,
+     "end": 268
+    },
+    {
+     "index": 6,
+     "prefix": "patt",
+     "answer": "ern",
+     "word": "pattern",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "patt_ _ _ ",
+     "start": 272,
+     "end": 282
+    },
+    {
+     "index": 7,
+     "prefix": "sl",
+     "answer": "eep",
+     "word": "sleep",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "sl_ _ _ ",
+     "start": 286,
+     "end": 294
+    },
+    {
+     "index": 8,
+     "prefix": "le",
+     "answer": "ad",
+     "word": "lead",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "le_ _ ",
+     "start": 299,
+     "end": 305
+    },
+    {
+     "index": 9,
+     "prefix": "prob",
+     "answer": "lem",
+     "word": "problem",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "prob_ _ _ ",
+     "start": 309,
+     "end": 319
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行30]）"
+    },
+    {
+     "type": "note",
+     "note": "空7: 正文下划线4格，按答案 'ern' 校正为3格（词 pattern）"
+    },
+    {
+     "type": "note",
+     "note": "空10: 正文下划线4格，按答案 'lem' 校正为3格（词 problem）"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 素材[8月行30] 同底文本、挖空不同"
+    }
+   ]
+  },
+  {
+   "id": "20260908A",
+   "month": "2026年9月",
+   "source": "20260908A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Glorious Revolution",
+   "discipline": "生命科学",
+   "topic": "生物",
+   "difficulty": "困难",
+   "passage": "England's Glorious Revolution of 1688 began when King James II lost the confidence of political elites because of his Catholicism and governing practices. Concerned about religious policy and centralized authority, influential figures invited a Protestant Dutch prince, William of Orange, to intervene. Rather th_ _  producing prol_ _ _ _ _  conflict, the tran_ _ _ _  of po_ _ _  occurred wi_ _  limited resis_ _ _ _ _  , as shifting alli_ _ _ _ _  and uncer_ _ _ _ _ _  over legit_ _ _ _ _  authority weak_ _ _ _  support for James II. The settlement, whereby William and his wife Mary were established as joint monarchs of England, emphasized limits on royal authority and strengthened the role of representative institutions.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "生命科学",
+    "glorious revolution"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "th",
+     "answer": "an",
+     "word": "than",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "th_ _ ",
+     "start": 310,
+     "end": 316
+    },
+    {
+     "index": 1,
+     "prefix": "prol",
+     "answer": "onged",
+     "word": "prolonged",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "prol_ _ _ _ _ ",
+     "start": 327,
+     "end": 341
+    },
+    {
+     "index": 2,
+     "prefix": "tran",
+     "answer": "sfer",
+     "word": "transfer",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "tran_ _ _ _ ",
+     "start": 356,
+     "end": 368
+    },
+    {
+     "index": 3,
+     "prefix": "po",
+     "answer": "wer",
+     "word": "power",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "po_ _ _ ",
+     "start": 372,
+     "end": 380
+    },
+    {
+     "index": 4,
+     "prefix": "wi",
+     "answer": "th",
+     "word": "with",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "wi_ _ ",
+     "start": 390,
+     "end": 396
+    },
+    {
+     "index": 5,
+     "prefix": "resis",
+     "answer": "tance",
+     "word": "resistance",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "resis_ _ _ _ _ ",
+     "start": 405,
+     "end": 420
+    },
+    {
+     "index": 6,
+     "prefix": "alli",
+     "answer": "ances",
+     "word": "alliances",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "alli_ _ _ _ _ ",
+     "start": 435,
+     "end": 449
+    },
+    {
+     "index": 7,
+     "prefix": "uncer",
+     "answer": "tainty",
+     "word": "uncertainty",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "uncer_ _ _ _ _ _ ",
+     "start": 454,
+     "end": 471
+    },
+    {
+     "index": 8,
+     "prefix": "legit",
+     "answer": "imate",
+     "word": "legitimate",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "legit_ _ _ _ _ ",
+     "start": 477,
+     "end": 492
+    },
+    {
+     "index": 9,
+     "prefix": "weak",
+     "answer": "ened",
+     "word": "weakened",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "weak_ _ _ _ ",
+     "start": 503,
+     "end": 515
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行32]）"
+    }
+   ]
+  },
+  {
+   "id": "20260909A",
+   "month": "2026年9月",
+   "source": "20260909A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Note-taking",
+   "discipline": "社会科学",
+   "topic": "教育",
+   "difficulty": "中等",
+   "passage": "In many university lecture courses, note-taking operates as more than a private memory aid; it also reflects how students position themselves within a classroom community. Some wr_ _ _  verbatim to red_ _ _  uncertainty, wh_ _ _  others summarize to te_ _  their unders_ _ _ _ _ _ _  in re_ _  time. Dig_ _ _ _  tools c_ _  increase effic_ _ _ _ _, yet they may ena_ _ _copying without processing. Instructors who pause for brief questions often shift note-taking from transcription toward interpretation, and this change often improves later discussion.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "note-taking"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "wr",
+     "answer": "ite",
+     "word": "write",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "wr_ _ _ ",
+     "start": 177,
+     "end": 185
+    },
+    {
+     "index": 1,
+     "prefix": "red",
+     "answer": "uce",
+     "word": "reduce",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "red_ _ _ ",
+     "start": 198,
+     "end": 207
+    },
+    {
+     "index": 2,
+     "prefix": "wh",
+     "answer": "ile",
+     "word": "while",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "wh_ _ _ ",
+     "start": 221,
+     "end": 229
+    },
+    {
+     "index": 3,
+     "prefix": "te",
+     "answer": "st",
+     "word": "test",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "te_ _ ",
+     "start": 250,
+     "end": 256
+    },
+    {
+     "index": 4,
+     "prefix": "unders",
+     "answer": "tanding",
+     "word": "understanding",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "unders_ _ _ _ _ _ _ ",
+     "start": 263,
+     "end": 283
+    },
+    {
+     "index": 5,
+     "prefix": "re",
+     "answer": "al",
+     "word": "real",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "re_ _ ",
+     "start": 287,
+     "end": 293
+    },
+    {
+     "index": 6,
+     "prefix": "Dig",
+     "answer": "ital",
+     "word": "Digital",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "Dig_ _ _ _ ",
+     "start": 300,
+     "end": 311
+    },
+    {
+     "index": 7,
+     "prefix": "c",
+     "answer": "an",
+     "word": "can",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "c_ _ ",
+     "start": 318,
+     "end": 323
+    },
+    {
+     "index": 8,
+     "prefix": "effic",
+     "answer": "iency",
+     "word": "efficiency",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "effic_ _ _ _ _",
+     "start": 333,
+     "end": 347
+    },
+    {
+     "index": 9,
+     "prefix": "ena",
+     "answer": "ble",
+     "word": "enable",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ena_ _ _",
+     "start": 362,
+     "end": 370
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行36]）"
+    }
+   ]
+  },
+  {
+   "id": "20260909A-2",
+   "month": "2026年9月",
+   "source": "20260909A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Railway Timekeeping",
+   "discipline": "自然科学",
+   "topic": "科技",
+   "difficulty": "中等",
+   "passage": "In the late nineteenth century, North America faced growing problems with timekeeping as railroads expanded across the continent. Towns set their clocks by the sun, so the times kept by municip_ _ _ _ _ _ _  varied slig_ _ _ _. Because tra_ _ _  required pre_ _ _ _  scheduling a_ _  telegraph mess_ _ _ _  depended on consi_ _ _ _ _  timing, this system caused confusion and delays. In 1883, major railroads adopted standard time zones, dividing the continent into regions with uniform time and making long-distance travel and communication more efficient and reliable.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "自然科学",
+    "railway timekeeping"
+   ],
+   "status": "active",
+   "blankCount": 7,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "municip",
+     "answer": "alities",
+     "word": "municipalities",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "municip_ _ _ _ _ _ _ ",
+     "start": 186,
+     "end": 207
+    },
+    {
+     "index": 1,
+     "prefix": "slig",
+     "answer": "htly",
+     "word": "slightly",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "slig_ _ _ _",
+     "start": 215,
+     "end": 226
+    },
+    {
+     "index": 2,
+     "prefix": "tra",
+     "answer": "ins",
+     "word": "trains",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "tra_ _ _ ",
+     "start": 236,
+     "end": 245
+    },
+    {
+     "index": 3,
+     "prefix": "pre",
+     "answer": "cise",
+     "word": "precise",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "pre_ _ _ _ ",
+     "start": 255,
+     "end": 266
+    },
+    {
+     "index": 4,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 278,
+     "end": 283
+    },
+    {
+     "index": 5,
+     "prefix": "mess",
+     "answer": "ages",
+     "word": "messages",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "mess_ _ _ _ ",
+     "start": 294,
+     "end": 306
+    },
+    {
+     "index": 6,
+     "prefix": "consi",
+     "answer": "stent",
+     "word": "consistent",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "consi_ _ _ _ _ ",
+     "start": 319,
+     "end": 334
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行37]）"
+    },
+    {
+     "type": "note",
+     "note": "答案列含错位残留 ['un', 'he', 'pt']，已剔除后子序列对齐"
+    },
+    {
+     "type": "note",
+     "note": "空4: 正文下划线3格，按答案 'cise' 校正为4格（词 precise）"
+    },
+    {
+     "type": "note",
+     "note": "空6: 正文下划线5格，按答案 'ages' 校正为4格（词 messages）"
+    }
+   ]
+  },
+  {
+   "id": "20260909B",
+   "month": "2026年9月",
+   "source": "20260909B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Schiller and Opera",
+   "discipline": "艺术",
+   "topic": "艺术",
+   "difficulty": "中等",
+   "passage": "The dramas of the German philosopher and poet Friedrich Schiller significantly influenced nineteenth-century opera, especially operas by Giuseppe Verdi such as Luisa Miller and Don Carlos. Although composers used Schiller's dramatic structures, operatic adapt_ _ _ _ _ _  often resh_ _ _ _  them, pla_ _ _ _greater emph_ _ _ _  on mo_ _ _  conflict and poli_ _ _ _ _  tension in Schiller's wo_ _ _. The pl_ _ _  frequently dep_ _ _  characters cau_ _ _  between personal desire and social constraint. Verdi and others adapted these themes to explore issues of freedom, authority, and duty, intensifying their emotional impact.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "艺术",
+    "schiller and opera"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "adapt",
+     "answer": "ations",
+     "word": "adaptations",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "adapt_ _ _ _ _ _ ",
+     "start": 254,
+     "end": 271
+    },
+    {
+     "index": 1,
+     "prefix": "resh",
+     "answer": "aped",
+     "word": "reshaped",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "resh_ _ _ _ ",
+     "start": 278,
+     "end": 290
+    },
+    {
+     "index": 2,
+     "prefix": "pla",
+     "answer": "cing",
+     "word": "placing",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "pla_ _ _ _",
+     "start": 297,
+     "end": 307
+    },
+    {
+     "index": 3,
+     "prefix": "emph",
+     "answer": "asis",
+     "word": "emphasis",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "emph_ _ _ _ ",
+     "start": 315,
+     "end": 327
+    },
+    {
+     "index": 4,
+     "prefix": "mo",
+     "answer": "ral",
+     "word": "moral",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "mo_ _ _ ",
+     "start": 331,
+     "end": 339
+    },
+    {
+     "index": 5,
+     "prefix": "poli",
+     "answer": "tical",
+     "word": "political",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "poli_ _ _ _ _ ",
+     "start": 353,
+     "end": 367
+    },
+    {
+     "index": 6,
+     "prefix": "wo",
+     "answer": "rks",
+     "word": "works",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "wo_ _ _",
+     "start": 390,
+     "end": 397
+    },
+    {
+     "index": 7,
+     "prefix": "pl",
+     "answer": "ots",
+     "word": "plots",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "pl_ _ _ ",
+     "start": 403,
+     "end": 411
+    },
+    {
+     "index": 8,
+     "prefix": "dep",
+     "answer": "ict",
+     "word": "depict",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "dep_ _ _ ",
+     "start": 423,
+     "end": 432
+    },
+    {
+     "index": 9,
+     "prefix": "cau",
+     "answer": "ght",
+     "word": "caught",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "cau_ _ _ ",
+     "start": 444,
+     "end": 453
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行38]）"
+    }
+   ]
+  },
+  {
+   "id": "20260909B-2",
+   "month": "2026年9月",
+   "source": "20260909B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Glorious Revolution",
+   "discipline": "生命科学",
+   "topic": "生物",
+   "difficulty": "困难",
+   "passage": "England's Glorious Revolution of 1688 began when King James II lost the confidence of political elites because of his Catholicism and governing practices. Concerned about religious policy and centralized authority, influential figures invited a Protestant Dutch prince, William of Orange, to intervene. Rather th_ _  producing prol_ _ _ _ _  conflict, the tran_ _ _ _  of po_ _ _occurred wi_ _  limited resis_ _ _ _ _, as shifting alli_ _ _ _ _  and uncer_ _ _ _ _ _over legit_ _ _ _ _  authority weak_ _ _ _  support for James II. The settlement, whereby William and his wife Mary were established as joint monarchs of England, emphasized limits on royal authority and strengthened the role of representative institutions.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "生命科学",
+    "glorious revolution"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "th",
+     "answer": "an",
+     "word": "than",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "th_ _ ",
+     "start": 310,
+     "end": 316
+    },
+    {
+     "index": 1,
+     "prefix": "prol",
+     "answer": "onged",
+     "word": "prolonged",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "prol_ _ _ _ _ ",
+     "start": 327,
+     "end": 341
+    },
+    {
+     "index": 2,
+     "prefix": "tran",
+     "answer": "sfer",
+     "word": "transfer",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "tran_ _ _ _ ",
+     "start": 356,
+     "end": 368
+    },
+    {
+     "index": 3,
+     "prefix": "po",
+     "answer": "wer",
+     "word": "power",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "po_ _ _",
+     "start": 372,
+     "end": 379
+    },
+    {
+     "index": 4,
+     "prefix": "wi",
+     "answer": "th",
+     "word": "with",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "wi_ _ ",
+     "start": 388,
+     "end": 394
+    },
+    {
+     "index": 5,
+     "prefix": "resis",
+     "answer": "tance",
+     "word": "resistance",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "resis_ _ _ _ _",
+     "start": 403,
+     "end": 417
+    },
+    {
+     "index": 6,
+     "prefix": "alli",
+     "answer": "ances",
+     "word": "alliances",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "alli_ _ _ _ _ ",
+     "start": 431,
+     "end": 445
+    },
+    {
+     "index": 7,
+     "prefix": "uncer",
+     "answer": "tainty",
+     "word": "uncertainty",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "uncer_ _ _ _ _ _",
+     "start": 450,
+     "end": 466
+    },
+    {
+     "index": 8,
+     "prefix": "legit",
+     "answer": "imacy",
+     "word": "legitimacy",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "legit_ _ _ _ _ ",
+     "start": 471,
+     "end": 486
+    },
+    {
+     "index": 9,
+     "prefix": "weak",
+     "answer": "ened",
+     "word": "weakened",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "weak_ _ _ _ ",
+     "start": 497,
+     "end": 509
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行39]）"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 素材[9月行32] 同底文本、挖空不同"
+    }
+   ]
+  },
+  {
+   "id": "20260909B-3",
+   "month": "2026年9月",
+   "source": "20260909B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Brain Anatomy",
+   "discipline": "生命科学",
+   "topic": "生物",
+   "difficulty": "中等",
+   "passage": "The human brain is an extraordinarily intricate organ, unrivaled in its complexity and function. Studying its anatomy reveals a remarkable internal architecture, composed of billions of neurons intricately interconnected by synapses. These neurons tran_ _ _ _  electrical impu_ _ _ _, facilitating t_ _  brain's ro_ _  in enab_ _ _ _  cognition, proce_ _ _ _ _  information, regul_ _ _ _ _  essential bod_ _ _  functions, a_ _  facilitating emot_ _ _ _. The reflective nature of studying the brain encourages careful consideration of how its structure impacts behavior and thought.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "生命科学",
+    "brain anatomy"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "tran",
+     "answer": "smit",
+     "word": "transmit",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "tran_ _ _ _ ",
+     "start": 248,
+     "end": 260
+    },
+    {
+     "index": 1,
+     "prefix": "impu",
+     "answer": "lses",
+     "word": "impulses",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "impu_ _ _ _",
+     "start": 272,
+     "end": 283
+    },
+    {
+     "index": 2,
+     "prefix": "t",
+     "answer": "he",
+     "word": "the",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "t_ _ ",
+     "start": 298,
+     "end": 303
+    },
+    {
+     "index": 3,
+     "prefix": "ro",
+     "answer": "le",
+     "word": "role",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "ro_ _ ",
+     "start": 312,
+     "end": 318
+    },
+    {
+     "index": 4,
+     "prefix": "enab",
+     "answer": "ling",
+     "word": "enabling",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "enab_ _ _ _ ",
+     "start": 322,
+     "end": 334
+    },
+    {
+     "index": 5,
+     "prefix": "proce",
+     "answer": "ssing",
+     "word": "processing",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "proce_ _ _ _ _ ",
+     "start": 346,
+     "end": 361
+    },
+    {
+     "index": 6,
+     "prefix": "regul",
+     "answer": "ating",
+     "word": "regulating",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "regul_ _ _ _ _ ",
+     "start": 375,
+     "end": 390
+    },
+    {
+     "index": 7,
+     "prefix": "bod",
+     "answer": "ily",
+     "word": "bodily",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "bod_ _ _ ",
+     "start": 401,
+     "end": 410
+    },
+    {
+     "index": 8,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 422,
+     "end": 427
+    },
+    {
+     "index": 9,
+     "prefix": "emot",
+     "answer": "ions",
+     "word": "emotions",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "emot_ _ _ _",
+     "start": 441,
+     "end": 452
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行40]）"
+    }
+   ]
+  },
+  {
+   "id": "20260912A",
+   "month": "2026年9月",
+   "source": "20260912A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Louisiana Purchase",
+   "discipline": "社会科学",
+   "topic": "历史",
+   "difficulty": "困难",
+   "passage": "The Louisiana Purchase of 1803 was a landmark diplomatic agreement in which the United States acquired approximately 828,000 square miles of territory from France for $15 million. Negotiated under President Thomas Jefferson, the acqui_ _ _ _ _ _  nearly dou_ _ _ _  the la_ _  area o_  the nat_ _ _  and sec_ _ _ _  access t_  key inl_ _ _  waterways a_ _  trade hu_ _  essential for economic expansion. The purchase also affirmed the principle of implied powers within the United States Constitution, setting a precedent for future territorial growth.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "louisiana purchase"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "acqui",
+     "answer": "sition",
+     "word": "acquisition",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "acqui_ _ _ _ _ _ ",
+     "start": 229,
+     "end": 246
+    },
+    {
+     "index": 1,
+     "prefix": "dou",
+     "answer": "bled",
+     "word": "doubled",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "dou_ _ _ _ ",
+     "start": 254,
+     "end": 265
+    },
+    {
+     "index": 2,
+     "prefix": "la",
+     "answer": "nd",
+     "word": "land",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "la_ _ ",
+     "start": 270,
+     "end": 276
+    },
+    {
+     "index": 3,
+     "prefix": "o",
+     "answer": "f",
+     "word": "of",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 282,
+     "end": 285
+    },
+    {
+     "index": 4,
+     "prefix": "nat",
+     "answer": "ion",
+     "word": "nation",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "nat_ _ _ ",
+     "start": 290,
+     "end": 299
+    },
+    {
+     "index": 5,
+     "prefix": "sec",
+     "answer": "ured",
+     "word": "secured",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "sec_ _ _ _ ",
+     "start": 304,
+     "end": 315
+    },
+    {
+     "index": 6,
+     "prefix": "t",
+     "answer": "o",
+     "word": "to",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "t_ ",
+     "start": 323,
+     "end": 326
+    },
+    {
+     "index": 7,
+     "prefix": "inl",
+     "answer": "and",
+     "word": "inland",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "inl_ _ _ ",
+     "start": 331,
+     "end": 340
+    },
+    {
+     "index": 8,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 351,
+     "end": 356
+    },
+    {
+     "index": 9,
+     "prefix": "hu",
+     "answer": "bs",
+     "word": "hubs",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "hu_ _ ",
+     "start": 363,
+     "end": 369
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行41]）"
+    }
+   ]
+  },
+  {
+   "id": "20260912A-2",
+   "month": "2026年9月",
+   "source": "20260912A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Brazilian Carnival",
+   "discipline": "社会科学",
+   "topic": "历史",
+   "difficulty": "困难",
+   "passage": "Carnival in Brazil is both a dazzling spectacle and a complex social phenomenon, where parades orchestrated by samba schools fuse music, dance, costume design, and intricate choreography into a carefully judged competition. These parades, unfolding in sambadromes and city str_ _ _ _, mobilize thou_ _ _ _ _  of perfo_ _ _ _ _  and crafts_ _ _ _ _ _, reflecting mon_ _ _  of prepa_ _ _ _ _ _. Beyond entert_ _ _ _ _ _ _, they inc_ _ _ _  narratives ab_ _ _  history, inequ_ _ _ _ _, and national identity. Every year, they turn urban space into a stage where Brazil publicly rehearses and negotiates its cultural diversity.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "brazilian carnival"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "str",
+     "answer": "eets",
+     "word": "streets",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "str_ _ _ _",
+     "start": 273,
+     "end": 283
+    },
+    {
+     "index": 1,
+     "prefix": "thou",
+     "answer": "sands",
+     "word": "thousands",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "thou_ _ _ _ _ ",
+     "start": 294,
+     "end": 308
+    },
+    {
+     "index": 2,
+     "prefix": "perfo",
+     "answer": "rmers",
+     "word": "performers",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "perfo_ _ _ _ _ ",
+     "start": 312,
+     "end": 327
+    },
+    {
+     "index": 3,
+     "prefix": "crafts",
+     "answer": "people",
+     "word": "craftspeople",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "crafts_ _ _ _ _ _",
+     "start": 332,
+     "end": 349
+    },
+    {
+     "index": 4,
+     "prefix": "mon",
+     "answer": "ths",
+     "word": "months",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "mon_ _ _ ",
+     "start": 362,
+     "end": 371
+    },
+    {
+     "index": 5,
+     "prefix": "prepa",
+     "answer": "ration",
+     "word": "preparation",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "prepa_ _ _ _ _ _",
+     "start": 375,
+     "end": 391
+    },
+    {
+     "index": 6,
+     "prefix": "entert",
+     "answer": "ainment",
+     "word": "entertainment",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "entert_ _ _ _ _ _ _",
+     "start": 400,
+     "end": 419
+    },
+    {
+     "index": 7,
+     "prefix": "inc",
+     "answer": "lude",
+     "word": "include",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "inc_ _ _ _ ",
+     "start": 426,
+     "end": 437
+    },
+    {
+     "index": 8,
+     "prefix": "ab",
+     "answer": "out",
+     "word": "about",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ab_ _ _ ",
+     "start": 449,
+     "end": 457
+    },
+    {
+     "index": 9,
+     "prefix": "inequ",
+     "answer": "ality",
+     "word": "inequality",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "inequ_ _ _ _ _",
+     "start": 467,
+     "end": 481
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行42]）"
+    }
+   ]
+  },
+  {
+   "id": "20260912A-3",
+   "month": "2026年9月",
+   "source": "20260912A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Gupta Empire",
+   "discipline": "社会科学",
+   "topic": "历史",
+   "difficulty": "困难",
+   "passage": "The Gupta Empire, known as the Golden Age of India, thrived from around 320 to 550 c.e. and saw major advancements in science, mathematics, astronomy, literature, and philosophy. Scholars like Aryabhata introduced the concept of zero and approximated pi. Intell_ _ _ _ _ _  achievements flour_ _ _ _ _, and t_ _  empire's infl_ _ _ _ _  spread thr_ _ _ _  trade, educ_ _ _ _ _, and cul_ _ _ _. The e_ _  also feat_ _ _ _  architectural struc_ _ _ _ _  such as Nalanda University, a renowned center of learning that drew students from across Asia. This left a lasting legacy that shaped neighboring regions and continues to be celebrated today.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "gupta empire"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "Intell",
+     "answer": "ectual",
+     "word": "Intellectual",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "Intell_ _ _ _ _ _ ",
+     "start": 255,
+     "end": 273
+    },
+    {
+     "index": 1,
+     "prefix": "flour",
+     "answer": "ished",
+     "word": "flourished",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "flour_ _ _ _ _",
+     "start": 287,
+     "end": 301
+    },
+    {
+     "index": 2,
+     "prefix": "t",
+     "answer": "he",
+     "word": "the",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "t_ _ ",
+     "start": 307,
+     "end": 312
+    },
+    {
+     "index": 3,
+     "prefix": "infl",
+     "answer": "uence",
+     "word": "influence",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "infl_ _ _ _ _ ",
+     "start": 322,
+     "end": 336
+    },
+    {
+     "index": 4,
+     "prefix": "thr",
+     "answer": "ough",
+     "word": "through",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "thr_ _ _ _ ",
+     "start": 344,
+     "end": 355
+    },
+    {
+     "index": 5,
+     "prefix": "educ",
+     "answer": "ation",
+     "word": "education",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "educ_ _ _ _ _",
+     "start": 363,
+     "end": 376
+    },
+    {
+     "index": 6,
+     "prefix": "cul",
+     "answer": "ture",
+     "word": "culture",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "cul_ _ _ _",
+     "start": 382,
+     "end": 392
+    },
+    {
+     "index": 7,
+     "prefix": "e",
+     "answer": "ra",
+     "word": "era",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "e_ _ ",
+     "start": 398,
+     "end": 403
+    },
+    {
+     "index": 8,
+     "prefix": "feat",
+     "answer": "ured",
+     "word": "featured",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "feat_ _ _ _ ",
+     "start": 409,
+     "end": 421
+    },
+    {
+     "index": 9,
+     "prefix": "struc",
+     "answer": "tures",
+     "word": "structures",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "struc_ _ _ _ _ ",
+     "start": 436,
+     "end": 451
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行43]）"
+    }
+   ]
+  },
+  {
+   "id": "20260913A",
+   "month": "2026年9月",
+   "source": "20260913A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Shadow Puppetry",
+   "discipline": "艺术",
+   "topic": "艺术",
+   "difficulty": "中等",
+   "passage": "Shadow puppetry is an ancient form of storytelling that uses flat, articulated (movable) figures cast onto a screen by a light source. Shadow puppetry comb_ _ _ _  visual arti_ _ _ _  with dram_ _ _ _  narration, crea_ _ _ _  engaging perfor_ _ _ _ _ _  that con_ _ _  traditional ta_ _ _  and mo_ _ _  lessons. Th_  art fo_ _  originated in Asia and spread to various cultures around the world. The puppets are typically made of leather or paper and manipulated by sticks or strings. Performers narrate stories, often accompanied by music or sound effects",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "艺术",
+    "shadow puppetry"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "comb",
+     "answer": "ines",
+     "word": "combines",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "comb_ _ _ _ ",
+     "start": 151,
+     "end": 163
+    },
+    {
+     "index": 1,
+     "prefix": "arti",
+     "answer": "stry",
+     "word": "artistry",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "arti_ _ _ _ ",
+     "start": 171,
+     "end": 183
+    },
+    {
+     "index": 2,
+     "prefix": "dram",
+     "answer": "atic",
+     "word": "dramatic",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "dram_ _ _ _ ",
+     "start": 189,
+     "end": 201
+    },
+    {
+     "index": 3,
+     "prefix": "crea",
+     "answer": "ting",
+     "word": "creating",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "crea_ _ _ _ ",
+     "start": 213,
+     "end": 225
+    },
+    {
+     "index": 4,
+     "prefix": "perfor",
+     "answer": "mances",
+     "word": "performances",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "perfor_ _ _ _ _ _ ",
+     "start": 235,
+     "end": 253
+    },
+    {
+     "index": 5,
+     "prefix": "con",
+     "answer": "vey",
+     "word": "convey",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "con_ _ _ ",
+     "start": 259,
+     "end": 268
+    },
+    {
+     "index": 6,
+     "prefix": "ta",
+     "answer": "les",
+     "word": "tales",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ta_ _ _ ",
+     "start": 281,
+     "end": 289
+    },
+    {
+     "index": 7,
+     "prefix": "mo",
+     "answer": "ral",
+     "word": "moral",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "mo_ _ _ ",
+     "start": 294,
+     "end": 302
+    },
+    {
+     "index": 8,
+     "prefix": "Th",
+     "answer": "e",
+     "word": "The",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "Th_ ",
+     "start": 312,
+     "end": 316
+    },
+    {
+     "index": 9,
+     "prefix": "fo",
+     "answer": "rm",
+     "word": "form",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "fo_ _ ",
+     "start": 321,
+     "end": 327
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行44]）"
+    },
+    {
+     "type": "note",
+     "note": "空9: 正文下划线2格，按答案 'e' 校正为1格（词 The）"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 真题-017 同底文本、挖空不同"
+    }
+   ]
+  },
+  {
+   "id": "20260913A-2",
+   "month": "2026年9月",
+   "source": "20260913A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Public Health",
+   "discipline": "生命科学",
+   "topic": "生理",
+   "difficulty": "困难",
+   "passage": "Public health initiatives aim to promote well-being and prevent disease across populations. These strat_ _ _ _ _  often fo_ _ _  on bo_ _  short-term resp_ _ _ _ _  to emerg_ _ _ _ _ _  and long- _ _ _ _  investments i_  infrastructure. Eff_ _ _ _  include vacci_ _ _ _ _ _  programs, educ_ _ _ _ _  campaigns, and the development of policies that ensure access to clean water and nutritious food. Collaboration between governments, nonprofit organizations, and communities is essential for effective public health interventions. Understanding the social determinants of health, such as economic stability and education, helps tailor initiatives to address the specific needs of different populations.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "生命科学",
+    "public health"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "strat",
+     "answer": "egies",
+     "word": "strategies",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "strat_ _ _ _ _ ",
+     "start": 98,
+     "end": 113
+    },
+    {
+     "index": 1,
+     "prefix": "fo",
+     "answer": "cus",
+     "word": "focus",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "fo_ _ _ ",
+     "start": 120,
+     "end": 128
+    },
+    {
+     "index": 2,
+     "prefix": "bo",
+     "answer": "th",
+     "word": "both",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "bo_ _ ",
+     "start": 132,
+     "end": 138
+    },
+    {
+     "index": 3,
+     "prefix": "resp",
+     "answer": "onses",
+     "word": "responses",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "resp_ _ _ _ _ ",
+     "start": 150,
+     "end": 164
+    },
+    {
+     "index": 4,
+     "prefix": "emerg",
+     "answer": "encies",
+     "word": "emergencies",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "emerg_ _ _ _ _ _ ",
+     "start": 168,
+     "end": 185
+    },
+    {
+     "index": 5,
+     "prefix": "",
+     "answer": "term",
+     "word": "term",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "_ _ _ _ ",
+     "start": 196,
+     "end": 204
+    },
+    {
+     "index": 6,
+     "prefix": "i",
+     "answer": "n",
+     "word": "in",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "i_ ",
+     "start": 217,
+     "end": 220
+    },
+    {
+     "index": 7,
+     "prefix": "Eff",
+     "answer": "orts",
+     "word": "Efforts",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "Eff_ _ _ _ ",
+     "start": 237,
+     "end": 248
+    },
+    {
+     "index": 8,
+     "prefix": "vacci",
+     "answer": "nation",
+     "word": "vaccination",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "vacci_ _ _ _ _ _ ",
+     "start": 257,
+     "end": 274
+    },
+    {
+     "index": 9,
+     "prefix": "educ",
+     "answer": "ation",
+     "word": "education",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "educ_ _ _ _ _ ",
+     "start": 285,
+     "end": 299
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行46]）"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 素材[8月行56] 同底文本、挖空不同"
+    }
+   ]
+  },
+  {
+   "id": "20260913B",
+   "month": "2026年9月",
+   "source": "20260913B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Desert Ecosystems",
+   "discipline": "自然科学",
+   "topic": "环境科学",
+   "difficulty": "中等",
+   "passage": "Deserts, often characterized by aridity and extreme temperatures, have long been dismissed as barren wastelands. However, this perce_ _ _ _ _  overlooks th_ _ _  critical ecolo_ _ _ _ _  significance a_ _  the remar_ _ _ _ _  adaptations o_  the orga_ _ _ _ _  they ho_ _  . These sev_ _ _  environments req_ _ _ _  resilience and innovation, with plants and animals developing unique survival strategies. Moreover, deserts play a vital role in global carbon cycles, and their vast landscapes offer unparalleled opportunities for research into climate change impacts. Thus, recognizing the intrinsic value of deserts is essential for fostering a deeper appreciation and commitment to desert conservation.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "自然科学",
+    "desert ecosystems"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "perce",
+     "answer": "ption",
+     "word": "perception",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "perce_ _ _ _ _ ",
+     "start": 127,
+     "end": 142
+    },
+    {
+     "index": 1,
+     "prefix": "th",
+     "answer": "eir",
+     "word": "their",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "th_ _ _ ",
+     "start": 153,
+     "end": 161
+    },
+    {
+     "index": 2,
+     "prefix": "ecolo",
+     "answer": "gical",
+     "word": "ecological",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "ecolo_ _ _ _ _ ",
+     "start": 171,
+     "end": 186
+    },
+    {
+     "index": 3,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 200,
+     "end": 205
+    },
+    {
+     "index": 4,
+     "prefix": "remar",
+     "answer": "kable",
+     "word": "remarkable",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "remar_ _ _ _ _ ",
+     "start": 210,
+     "end": 225
+    },
+    {
+     "index": 5,
+     "prefix": "o",
+     "answer": "f",
+     "word": "of",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 238,
+     "end": 241
+    },
+    {
+     "index": 6,
+     "prefix": "orga",
+     "answer": "nisms",
+     "word": "organisms",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "orga_ _ _ _ _ ",
+     "start": 246,
+     "end": 260
+    },
+    {
+     "index": 7,
+     "prefix": "ho",
+     "answer": "ld",
+     "word": "hold",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "ho_ _ ",
+     "start": 266,
+     "end": 272
+    },
+    {
+     "index": 8,
+     "prefix": "sev",
+     "answer": "ere",
+     "word": "severe",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "sev_ _ _ ",
+     "start": 281,
+     "end": 290
+    },
+    {
+     "index": 9,
+     "prefix": "req",
+     "answer": "uire",
+     "word": "require",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "req_ _ _ _ ",
+     "start": 304,
+     "end": 315
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行47]）"
+    },
+    {
+     "type": "note",
+     "note": "空6: 正文下划线2格，按答案 'f' 校正为1格（词 of）"
+    }
+   ]
+  },
+  {
+   "id": "20260913B-2",
+   "month": "2026年9月",
+   "source": "20260913B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Cognition Studies",
+   "discipline": "生命科学",
+   "topic": "心理学",
+   "difficulty": "中等",
+   "passage": "Cognition and consciousness are central themes in the study of the human mind. Cognitive sci_ _ _ _  explores h_ _  we perc_ _ _ _, think, a_ _  remember infor_ _ _ _ _ _; consciousness rese_ _ _ _  focuses o_  subjective exper_ _ _ _ _. These fie_ _ _  intersect wi_ _  neuroscience, psychology, and philosophy, providing a multifaceted approach to understanding mental processes. Advances in these areas help explain complex behaviors and inform treatments for cognitive disorders. By studying how people think and feel, researchers can help others improve memory, make better decisions, and solve problems in everyday life.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "生命科学",
+    "cognition studies"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "sci",
+     "answer": "ence",
+     "word": "science",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "sci_ _ _ _ ",
+     "start": 89,
+     "end": 100
+    },
+    {
+     "index": 1,
+     "prefix": "h",
+     "answer": "ow",
+     "word": "how",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "h_ _ ",
+     "start": 110,
+     "end": 115
+    },
+    {
+     "index": 2,
+     "prefix": "perc",
+     "answer": "eive",
+     "word": "perceive",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "perc_ _ _ _",
+     "start": 119,
+     "end": 130
+    },
+    {
+     "index": 3,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 139,
+     "end": 144
+    },
+    {
+     "index": 4,
+     "prefix": "infor",
+     "answer": "mation",
+     "word": "information",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "infor_ _ _ _ _ _",
+     "start": 154,
+     "end": 170
+    },
+    {
+     "index": 5,
+     "prefix": "rese",
+     "answer": "arch",
+     "word": "research",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "rese_ _ _ _ ",
+     "start": 186,
+     "end": 198
+    },
+    {
+     "index": 6,
+     "prefix": "o",
+     "answer": "n",
+     "word": "on",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 207,
+     "end": 210
+    },
+    {
+     "index": 7,
+     "prefix": "exper",
+     "answer": "ience",
+     "word": "experience",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "exper_ _ _ _ _",
+     "start": 222,
+     "end": 236
+    },
+    {
+     "index": 8,
+     "prefix": "fie",
+     "answer": "lds",
+     "word": "fields",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "fie_ _ _ ",
+     "start": 244,
+     "end": 253
+    },
+    {
+     "index": 9,
+     "prefix": "wi",
+     "answer": "th",
+     "word": "with",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "wi_ _ ",
+     "start": 264,
+     "end": 270
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行48]）"
+    },
+    {
+     "type": "note",
+     "note": "空1: 正文下划线5格，按答案 'ence' 校正为4格（词 science）"
+    }
+   ]
+  },
+  {
+   "id": "20260914A",
+   "month": "2026年9月",
+   "source": "20260914A / 20260920A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Photoperiodism",
+   "discipline": "社会科学",
+   "topic": "综合",
+   "difficulty": "中等",
+   "passage": "Photoperiodism is crucial for the survival of organisms. In trees, photoperiodism refers to the physiological response to the length of day and night. This response influences seas_ _ _ _  behaviors li_ _  leaf shed_ _ _ _  and flow_ _ _ _ _. As t_ _  days gr_ _  shorter a_ _  the nig_ _ _  longer, so_ _  trees be_ _ _  to prepare for the changing seasons by dropping their leaves. This conserves water and energy during the winter months and protects the sensitive tissues of the tree from cold damage.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "photoperiodism"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "seas",
+     "answer": "onal",
+     "word": "seasonal",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "seas_ _ _ _ ",
+     "start": 176,
+     "end": 188
+    },
+    {
+     "index": 1,
+     "prefix": "li",
+     "answer": "ke",
+     "word": "like",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "li_ _ ",
+     "start": 199,
+     "end": 205
+    },
+    {
+     "index": 2,
+     "prefix": "shed",
+     "answer": "ding",
+     "word": "shedding",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "shed_ _ _ _ ",
+     "start": 211,
+     "end": 223
+    },
+    {
+     "index": 3,
+     "prefix": "flow",
+     "answer": "ering",
+     "word": "flowering",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "flow_ _ _ _ _",
+     "start": 228,
+     "end": 241
+    },
+    {
+     "index": 4,
+     "prefix": "t",
+     "answer": "he",
+     "word": "the",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "t_ _ ",
+     "start": 246,
+     "end": 251
+    },
+    {
+     "index": 5,
+     "prefix": "gr",
+     "answer": "ow",
+     "word": "grow",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "gr_ _ ",
+     "start": 257,
+     "end": 263
+    },
+    {
+     "index": 6,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 272,
+     "end": 277
+    },
+    {
+     "index": 7,
+     "prefix": "nig",
+     "answer": "hts",
+     "word": "nights",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "nig_ _ _ ",
+     "start": 282,
+     "end": 291
+    },
+    {
+     "index": 8,
+     "prefix": "so",
+     "answer": "me",
+     "word": "some",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "so_ _ ",
+     "start": 300,
+     "end": 306
+    },
+    {
+     "index": 9,
+     "prefix": "be",
+     "answer": "gin",
+     "word": "begin",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "be_ _ _ ",
+     "start": 313,
+     "end": 321
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行49]）"
+    }
+   ]
+  },
+  {
+   "id": "20260914A-2",
+   "month": "2026年9月",
+   "source": "20260914A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Theatrical Realism",
+   "discipline": "艺术",
+   "topic": "艺术",
+   "difficulty": "中等",
+   "passage": "Realism in theater is a movement that emerged in the 19th century, aimingto portray everyday life with authenticity and truthfulness. It rejects exaggerated sentime_ _ _ _ _ _ _  and theat_ _ _ _ _  conventions, ins_ _ _ _  focusing o_  believable chara_ _ _ _ _, natural conver_ _ _ _ _ _  and sett_ _ _ _  that ref_ _ _ _  real soc_ _ _  environments. Rea_ _ _ _  plays often explore complex moral and social issues, emphasizing psychologicalepth and the influence of environment and circumstance on human behavior. Realism continues toinfluence contemporary theatre by encouraging honest, nuanced storytelling.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "艺术",
+    "theatrical realism"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "sentime",
+     "answer": "ntality",
+     "word": "sentimentality",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "sentime_ _ _ _ _ _ _ ",
+     "start": 157,
+     "end": 178
+    },
+    {
+     "index": 1,
+     "prefix": "theat",
+     "answer": "rical",
+     "word": "theatrical",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "theat_ _ _ _ _ ",
+     "start": 183,
+     "end": 198
+    },
+    {
+     "index": 2,
+     "prefix": "ins",
+     "answer": "tead",
+     "word": "instead",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "ins_ _ _ _ ",
+     "start": 212,
+     "end": 223
+    },
+    {
+     "index": 3,
+     "prefix": "o",
+     "answer": "n",
+     "word": "on",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 233,
+     "end": 236
+    },
+    {
+     "index": 4,
+     "prefix": "chara",
+     "answer": "cters",
+     "word": "characters",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "chara_ _ _ _ _",
+     "start": 248,
+     "end": 262
+    },
+    {
+     "index": 5,
+     "prefix": "conver",
+     "answer": "sation",
+     "word": "conversation",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "conver_ _ _ _ _ _ ",
+     "start": 272,
+     "end": 290
+    },
+    {
+     "index": 6,
+     "prefix": "sett",
+     "answer": "ings",
+     "word": "settings",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "sett_ _ _ _ ",
+     "start": 295,
+     "end": 307
+    },
+    {
+     "index": 7,
+     "prefix": "ref",
+     "answer": "lect",
+     "word": "reflect",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "ref_ _ _ _ ",
+     "start": 313,
+     "end": 324
+    },
+    {
+     "index": 8,
+     "prefix": "soc",
+     "answer": "ial",
+     "word": "social",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "soc_ _ _ ",
+     "start": 330,
+     "end": 339
+    },
+    {
+     "index": 9,
+     "prefix": "Rea",
+     "answer": "list",
+     "word": "Realist",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "Rea_ _ _ _ ",
+     "start": 354,
+     "end": 365
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行50]）"
+    }
+   ]
+  },
+  {
+   "id": "20260915A",
+   "month": "2026年9月",
+   "source": "20260915A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Prehistoric Art",
+   "discipline": "社会科学",
+   "topic": "历史",
+   "difficulty": "中等",
+   "passage": "In prehistoric societies, art and religion were intimately intertwined, serving as conduits for expressing spiritual beliefs and cultural narratives. Cave pain_ _ _ _ _, for inst_ _ _ _, are n_ _  merely arti_ _ _ _  endeavors b_ _  are beli_ _ _ _  to ho_ _  cultural signif_ _ _ _ _, possibly us_ _  in cerem_ _ _ _ _  to ask for hunting success or favorable weather. These artworks, often found in remote and inaccessible areas, suggest a deliberate choice to separate sacred spaces from daily life. Archaeologists hypothesize that these depictions were part of a broader spiritual framework, reflecting the community's cosmology and societal structure.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "prehistoric art"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "pain",
+     "answer": "tings",
+     "word": "paintings",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "pain_ _ _ _ _",
+     "start": 155,
+     "end": 168
+    },
+    {
+     "index": 1,
+     "prefix": "inst",
+     "answer": "ance",
+     "word": "instance",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "inst_ _ _ _",
+     "start": 174,
+     "end": 185
+    },
+    {
+     "index": 2,
+     "prefix": "n",
+     "answer": "ot",
+     "word": "not",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "n_ _ ",
+     "start": 191,
+     "end": 196
+    },
+    {
+     "index": 3,
+     "prefix": "arti",
+     "answer": "stic",
+     "word": "artistic",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "arti_ _ _ _ ",
+     "start": 204,
+     "end": 216
+    },
+    {
+     "index": 4,
+     "prefix": "b",
+     "answer": "ut",
+     "word": "but",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "b_ _ ",
+     "start": 227,
+     "end": 232
+    },
+    {
+     "index": 5,
+     "prefix": "beli",
+     "answer": "eved",
+     "word": "believed",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "beli_ _ _ _ ",
+     "start": 237,
+     "end": 249
+    },
+    {
+     "index": 6,
+     "prefix": "ho",
+     "answer": "ld",
+     "word": "hold",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "ho_ _ ",
+     "start": 253,
+     "end": 259
+    },
+    {
+     "index": 7,
+     "prefix": "signif",
+     "answer": "cance",
+     "word": "signifcance",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "signif_ _ _ _ _",
+     "start": 269,
+     "end": 284
+    },
+    {
+     "index": 8,
+     "prefix": "us",
+     "answer": "ed",
+     "word": "used",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "us_ _ ",
+     "start": 295,
+     "end": 301
+    },
+    {
+     "index": 9,
+     "prefix": "cerem",
+     "answer": "onies",
+     "word": "ceremonies",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "cerem_ _ _ _ _ ",
+     "start": 305,
+     "end": 320
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行54]）"
+    },
+    {
+     "type": "note",
+     "note": "空6: 正文下划线5格，按答案 'eved' 校正为4格（词 believed）"
+    },
+    {
+     "type": "note",
+     "note": "空8: 正文下划线6格，按答案 'cance' 校正为5格（词 signifcance）"
+    }
+   ]
+  },
+  {
+   "id": "20260916A",
+   "month": "2026年9月",
+   "source": "20260916A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Sustainability",
+   "discipline": "自然科学",
+   "topic": "环境科学",
+   "difficulty": "中等",
+   "passage": "Sustainability is crucial for tackling today's environmental challenges. It means meeting current needs without compromising the ability of future generations to meet their own needs. Achieving sustainability requ_ _ _ _  balancing econ_ _ _ _  growth, soc_ _ _  well-being, a_ _  environmental prote_ _ _ _ _. Renewable ene_ _ _  sources su_ _  as so_ _ _  and wi_ _  help red_ _ _  carbon emissions and mitigate climate change. Practices like sustainable agriculture aim to improve soil health, crop yields, and food security while reducing chemical use. Embracing sustainable methods is key to preserving the planet.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "自然科学",
+    "sustainability"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "requ",
+     "answer": "ires",
+     "word": "requires",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "requ_ _ _ _ ",
+     "start": 209,
+     "end": 221
+    },
+    {
+     "index": 1,
+     "prefix": "econ",
+     "answer": "omic",
+     "word": "economic",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "econ_ _ _ _ ",
+     "start": 232,
+     "end": 244
+    },
+    {
+     "index": 2,
+     "prefix": "soc",
+     "answer": "ial",
+     "word": "social",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "soc_ _ _ ",
+     "start": 253,
+     "end": 262
+    },
+    {
+     "index": 3,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 275,
+     "end": 280
+    },
+    {
+     "index": 4,
+     "prefix": "prote",
+     "answer": "ction",
+     "word": "protection",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "prote_ _ _ _ _",
+     "start": 295,
+     "end": 309
+    },
+    {
+     "index": 5,
+     "prefix": "ene",
+     "answer": "rgy",
+     "word": "energy",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ene_ _ _ ",
+     "start": 321,
+     "end": 330
+    },
+    {
+     "index": 6,
+     "prefix": "su",
+     "answer": "ch",
+     "word": "such",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "su_ _ ",
+     "start": 339,
+     "end": 345
+    },
+    {
+     "index": 7,
+     "prefix": "so",
+     "answer": "lar",
+     "word": "solar",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "so_ _ _ ",
+     "start": 349,
+     "end": 357
+    },
+    {
+     "index": 8,
+     "prefix": "wi",
+     "answer": "nd",
+     "word": "wind",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "wi_ _ ",
+     "start": 362,
+     "end": 368
+    },
+    {
+     "index": 9,
+     "prefix": "red",
+     "answer": "uce",
+     "word": "reduce",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "red_ _ _ ",
+     "start": 374,
+     "end": 383
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行61]）"
+    },
+    {
+     "type": "note",
+     "note": "空6: 正文下划线4格，按答案 'rgy' 校正为3格（词 energy）"
+    },
+    {
+     "type": "note",
+     "note": "空8: 正文下划线4格，按答案 'lar' 校正为3格（词 solar）"
+    },
+    {
+     "type": "note",
+     "note": "空10: 正文下划线4格，按答案 'uce' 校正为3格（词 reduce）"
+    }
+   ]
+  },
+  {
+   "id": "20260916B",
+   "month": "2026年9月",
+   "source": "20260916B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Ant Social Behavior",
+   "discipline": "生命科学",
+   "topic": "生物",
+   "difficulty": "中等",
+   "passage": "Ants display highly organized social behavior, characterized by a structured division of labor and cooperative interaction. Worker ants, which are sterile females, perform specialized tasks such as foraging, brood care, nest maintenance, and defense. These roles often va_ _  based o_  age o_  physical tra_ _ _, enhancing col_ _ _  efficiency. Commun_ _ _ _ _ _ _  occurs prim_ _ _ _ _  through chem_ _ _ _  signals cal_ _ _  pheromones, enabling coordination across large groups. The complexity of ant societies offers insight into how evolutionary pressures can produce adaptive social systems.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "生命科学",
+    "ant social behavior"
+   ],
+   "status": "active",
+   "blankCount": 9,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "va",
+     "answer": "ry",
+     "word": "vary",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "va_ _ ",
+     "start": 269,
+     "end": 275
+    },
+    {
+     "index": 1,
+     "prefix": "o",
+     "answer": "n",
+     "word": "on",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 282,
+     "end": 285
+    },
+    {
+     "index": 2,
+     "prefix": "o",
+     "answer": "r",
+     "word": "or",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 290,
+     "end": 293
+    },
+    {
+     "index": 3,
+     "prefix": "tra",
+     "answer": "its",
+     "word": "traits",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "tra_ _ _",
+     "start": 303,
+     "end": 311
+    },
+    {
+     "index": 4,
+     "prefix": "col",
+     "answer": "ony",
+     "word": "colony",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "col_ _ _ ",
+     "start": 323,
+     "end": 332
+    },
+    {
+     "index": 5,
+     "prefix": "Commun",
+     "answer": "ication",
+     "word": "Communication",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "Commun_ _ _ _ _ _ _ ",
+     "start": 345,
+     "end": 365
+    },
+    {
+     "index": 6,
+     "prefix": "prim",
+     "answer": "arily",
+     "word": "primarily",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "prim_ _ _ _ _ ",
+     "start": 373,
+     "end": 387
+    },
+    {
+     "index": 7,
+     "prefix": "chem",
+     "answer": "ical",
+     "word": "chemical",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "chem_ _ _ _ ",
+     "start": 396,
+     "end": 408
+    },
+    {
+     "index": 8,
+     "prefix": "cal",
+     "answer": "led",
+     "word": "called",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "cal_ _ _ ",
+     "start": 417,
+     "end": 426
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行65]）"
+    },
+    {
+     "type": "note",
+     "note": "答案列含错位残留 ['ry']，已剔除后子序列对齐"
+    },
+    {
+     "type": "note",
+     "note": "空1: 正文下划线3格，按答案 'ry' 校正为2格（词 vary）"
+    },
+    {
+     "type": "note",
+     "note": "空2: 正文下划线2格，按答案 'n' 校正为1格（词 on）"
+    },
+    {
+     "type": "note",
+     "note": "空3: 正文下划线2格，按答案 'r' 校正为1格（词 or）"
+    },
+    {
+     "type": "note",
+     "note": "空4: 正文下划线4格，按答案 'its' 校正为3格（词 traits）"
+    },
+    {
+     "type": "note",
+     "note": "空5: 正文下划线4格，按答案 'ony' 校正为3格（词 colony）"
+    }
+   ]
+  },
+  {
+   "id": "20260920A",
+   "month": "2026年9月",
+   "source": "20260920A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Urbanization History",
+   "discipline": "社会科学",
+   "topic": "历史",
+   "difficulty": "中等",
+   "passage": "The trajectory of modern history has been profoundly shaped by urbanization and industrialization, which redefined both physical landscapes and social structures. As industrial centers grew, rural populations increasingly abandoned agrarian lifestyles rooted in seasonal labor and subsistence farming for wemployment in cities. Urban enviro_ _ _ _ _ _  became hu_ _  of econ_ _ _ _  opportunity a_ _  social exch_ _ _ _, where indiv_ _ _ _ _ _  from var_ _ _  backgrounds inter_ _ _ _ _, shared id_ _ _, and contr_ _ _ _ _ _  to emerging cultural movements. This shift marked a fundamental transformation in how people lived, worked, and connected within society.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "urbanization history"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "enviro",
+     "answer": "nments",
+     "word": "environments",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "enviro_ _ _ _ _ _ ",
+     "start": 334,
+     "end": 352
+    },
+    {
+     "index": 1,
+     "prefix": "hu",
+     "answer": "bs",
+     "word": "hubs",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "hu_ _ ",
+     "start": 360,
+     "end": 366
+    },
+    {
+     "index": 2,
+     "prefix": "econ",
+     "answer": "omic",
+     "word": "economic",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "econ_ _ _ _ ",
+     "start": 370,
+     "end": 382
+    },
+    {
+     "index": 3,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 395,
+     "end": 400
+    },
+    {
+     "index": 4,
+     "prefix": "exch",
+     "answer": "ange",
+     "word": "exchange",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "exch_ _ _ _",
+     "start": 408,
+     "end": 419
+    },
+    {
+     "index": 5,
+     "prefix": "indiv",
+     "answer": "iduals",
+     "word": "individuals",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "indiv_ _ _ _ _ _ ",
+     "start": 427,
+     "end": 444
+    },
+    {
+     "index": 6,
+     "prefix": "var",
+     "answer": "ied",
+     "word": "varied",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "var_ _ _ ",
+     "start": 450,
+     "end": 459
+    },
+    {
+     "index": 7,
+     "prefix": "inter",
+     "answer": "acted",
+     "word": "interacted",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "inter_ _ _ _ _",
+     "start": 472,
+     "end": 486
+    },
+    {
+     "index": 8,
+     "prefix": "id",
+     "answer": "eas",
+     "word": "ideas",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "id_ _ _",
+     "start": 495,
+     "end": 502
+    },
+    {
+     "index": 9,
+     "prefix": "contr",
+     "answer": "ibuted",
+     "word": "contributed",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "contr_ _ _ _ _ _ ",
+     "start": 508,
+     "end": 525
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行67]）"
+    }
+   ]
+  },
+  {
+   "id": "20260920B",
+   "month": "2026年9月",
+   "source": "20260920B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Cognition Studies",
+   "discipline": "生命科学",
+   "topic": "心理学",
+   "difficulty": "中等",
+   "passage": "Cognition and consciousness are central themes in the study of the human mind. Cognitive sci_ _ _ _  explores h_ _  we per_ _ _ _ _, think, a_ _  remember infor_ _ _ _ _ _; consciousness rese_ _ _ _  focuses o_  subjective exper_ _ _ _ _. These fie_ _ _  intersect wi_ _  neuroscience, psychology, and philosophy, providing a multifaceted approach to understanding mental processes. Advances in these areas help explain complex behaviors and inform treatments for cognitive disorders. By studying how people think and feel, researchers can help others improve memory, make better decisions, and solve problems in everyday life.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "生命科学",
+    "cognition studies"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "sci",
+     "answer": "ence",
+     "word": "science",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "sci_ _ _ _ ",
+     "start": 89,
+     "end": 100
+    },
+    {
+     "index": 1,
+     "prefix": "h",
+     "answer": "ow",
+     "word": "how",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "h_ _ ",
+     "start": 110,
+     "end": 115
+    },
+    {
+     "index": 2,
+     "prefix": "per",
+     "answer": "ceive",
+     "word": "perceive",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "per_ _ _ _ _",
+     "start": 119,
+     "end": 131
+    },
+    {
+     "index": 3,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 140,
+     "end": 145
+    },
+    {
+     "index": 4,
+     "prefix": "infor",
+     "answer": "mation",
+     "word": "information",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "infor_ _ _ _ _ _",
+     "start": 155,
+     "end": 171
+    },
+    {
+     "index": 5,
+     "prefix": "rese",
+     "answer": "arch",
+     "word": "research",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "rese_ _ _ _ ",
+     "start": 187,
+     "end": 199
+    },
+    {
+     "index": 6,
+     "prefix": "o",
+     "answer": "n",
+     "word": "on",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 208,
+     "end": 211
+    },
+    {
+     "index": 7,
+     "prefix": "exper",
+     "answer": "ience",
+     "word": "experience",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "exper_ _ _ _ _",
+     "start": 223,
+     "end": 237
+    },
+    {
+     "index": 8,
+     "prefix": "fie",
+     "answer": "lds",
+     "word": "fields",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "fie_ _ _ ",
+     "start": 245,
+     "end": 254
+    },
+    {
+     "index": 9,
+     "prefix": "wi",
+     "answer": "th",
+     "word": "with",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "wi_ _ ",
+     "start": 265,
+     "end": 271
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行70]）"
+    },
+    {
+     "type": "note",
+     "note": "个案修复：空3 答案 'eive' → 'ceive'"
+    },
+    {
+     "type": "note",
+     "note": "空3: 正文下划线4格，按答案 'ceive' 校正为5格（词 perceive）"
+    },
+    {
+     "type": "note",
+     "note": "答案列笔误：第3空 eive→ceive（per+ceive=perceive），格数按答案校正为5"
+    }
+   ]
+  },
+  {
+   "id": "20260920B-2",
+   "month": "2026年9月",
+   "source": "20260920B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Emperor Penguins",
+   "discipline": "生命科学",
+   "topic": "生物",
+   "difficulty": "中等",
+   "passage": "Emperor penguins are remarkable for their unique breeding behaviors, which take place in Antarctica's harsh environment. The female lays a single egg during the Antarctic winter, typically in May or June, and then returns to the sea to feed. The male protects the egg for ab_ _ _  two mon_ _ _, keeping i_  warm wh_ _ _  he end_ _ _ _  freezing temper_ _ _ _ _ _, strong wi_ _ _, and dark_ _ _ _. He fa_ _ _, relying o_  his stored body fat to survive. Once the chicks hatch, both parents alternate feeding trips.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "生命科学",
+    "emperor penguins"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "ab",
+     "answer": "out",
+     "word": "about",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ab_ _ _ ",
+     "start": 272,
+     "end": 280
+    },
+    {
+     "index": 1,
+     "prefix": "mon",
+     "answer": "ths",
+     "word": "months",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "mon_ _ _",
+     "start": 285,
+     "end": 293
+    },
+    {
+     "index": 2,
+     "prefix": "i",
+     "answer": "t",
+     "word": "it",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "i_ ",
+     "start": 303,
+     "end": 306
+    },
+    {
+     "index": 3,
+     "prefix": "wh",
+     "answer": "ile",
+     "word": "while",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "wh_ _ _ ",
+     "start": 312,
+     "end": 320
+    },
+    {
+     "index": 4,
+     "prefix": "end",
+     "answer": "ures",
+     "word": "endures",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "end_ _ _ _ ",
+     "start": 324,
+     "end": 335
+    },
+    {
+     "index": 5,
+     "prefix": "temper",
+     "answer": "atures",
+     "word": "temperatures",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "temper_ _ _ _ _ _",
+     "start": 345,
+     "end": 362
+    },
+    {
+     "index": 6,
+     "prefix": "wi",
+     "answer": "nds",
+     "word": "winds",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "wi_ _ _",
+     "start": 371,
+     "end": 378
+    },
+    {
+     "index": 7,
+     "prefix": "dark",
+     "answer": "ness",
+     "word": "darkness",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "dark_ _ _ _",
+     "start": 384,
+     "end": 395
+    },
+    {
+     "index": 8,
+     "prefix": "fa",
+     "answer": "sts",
+     "word": "fasts",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "fa_ _ _",
+     "start": 400,
+     "end": 407
+    },
+    {
+     "index": 9,
+     "prefix": "o",
+     "answer": "n",
+     "word": "on",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 417,
+     "end": 420
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行72]）"
+    }
+   ]
+  },
+  {
+   "id": "20260921A",
+   "month": "2026年9月",
+   "source": "20260921A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Artificial Intelligence",
+   "discipline": "自然科学",
+   "topic": "科技",
+   "difficulty": "中等",
+   "passage": "In recent years, the development of artificial intelligence has revolutionized numerous industries, transforming the way businesses operate and interact with their customers. AI technologies, such as machine learning and natural language processing, enable comp_ _ _ _ _  to per_ _ _ _  tasks th_ _  previously requ_ _ _ _  human judg_ _ _ _  . For exa_ _ _ _  , customer ser_ _ _ _  chatbots a_ _  now cap_ _ _ _  of unders_ _ _ _ _ _ _  and responding to queries, providing instant support. Additionally, AI-driven analytics tools offer insights by processing vast amounts of data in real time, helping organizations make informed decisions.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "自然科学",
+    "artificial intelligence"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "comp",
+     "answer": "uters",
+     "word": "computers",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "comp_ _ _ _ _ ",
+     "start": 257,
+     "end": 271
+    },
+    {
+     "index": 1,
+     "prefix": "per",
+     "answer": "form",
+     "word": "perform",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "per_ _ _ _ ",
+     "start": 275,
+     "end": 286
+    },
+    {
+     "index": 2,
+     "prefix": "th",
+     "answer": "at",
+     "word": "that",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "th_ _ ",
+     "start": 293,
+     "end": 299
+    },
+    {
+     "index": 3,
+     "prefix": "requ",
+     "answer": "ired",
+     "word": "required",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "requ_ _ _ _ ",
+     "start": 311,
+     "end": 323
+    },
+    {
+     "index": 4,
+     "prefix": "judg",
+     "answer": "ment",
+     "word": "judgment",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "judg_ _ _ _ ",
+     "start": 330,
+     "end": 342
+    },
+    {
+     "index": 5,
+     "prefix": "exa",
+     "answer": "mple",
+     "word": "example",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "exa_ _ _ _ ",
+     "start": 349,
+     "end": 360
+    },
+    {
+     "index": 6,
+     "prefix": "ser",
+     "answer": "vice",
+     "word": "service",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "ser_ _ _ _ ",
+     "start": 372,
+     "end": 383
+    },
+    {
+     "index": 7,
+     "prefix": "a",
+     "answer": "re",
+     "word": "are",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 393,
+     "end": 398
+    },
+    {
+     "index": 8,
+     "prefix": "cap",
+     "answer": "able",
+     "word": "capable",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "cap_ _ _ _ ",
+     "start": 403,
+     "end": 414
+    },
+    {
+     "index": 9,
+     "prefix": "unders",
+     "answer": "tanding",
+     "word": "understanding",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "unders_ _ _ _ _ _ _ ",
+     "start": 418,
+     "end": 438
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行76]）"
+    }
+   ]
+  },
+  {
+   "id": "20260922B",
+   "month": "2026年9月",
+   "source": "20260922B",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Early Civilization",
+   "discipline": "社会科学",
+   "topic": "历史",
+   "difficulty": "中等",
+   "passage": "Early civilizations emerged around river valleys, where fertile land and water resources supported agriculture. These commu_ _ _ _ _ _  developed com_ _ _ _  social struc_ _ _ _ _  that incl_ _ _  systems o_  governance a_ _  religious instit_ _ _ _ _ _. The devel_ _ _ _ _ _  of wri_ _ _ _  marked a ma_ _ _  milestone, enabling record-keeping, communication, and the transmission of knowledge across generations. Artifacts such as pottery, tools, and writings offer glimpses into the daily lives and cultural practices of ancient peoples and the rise and fall of early societies.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "early civilization"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "commu",
+     "answer": "nities",
+     "word": "communities",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "commu_ _ _ _ _ _ ",
+     "start": 118,
+     "end": 135
+    },
+    {
+     "index": 1,
+     "prefix": "com",
+     "answer": "plex",
+     "word": "complex",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "com_ _ _ _ ",
+     "start": 146,
+     "end": 157
+    },
+    {
+     "index": 2,
+     "prefix": "struc",
+     "answer": "tures",
+     "word": "structures",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "struc_ _ _ _ _ ",
+     "start": 165,
+     "end": 180
+    },
+    {
+     "index": 3,
+     "prefix": "incl",
+     "answer": "ude",
+     "word": "include",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "incl_ _ _ ",
+     "start": 186,
+     "end": 196
+    },
+    {
+     "index": 4,
+     "prefix": "o",
+     "answer": "f",
+     "word": "of",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 205,
+     "end": 208
+    },
+    {
+     "index": 5,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 220,
+     "end": 225
+    },
+    {
+     "index": 6,
+     "prefix": "instit",
+     "answer": "utions",
+     "word": "institutions",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "instit_ _ _ _ _ _",
+     "start": 236,
+     "end": 253
+    },
+    {
+     "index": 7,
+     "prefix": "devel",
+     "answer": "opment",
+     "word": "development",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "devel_ _ _ _ _ _ ",
+     "start": 259,
+     "end": 276
+    },
+    {
+     "index": 8,
+     "prefix": "wri",
+     "answer": "ting",
+     "word": "writing",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "wri_ _ _ _ ",
+     "start": 280,
+     "end": 291
+    },
+    {
+     "index": 9,
+     "prefix": "ma",
+     "answer": "jor",
+     "word": "major",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ma_ _ _ ",
+     "start": 301,
+     "end": 309
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行86]）"
+    },
+    {
+     "type": "note",
+     "note": "空4: 正文下划线4格，按答案 'ude' 校正为3格（词 include）"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 20260401A-2 同底文本、挖空不同"
+    }
+   ]
+  },
+  {
+   "id": "20260928A",
+   "month": "2026年9月",
+   "source": "20260928A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Museum Culture",
+   "discipline": "社会科学",
+   "topic": "历史",
+   "difficulty": "中等",
+   "passage": "Museums play a crucial role in preserving and showcasing art, history, and culture. They pro_ _ _ _  a sp_ _ _  where peo_ _ _  can en_ _ _  with multi_ _ _ _  forms o_  artistic expre_ _ _ _ _  and histo_ _ _ _ _  artifacts. Ma_ _  museums al_ _  offer educational programs and workshops, fostering a deeper understanding of the subjects they display. In addition, digital innovations haveenabled museums to reach global audiences through virtual tours and online collections. The patronage of visual arts by individuals and organizations helps support artists and ensures the continued growth anddiversity of the cultural landscape.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "museum culture"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "pro",
+     "answer": "vide",
+     "word": "provide",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "pro_ _ _ _ ",
+     "start": 89,
+     "end": 100
+    },
+    {
+     "index": 1,
+     "prefix": "sp",
+     "answer": "ace",
+     "word": "space",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "sp_ _ _ ",
+     "start": 103,
+     "end": 111
+    },
+    {
+     "index": 2,
+     "prefix": "peo",
+     "answer": "ple",
+     "word": "people",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "peo_ _ _ ",
+     "start": 118,
+     "end": 127
+    },
+    {
+     "index": 3,
+     "prefix": "en",
+     "answer": "age",
+     "word": "enage",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "en_ _ _ ",
+     "start": 132,
+     "end": 140
+    },
+    {
+     "index": 4,
+     "prefix": "multi",
+     "answer": "iple",
+     "word": "multiiple",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "multi_ _ _ _ ",
+     "start": 146,
+     "end": 159
+    },
+    {
+     "index": 5,
+     "prefix": "o",
+     "answer": "f",
+     "word": "of",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "o_ ",
+     "start": 166,
+     "end": 169
+    },
+    {
+     "index": 6,
+     "prefix": "expre",
+     "answer": "ssion",
+     "word": "expression",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "expre_ _ _ _ _ ",
+     "start": 179,
+     "end": 194
+    },
+    {
+     "index": 7,
+     "prefix": "histo",
+     "answer": "rical",
+     "word": "historical",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "histo_ _ _ _ _ ",
+     "start": 199,
+     "end": 214
+    },
+    {
+     "index": 8,
+     "prefix": "Ma",
+     "answer": "ny",
+     "word": "Many",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "Ma_ _ ",
+     "start": 226,
+     "end": 232
+    },
+    {
+     "index": 9,
+     "prefix": "al",
+     "answer": "so",
+     "word": "also",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "al_ _ ",
+     "start": 241,
+     "end": 247
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行92]）"
+    },
+    {
+     "type": "note",
+     "note": "空4: 正文下划线4格，按答案 'age' 校正为3格（词 enage）"
+    },
+    {
+     "type": "note",
+     "note": "空5: 正文下划线3格，按答案 'iple' 校正为4格（词 multiiple）"
+    }
+   ]
+  },
+  {
+   "id": "20260929A",
+   "month": "2026年9月",
+   "source": "20260929A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Accessory Dwelling Units",
+   "discipline": "社会科学",
+   "topic": "政治经济",
+   "difficulty": "中等",
+   "passage": "Accessory dwelling units (ADUs) offer homeowners flexible ways to use additional space while potentially generating income. These small, secondary residences—often located on the same property as a primary home—can house fam_ _ _  members, cre_ _ _  rental opport_ _ _ _ _ _ _  , or func_ _ _ _  as sepa_ _ _ _  workspaces. How_ _ _ _  , constructing ADUs requ_ _ _  compliance wi_ _  zoning regul_ _ _ _ _ _  and buil_ _ _ _  codes. As urban populations grow, ADUs present an innovative strategy for supporting sustainable development through efficient use of urban land and the potential to ease housing shortages.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "accessory dwelling units"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "fam",
+     "answer": "ily",
+     "word": "family",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "fam_ _ _ ",
+     "start": 221,
+     "end": 230
+    },
+    {
+     "index": 1,
+     "prefix": "cre",
+     "answer": "ate",
+     "word": "create",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "cre_ _ _ ",
+     "start": 240,
+     "end": 249
+    },
+    {
+     "index": 2,
+     "prefix": "opport",
+     "answer": "unities",
+     "word": "opportunities",
+     "slots": 7,
+     "underscores": 7,
+     "marker": "opport_ _ _ _ _ _ _ ",
+     "start": 257,
+     "end": 277
+    },
+    {
+     "index": 3,
+     "prefix": "func",
+     "answer": "tion",
+     "word": "function",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "func_ _ _ _ ",
+     "start": 283,
+     "end": 295
+    },
+    {
+     "index": 4,
+     "prefix": "sepa",
+     "answer": "rate",
+     "word": "separate",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "sepa_ _ _ _ ",
+     "start": 299,
+     "end": 311
+    },
+    {
+     "index": 5,
+     "prefix": "How",
+     "answer": "ever",
+     "word": "However",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "How_ _ _ _ ",
+     "start": 324,
+     "end": 335
+    },
+    {
+     "index": 6,
+     "prefix": "requ",
+     "answer": "ire",
+     "word": "require",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "requ_ _ _ ",
+     "start": 356,
+     "end": 366
+    },
+    {
+     "index": 7,
+     "prefix": "wi",
+     "answer": "th",
+     "word": "with",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "wi_ _ ",
+     "start": 378,
+     "end": 384
+    },
+    {
+     "index": 8,
+     "prefix": "regul",
+     "answer": "ations",
+     "word": "regulations",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "regul_ _ _ _ _ _ ",
+     "start": 392,
+     "end": 409
+    },
+    {
+     "index": 9,
+     "prefix": "buil",
+     "answer": "ding",
+     "word": "building",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "buil_ _ _ _ ",
+     "start": 414,
+     "end": 426
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行93]）"
+    },
+    {
+     "type": "note",
+     "note": "空7: 正文下划线4格，按答案 'ire' 校正为3格（词 require）"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 素材[8月行52] 同底文本、挖空不同"
+    }
+   ]
+  },
+  {
+   "id": "20260930A",
+   "month": "2026年9月",
+   "source": "20260930A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Aquatic Ecosystems",
+   "discipline": "自然科学",
+   "topic": "环境科学",
+   "difficulty": "中等",
+   "passage": "The complexity and diversity of aquatic ecosystems have captivated scientists for decades, prompting extensive studies into the myriad interactions between species and their environments. In these vast under_ _ _ _ _  worlds, t_ _  adaptive strat_ _ _ _ _  of fi_ _  and ot_ _ _  aquatic orga_ _ _ _ _  are n_ _  only fasci_ _ _ _ _ _  but cru_ _ _ _  for surv_ _ _ _. For instance, the symbiotic relationships that often develop—such as those between cleaner species that feed on parasites and their larger hosts—highlight the intricate dependencies at play. However, these interactions are increasingly threatened by human activities that disrupt habitats and contribute to biodiversity loss.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "自然科学",
+    "aquatic ecosystems"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "under",
+     "answer": "water",
+     "word": "underwater",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "under_ _ _ _ _ ",
+     "start": 202,
+     "end": 217
+    },
+    {
+     "index": 1,
+     "prefix": "t",
+     "answer": "he",
+     "word": "the",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "t_ _ ",
+     "start": 226,
+     "end": 231
+    },
+    {
+     "index": 2,
+     "prefix": "strat",
+     "answer": "egies",
+     "word": "strategies",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "strat_ _ _ _ _ ",
+     "start": 241,
+     "end": 256
+    },
+    {
+     "index": 3,
+     "prefix": "fi",
+     "answer": "sh",
+     "word": "fish",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "fi_ _ ",
+     "start": 260,
+     "end": 266
+    },
+    {
+     "index": 4,
+     "prefix": "ot",
+     "answer": "her",
+     "word": "other",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "ot_ _ _ ",
+     "start": 271,
+     "end": 279
+    },
+    {
+     "index": 5,
+     "prefix": "orga",
+     "answer": "nisms",
+     "word": "organisms",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "orga_ _ _ _ _ ",
+     "start": 288,
+     "end": 302
+    },
+    {
+     "index": 6,
+     "prefix": "n",
+     "answer": "ot",
+     "word": "not",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "n_ _ ",
+     "start": 307,
+     "end": 312
+    },
+    {
+     "index": 7,
+     "prefix": "fasci",
+     "answer": "nating",
+     "word": "fascinating",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "fasci_ _ _ _ _ _ ",
+     "start": 318,
+     "end": 335
+    },
+    {
+     "index": 8,
+     "prefix": "cru",
+     "answer": "cial",
+     "word": "crucial",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "cru_ _ _ _ ",
+     "start": 340,
+     "end": 351
+    },
+    {
+     "index": 9,
+     "prefix": "surv",
+     "answer": "ival",
+     "word": "survival",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "surv_ _ _ _",
+     "start": 356,
+     "end": 367
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行95]）"
+    }
+   ]
+  },
+  {
+   "id": "20260930A-2",
+   "month": "2026年9月",
+   "source": "20260930A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Heritage Tourism",
+   "discipline": "社会科学",
+   "topic": "历史",
+   "difficulty": "中等",
+   "passage": "Balancing cultural preservation and economic development in heritage-rich tourist destinations demands more than simply limiting visitor numbers or building new hotels. It requ_ _ _ _  careful manag_ _ _ _ _  of how lo_ _ _  customs, rit_ _ _ _, and hist_ _ _ _  sites are pres_ _ _ _ _  to visitors and commer_ _ _ _ _ _  exploited, with_ _ _  reducing th_ _  to scri_ _ _ _  performances for outsiders. Successful strategies typically pair strict conservation rules with community-led tourism planning, ensuring that residents retain control over their cultural narratives while still gaining tangible financial benefits.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "heritage tourism"
+   ],
+   "status": "active",
+   "blankCount": 10,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "requ",
+     "answer": "ires",
+     "word": "requires",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "requ_ _ _ _ ",
+     "start": 172,
+     "end": 184
+    },
+    {
+     "index": 1,
+     "prefix": "manag",
+     "answer": "ement",
+     "word": "management",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "manag_ _ _ _ _ ",
+     "start": 193,
+     "end": 208
+    },
+    {
+     "index": 2,
+     "prefix": "lo",
+     "answer": "cal",
+     "word": "local",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "lo_ _ _ ",
+     "start": 216,
+     "end": 224
+    },
+    {
+     "index": 3,
+     "prefix": "rit",
+     "answer": "uals",
+     "word": "rituals",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "rit_ _ _ _",
+     "start": 234,
+     "end": 244
+    },
+    {
+     "index": 4,
+     "prefix": "hist",
+     "answer": "oric",
+     "word": "historic",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "hist_ _ _ _ ",
+     "start": 250,
+     "end": 262
+    },
+    {
+     "index": 5,
+     "prefix": "pres",
+     "answer": "ented",
+     "word": "presented",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "pres_ _ _ _ _ ",
+     "start": 273,
+     "end": 287
+    },
+    {
+     "index": 6,
+     "prefix": "commer",
+     "answer": "cially",
+     "word": "commercially",
+     "slots": 6,
+     "underscores": 6,
+     "marker": "commer_ _ _ _ _ _ ",
+     "start": 304,
+     "end": 322
+    },
+    {
+     "index": 7,
+     "prefix": "with",
+     "answer": "out",
+     "word": "without",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "with_ _ _ ",
+     "start": 334,
+     "end": 344
+    },
+    {
+     "index": 8,
+     "prefix": "th",
+     "answer": "em",
+     "word": "them",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "th_ _ ",
+     "start": 354,
+     "end": 360
+    },
+    {
+     "index": 9,
+     "prefix": "scri",
+     "answer": "pted",
+     "word": "scripted",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "scri_ _ _ _ ",
+     "start": 364,
+     "end": 376
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行96]）"
+    }
+   ]
+  },
+  {
+   "id": "20260930A-3",
+   "month": "2026年9月",
+   "source": "20260930A",
+   "type": "complete_words",
+   "instruction": "Fill in the missing letters in the paragraph.",
+   "title": "Hand Washing",
+   "discipline": "社会科学",
+   "topic": "综合",
+   "difficulty": "中等",
+   "passage": "Washing hands is a simple yet effective way to prevent the spread of diseases. When we wash our hands, we rem_ _ _  dirt a_ _  germs th_ _  we m_ _  have pic_ _ _  up fr_ _  touching surf_ _ _ _. This i_  especially impo_ _ _ _ _  before eat_ _ _  or after using the restroom. Regular hand washing can protect us from illnesses like the flu and colds. Health experts recommend washing hands with soap and water for at least 20 seco_nds to ensure that all germs are thoroughly removed.",
+   "translation": "",
+   "analysis": [],
+   "tags": [
+    "真题",
+    "9月",
+    "社会科学",
+    "hand washing"
+   ],
+   "status": "active",
+   "blankCount": 11,
+   "blanks": [
+    {
+     "index": 0,
+     "prefix": "rem",
+     "answer": "ove",
+     "word": "remove",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "rem_ _ _ ",
+     "start": 106,
+     "end": 115
+    },
+    {
+     "index": 1,
+     "prefix": "a",
+     "answer": "nd",
+     "word": "and",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "a_ _ ",
+     "start": 121,
+     "end": 126
+    },
+    {
+     "index": 2,
+     "prefix": "th",
+     "answer": "at",
+     "word": "that",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "th_ _ ",
+     "start": 133,
+     "end": 139
+    },
+    {
+     "index": 3,
+     "prefix": "m",
+     "answer": "ay",
+     "word": "may",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "m_ _ ",
+     "start": 143,
+     "end": 148
+    },
+    {
+     "index": 4,
+     "prefix": "pic",
+     "answer": "ked",
+     "word": "picked",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "pic_ _ _ ",
+     "start": 154,
+     "end": 163
+    },
+    {
+     "index": 5,
+     "prefix": "fr",
+     "answer": "om",
+     "word": "from",
+     "slots": 2,
+     "underscores": 2,
+     "marker": "fr_ _ ",
+     "start": 167,
+     "end": 173
+    },
+    {
+     "index": 6,
+     "prefix": "surf",
+     "answer": "aces",
+     "word": "surfaces",
+     "slots": 4,
+     "underscores": 4,
+     "marker": "surf_ _ _ _",
+     "start": 183,
+     "end": 194
+    },
+    {
+     "index": 7,
+     "prefix": "i",
+     "answer": "s",
+     "word": "is",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "i_ ",
+     "start": 201,
+     "end": 204
+    },
+    {
+     "index": 8,
+     "prefix": "impo",
+     "answer": "rtant",
+     "word": "important",
+     "slots": 5,
+     "underscores": 5,
+     "marker": "impo_ _ _ _ _ ",
+     "start": 216,
+     "end": 230
+    },
+    {
+     "index": 9,
+     "prefix": "eat",
+     "answer": "ing",
+     "word": "eating",
+     "slots": 3,
+     "underscores": 3,
+     "marker": "eat_ _ _ ",
+     "start": 238,
+     "end": 247
+    },
+    {
+     "index": 10,
+     "prefix": "seco",
+     "answer": "n",
+     "word": "secon",
+     "slots": 1,
+     "underscores": 1,
+     "marker": "seco_",
+     "start": 427,
+     "end": 432
+    }
+   ],
+   "flags": [
+    {
+     "type": "new",
+     "note": "v4.7 新增（9月素材 [9月行97]）"
+    },
+    {
+     "type": "note",
+     "note": "个案修复：空11 答案 '(空)' → 'n'"
+    },
+    {
+     "type": "note",
+     "note": "空5: 正文下划线2格，按答案 'ked' 校正为3格（词 picked）"
+    },
+    {
+     "type": "note",
+     "note": "第11空 seco_nds 为词中单格挖空，答案 n 由词形推断（seco+n+nds=seconds），请人工复核"
+    },
+    {
+     "type": "note",
+     "note": "变体题：与 素材[8月行61] 同底文本、挖空不同"
+    }
+   ]
   }
  ]
 };

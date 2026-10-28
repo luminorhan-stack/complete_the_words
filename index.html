@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOEFL Reading Complete the Words 练习系统 v4</title>
+    <title>TOEFL Reading Complete the Words 练习系统 v4.8.1</title>
     <script src="xlsx.full.min.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'"></script>
     <script src="questions-data.js"></script>
     <style>
@@ -563,6 +563,10 @@
 
         .db-toolbar select:focus, .db-toolbar input[type="text"]:focus {
             border-color: var(--primary-color);
+        }
+
+        .db-toolbar select {
+            min-width: 132px;
         }
 
         .db-toolbar .search-input {
@@ -1131,7 +1135,7 @@
     <div class="container">
         <header>
             <h1>TOEFL Reading Complete the Words</h1>
-            <p>托福阅读·填空题练习系统 v4.7 · 287 题全量题库（8/9月同步版）</p>
+            <p>托福阅读·填空题练习系统 v4.8.1 · 242 题全量题库（去重版）</p>
         </header>
 
         <nav class="view-nav">
@@ -1154,9 +1158,6 @@
                 <span class="toolbar-label">📚 题库</span>
                 <select id="monthFilter" onchange="applyFilters()">
                     <option value="">全部月份</option>
-                </select>
-                <select id="sourceFilter" onchange="applyFilters()">
-                    <option value="">全部来源</option>
                 </select>
                 <select id="topicFilter" onchange="applyFilters()">
                     <option value="">全部话题</option>
@@ -1365,7 +1366,7 @@
 
         // ============ 题库数据库模式 ============
         let allQuestions = [];        // 全量题目（active + draft 待校验）
-        let filterState = { month: '', source: '', topic: '', difficulty: '', keyword: '' };
+        let filterState = { month: '', topic: '', difficulty: '', keyword: '' };
 
         function initFromDB() {
             if (typeof QUESTION_DB === 'undefined' || !QUESTION_DB.questions) {
@@ -1385,16 +1386,6 @@
                 opt.value = m.id;
                 opt.textContent = `${m.label} (${m.count}题)`;
                 monthSel.appendChild(opt);
-            });
-
-            // 填充来源下拉
-            const sourceSet = [...new Set(allQuestions.map(q => q.source))];
-            const srcSel = document.getElementById('sourceFilter');
-            sourceSet.forEach(s => {
-                const opt = document.createElement('option');
-                opt.value = s;
-                opt.textContent = s;
-                srcSel.appendChild(opt);
             });
 
             // 填充话题下拉（四类学科，含题数统计）
@@ -1439,14 +1430,12 @@
 
         function applyFilters() {
             filterState.month = document.getElementById('monthFilter').value;
-            filterState.source = document.getElementById('sourceFilter').value;
             filterState.topic = document.getElementById('topicFilter').value;
             filterState.difficulty = document.getElementById('difficultyFilter').value;
             filterState.keyword = document.getElementById('keywordSearch').value.trim().toLowerCase();
 
             questions = allQuestions.filter(q => {
                 if (filterState.month && q.month !== filterState.month) return false;
-                if (filterState.source && q.source !== filterState.source) return false;
                 if (filterState.topic && q.discipline !== filterState.topic) return false;
                 if (filterState.difficulty && q.difficulty !== filterState.difficulty) return false;
                 if (filterState.keyword) {
@@ -1479,7 +1468,6 @@
         // 一键清除全部筛选条件，恢复全量题库
         function resetAllFilters() {
             document.getElementById('monthFilter').value = '';
-            document.getElementById('sourceFilter').value = '';
             document.getElementById('topicFilter').value = '';
             document.getElementById('difficultyFilter').value = '';
             document.getElementById('keywordSearch').value = '';
@@ -2003,7 +1991,6 @@
         function clearAllQuestions() {
             if (confirm('确定要重置筛选条件为全部题目吗？\n（做题记录默认完整保留）')) {
                 document.getElementById('monthFilter').value = '';
-                document.getElementById('sourceFilter').value = '';
                 document.getElementById('topicFilter').value = '';
                 document.getElementById('difficultyFilter').value = '';
                 document.getElementById('keywordSearch').value = '';

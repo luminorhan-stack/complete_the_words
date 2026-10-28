@@ -1,76 +1,75 @@
-# Complete the Words 版本更新日志
+# Complete the Words 更新日志
 
-## v4.7.1（2026-10-27）当前版本
+---
 
-- 人工难度标签同步：依据 complete the words(152)【加标签】.xlsx I 列星标，更新 138 题难度（★→简单，★★/★★★→中等，★★★★/★★★★★→困难）
-- 其中 70 题难度实际变化：中等→简单 16、简单→中等 10、中等→困难 20、困难→中等 20、困难→简单 3、简单→困难 1；其余 68 题与原算法难度一致
-- 同步范围含等价重复与同底变体：Bicycle History（真题-095 + 20260905A-2）、Oceanography（真题-078 + 未标注-74）、Homo Sapiens Origins（20260609A + 20260722A-2）、Louisiana Purchase（20260621B-2 + 20260912A）等
-- 标签表 134 行有效标签全覆盖匹配（0 失配、0 空白）；33 个空行非题目数据
-- xlsx 与 questions-data.js 双端同步；70 处实际变化行在 xlsx 第 30 列追加「v4.7.1 难度修正(人工标签)」标注
+## v4.8.1（2026-10-28）
 
-## v4.6.1（2026-09-21）
+### 标题与版本标识
 
-- 真题-036「South Pacific History」第 6 空修复：题干改为前缀 "T"，答案 "he"（拼接为完整词 "The"，2 格下划线）。原数据 answer="tical"/word="Ttical"/slots=5 系源表答案列错位污染（与第 7 空 political 的尾巴串位），正文 marker 本就为 2 格，与 "he" 长度吻合
-- 同步清理解析词条批注：The 词条 reason 由校对警示语更新为 "art. 定冠词"（所描述的数据错误已修复）
-- 全库 228 题渲染契约校验通过；浏览器实测 "T + he" 判分正确、上下文 "structures. T__ region's poli…" 连贯无歧义
+- 页面标题更新：`TOEFL Reading Complete the Words 练习系统 v4.8.1`
+- 副标题更新：`托福阅读·填空题练习系统 v4.8.1 · 242 题全量题库（去重版）`
 
-## v4.7（2026-10-27）当前版本
+### 功能移除
 
-- CW 8月/9月素材同步：167 行素材全量比对，新增 59 题（46 全新 + 13 同底文本变体），总题量 228→287
-- 场次复用记录：93 条考试场次追加到库题 source（55 道库题标注）
-- 素材自动修复：完整词剥前缀（约 37 空）、格数按答案校正、答案列错位残留剔除 4 行、缺失答案从库补全 1 处
-- 个案修复 6 处：lation→ation、uction→duction、ction→ctive、eive→ceive、正文漏挖补空 1 处、词中单格挖空推断 1 处
-- 库题修正：20260601A-2 River Deltas 空5 material→materials（v4.4 遗留的 slots 与正文下划线不一致）
-- 2 行素材待人工核对：Extinction Events（正文无下划线+词形差异三处）、Paint History（第5空正文损坏）
-- 全库校验：285 道 active 题渲染契约 + 下划线残留扫描通过；浏览器实测判分正常
+- **移除「全部来源」筛选器**及全部关联逻辑（共 7 处）：
+  - 工具栏「全部来源」下拉框
+  - `filterState` 中的 `source` 字段
+  - 来源下拉的填充逻辑
+  - `applyFilters` 中的来源读取与过滤条件
+  - `resetAllFilters` / `clearAllQuestions` 中的来源重置语句
+- 关键词检索仍支持来源字样（如输入「官方TPO」可检索到对应题目），该能力属关键词功能，不受本次移除影响
 
-## v4.6（2026-09-16）当前版本
+### 版式优化
 
-- 笔误更正：20260708B-2 Critical Thinking 正文 "a clrear" 更正为 "a clear"
-- 语义修复：20260621A-2 Wind Formation 首句删除破损插入的 "role shaping"，恢复为 "driving horizontal air movement known as wind"
-- 清除全部存疑标记：移除全库 116 题共 212 条存疑（suspect）标注，同时删除页面上的存疑徽章与黄色高亮说明框
-- 保留 2 道 draft 题（真题-048、26TPO05）的"待校验"提示，待原始材料补齐后恢复
-- 全库 228 题（active 226 / draft 2）逐题校验通过
+- 筛选工具栏三个下拉（月份 / 话题 / 难度）统一 `min-width: 132px`，宽度不再随文案长短参差
+- 布局自动重排，筛选层级保持：月份 → 话题 → 难度 → 关键词 → 清除筛选 → 结果计数
 
-## v4.5（2026-09-16）
+### 回归验证
 
-依据人工审校清单执行 12 项修正：
+- 「全部来源」无残留代码、无控制台报错
+- 月份筛选实测精确命中（2026年3月 → 3 题）；关键词 glacier → 5 题；重置恢复 242 题
 
-- 13 处空位答案修正：包括 schoolars→scholars、advaanced→advanced、techlity→technical、abining→ability、infural→infuse、milllennia→millennia、multtiple→multiple、retional→rational、inflluence→influence 等拼写修正，空格数全部同步
-- 4 处全空题改为带题干前缀：atmos+pheric、li+ke、str+ong、she+lter（题干已含前缀词，挖空结构对齐正文）
-- 20260621A-2 Wind Formation 删除第 1 空（known 恢复为完整词），保留其余 10 空
-- 20260630A Cognition 增补 though 空（tho[ ] 改为 tho_ _ _，9 空变 10 空）
-- 20260722D Transitional Fossils 与 20260722A-3 完全重复，删除该套（总题数 229→228）
-- 全库渲染契约校验通过，月份统计同步（2026 年 7 月 31→30 题）
+---
 
-## v4.4（2026-08-31）
+## v4.8（2026-10-28）
 
-- 待校验题全量处理：依据源表"完整文档"列、"解析"列人工校注词表与"阅读材料"正文，重建全部 21 道 draft 待校验题（21/21 重建成功）
-- 每题按词表逐词对齐正文前缀，重建答案、空位、解析数据
-- 剩余 2 道 draft（真题-048、26TPO05）不在源表 152 行内，系旧 docx / TPO 渠道遗留，需查原始文档后补录
-- 库内达到 active 227 / 总 229
+### 题库去重（287 → 243 题）
 
-## v4.3（2026-08-31）
+- 依据《Complete the Words 题库去重报告》：按首句归组 + 挖空回填全文 3-gram 比对（阈值 0.97），删除 44 条重复题（41 组）
+- 5 组按「正文正确性」反转保留方向（如 he→the、model→models 等笔误修正）
+- 3 组保留题（20260907A、真题-085、20260809A）原无解析，已并入被删版解析，词条按保留版正文修正（model→models、interaction→interactions、challenge→challenged，补 thought 词条 1 条）
+- 清理指向被删素材的过时 ⚠ 批注
+- months 月份计数全部重算同步
 
-- 第二批 7 处答案修正（20260121B-2 Spix's Macaw 三处、20260121B Glacier Landforms、20260121C Pottery Craft、20260406A、20260415A Photosynthesis 的 Artifcial→Artificial）
-- 20260127AM Fossils & Evolution 删除正文中多余的 "environments" 残留
-- 5 道 draft 题重建为 active（20260202AM-2 Use of Fire、20260201AM-2 Logical Reasoning、20260401A-2 Early Civilizations、20260506B Atmospheric Prediction、20260510B Extraterrestrial Life），难度按四维度算法重算
-- 完成第 54 套起集中出错的原因分析：题库后半段为新表新增题、无旧库答案兜底，且源表两个机器生成列（完整文档、答案列）大面积损坏所致
+### 挖空补全（4 题补齐至 10 空）
 
-## v4.2（2026-08-31）
+| 题目 | 修复 | 依据 |
+|---|---|---|
+| Glacier Landforms（20260121B） | 补 `and`（9→10） | 同文被删版 真题-032 |
+| Herd Society（20260621A-3） | 重建正文 + 补 `success`（9→10） | 同文干净版 20260705A，顺带修复多处粘连乱码（manyterrestrial / dlearly / increasedsucgroup 等） |
+| Railway Timekeeping（20260909A-2） | 补 `sun` / `the` / `kept`（7→10） | CW 9月源表答案列；v4.7 建库时误将 un/he/pt 当「错位残留」剔除，实为源表正文丢失标记对应的真答案 |
+| 欧洲中世纪介绍（26TPO05） | 重建全部 10 空（0→10） | 正文自带标记 + 官方TPO 源表答案列；源表笔误 `induding` 校正为 **including** |
 
-- 第一批 12 处答案修正（真题-023 Rock Layer Records 五处、真题-042 Cloud Composition 三处、真题-116 Brain Plasticity 两处、20260610A-2、真题-046）
-- 真题-079 Camel Fat Storage 由 draft 恢复为 active，10 个空位数据取自旧版题库
+### 收尾清理（243 → 242 题）
 
-## v4.1（2026-08-31）
+- **删除 Herd Society 7 月重复版 20260705A**（保留 6 月版 20260621A-3，删前核对解析/翻译无信息丢失），7 月题数 29→28 同步
+- **26TPO05 转正**：答案 including 经人工确认，draft → active，页面不再显示「待校验」提示，修复过程记入 flags 备查
+- 全库无 draft / 待校验残留
 
-- 「高级班讲义题库」152 题全量同步（实际 145 道唯一题，7 组同正文多场复用）
-- 重复题按新表替换来源、解析、学科等字段，新题全部入库，总题数 229
-- 来源编号统一为「2026年考试日期+套题字母」格式（如 20260121A），按考试月份细分
-- 新增 draft（待校验）与 suspect（存疑）标记体系
-- 难度按四维度算法重算
+### 数据终态
 
-## GitHub 部署版（2026-09-18）
+- **242 题，全部 active，全部 10 空**
+- id 唯一、months 计数与实际分布一致、marker 定位 / prefix+answer=word / slots 校验全通过
+- index.html 页面结构、交互逻辑、样式与 v4.7 保持一致（仅数据文件与标题更新）
 
-- 内容与 v4.6 完全一致（228 题）
-- xlsx 库（SheetJS 0.18.5）由 CDN 在线引用改为本地打包，网站完全自包含、可离线部署
+---
+
+## v4.7 → v4.8 数据对照
+
+| 指标 | v4.7 | v4.8.1 |
+|---|---|---|
+| 总题量 | 287 | **242** |
+| 挖空不足 10 空的题 | 4 | **0** |
+| draft / 待校验 | 1 | **0** |
+| 重复正文组 | 41 组 | **0** |
+| 解析覆盖率 | 53.1% | 59.7% |
